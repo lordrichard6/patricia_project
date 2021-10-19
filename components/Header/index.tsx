@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 
+import { Navbar } from '../Navbar'
+
 export function Header() {
     return (
         <SectionContainer>
+            <Navbar />
             <SloganContainer>
                 <Title>
-                    “Because driving driving<br/>
+                    “Because driving<br />
                     from A to B doesn’t have to be boring”
                 </Title>
                 <SubTitle>
@@ -20,8 +23,11 @@ export function Header() {
 const SectionContainer = styled.div`  
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 100vw;
     height: 100vh;
+    padding-left: 8rem;
+    padding-right: 8rem;
     background: linear-gradient(259.91deg, #7F7FD5 -2.37%, #86A8E7 50.2%, #91EAE4 104.95%);
 `
 
