@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { Navbar } from '../Navbar'
 
-export function Header() {
+export default function Header() {
     return (
         <SectionContainer>
             <Navbar />
@@ -24,7 +24,7 @@ const SectionContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     padding-left: 8rem;
     padding-right: 8rem;
