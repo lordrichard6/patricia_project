@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import Gap from '../components/SectionGap'
 import Header from '../components/Header'
 import AboutMe from '../components/AboutMe'
+import WhyChooseMe from '../components/WhyChooseMe'
 
 const Home: NextPage = () => {
   return (
@@ -17,8 +18,8 @@ const Home: NextPage = () => {
       <Header />
       <Gap />
       <AboutMe />
-      <Gap />
-
+      <Gap /> 
+      <WhyChooseMe />
 
     </MainContainer>
   )
