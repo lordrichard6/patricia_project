@@ -1,11 +1,18 @@
 import styled from 'styled-components'
+import Image from 'next/image'
 
-export function Navbar() {
+import logo from '../../public/logo_neon.png'
+
+export default function Navbar() {
     return (
         <Container>
             <InnerContainer>
                 <LogoContainer>
-                    <h1>Logo</h1>
+                    <Image 
+                        src={logo}
+                        height='100px'
+                        width='100px'
+                    />
                 </LogoContainer>
                 <ItemsContainer>
                     <li><a>Home</a></li>
@@ -23,6 +30,8 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
+    z-index: 1;
+    background-color: #212121;
 `
 
 const InnerContainer = styled.div`
@@ -35,9 +44,6 @@ const InnerContainer = styled.div`
 const LogoContainer = styled.div`
     display: flex;
     justify-content: center;
-    background: #c4c4c4;
-    border-radius: 10rem;
-    padding: 0.5rem;
 `
 
 const ItemsContainer = styled.ul`
@@ -45,6 +51,9 @@ const ItemsContainer = styled.ul`
     flex-direction: row;
     justify-content: flex-end;
     list-style: none;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: normal;
     li {
         padding-right: 1rem;
         padding-left: 1rem;

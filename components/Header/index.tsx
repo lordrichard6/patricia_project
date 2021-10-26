@@ -1,11 +1,17 @@
 import styled from 'styled-components'
+import Image from 'next/image'
 
-import { Navbar } from '../Navbar'
+import picture from '../../assets/images/image_01.jpg'
 
 export default function Header() {
     return (
         <SectionContainer>
-            <Navbar />
+            <Background 
+                src={picture}
+                layout='fill'
+                objectFit='cover'
+                objectPosition='center'
+            />
             <SloganContainer>
                 <Title>
                     “Because driving<br />
@@ -28,12 +34,13 @@ const SectionContainer = styled.div`
     height: 100vh;
     padding-left: 8rem;
     padding-right: 8rem;
-    background: linear-gradient(259.91deg, #7F7FD5 -2.37%, #86A8E7 50.2%, #91EAE4 104.95%);
+    /* background: linear-gradient(259.91deg, #7F7FD5 -2.37%, #86A8E7 50.2%, #91EAE4 104.95%); */
 `
 
 const SloganContainer = styled.div`  
     display: flex;
     flex-direction: column;
+    z-index: 1;
 `
 
 const Title = styled.h1`
@@ -46,4 +53,8 @@ const SubTitle = styled.h2`
   font-size: 2rem;
   font-weight: normal;
   color: #FFFFFF;
+`
+
+const Background = styled(Image)`
+  z-index: 0;
 `
