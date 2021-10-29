@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import Image from 'next/image'
+
+import picture from '../../assets/images/image_01.jpg'
 
 export default function Services() {
     return (
@@ -14,22 +17,40 @@ export default function Services() {
             </h3>
             <ServicesContainer>
                 <Service>
-                    <h1>service #1</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
+                    <ServiceImage
+                        src={picture}
+                    />
+                    <Info>
+                        <h1>service #1</h1>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in.
+                        </p>
+                    </Info>
+
                 </Service>
                 <Service>
-                    <h1>service #2</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
+                    <ServiceImage
+                        src={picture}
+                    />
+                    <Info>
+                        <h1>service #2</h1>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in.
+                        </p>
+                    </Info>
+
                 </Service>
                 <Service>
-                      <h1>service #3</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
+                    <ServiceImage
+                        src={picture}
+                    />
+                    <Info>
+                        <h1>service #3</h1>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in.
+                        </p>
+                    </Info>
+
                 </Service>
             </ServicesContainer>
         </SectionContainer>
@@ -59,8 +80,20 @@ const Service = styled.div`
     align-items: end;
     background-color: lightblue;
     width: 14rem;
+    /* height: 25rem; */
+`
+
+const ServiceImage = styled(Image)`
     height: 25rem;
+`
+
+const Info = styled.div`
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h1 {
         font-weight: normal;
     }
 `
+

@@ -1,10 +1,15 @@
 import styled from 'styled-components'
+import Image from 'next/image'
+
+import picture from '../../assets/images/image_01.jpg'
 
 export default function WhyChooseMe() {
     return (
         <SectionContainer>
             <LeftContainer>
-                <LeftImage />
+                <LeftImage 
+                    // src={picture}
+                />
             </LeftContainer>
             <RightContainer>
                 <h3>
@@ -47,7 +52,7 @@ const LeftContainer = styled.div`
     background: linear-gradient(259.91deg, #7F7FD5 -2.37%, #86A8E7 50.2%, #91EAE4 104.95%);
 `
 
-const LeftImage = styled.div`
+const LeftImage = styled.img`
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
@@ -56,7 +61,7 @@ const LeftImage = styled.div`
     margin-left: 6rem;
     width: 100%;
     height: 80%;
-    background: lightgreen;
+    background-image: url(${picture});
 `
 
 const RightContainer = styled.div`

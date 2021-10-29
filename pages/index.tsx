@@ -9,7 +9,9 @@ import AboutMe from '../components/AboutMe'
 import Services from '../components/services'
 import WhyChooseMe from '../components/WhyChooseMe'
 import BannerContactMe from '../components/BannerContactMe'
+import OtherPassions from '../components/OtherPassions'
 import Gallery from '../components/Gallery'
+import Form from '../components/Form'
 
 const Home: NextPage = () => {
   return (
@@ -30,7 +32,11 @@ const Home: NextPage = () => {
       <Gap />
       <BannerContactMe />
       <Gap />
+      <OtherPassions />
+      <Gap />
       <Gallery />
+      <Gap />
+      <Form />
 
     </MainContainer>
   )

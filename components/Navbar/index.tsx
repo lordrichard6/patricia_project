@@ -10,8 +10,8 @@ export default function Navbar() {
                 <LogoContainer>
                     <Image 
                         src={logo}
-                        height='100px'
-                        width='100px'
+                        height='60px'
+                        width='60px'
                     />
                 </LogoContainer>
                 <ItemsContainer>
@@ -27,6 +27,7 @@ export default function Navbar() {
 }
 
 const Container = styled.div`
+    margin: 0;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -39,6 +40,8 @@ const InnerContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding-left: 8rem;
+    padding-right: 8rem;
 `
 
 const LogoContainer = styled.div`
@@ -52,8 +55,9 @@ const ItemsContainer = styled.ul`
     justify-content: flex-end;
     list-style: none;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: normal;
+    margin: 0;
     li {
         padding-right: 1rem;
         padding-left: 1rem;
