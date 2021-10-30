@@ -12,13 +12,13 @@ export default function Services() {
             <h1>
                 Every bit of Joy of Driving
             </h1>
-            <h3>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </h3>
             <ServicesContainer>
                 <Service>
                     <ServiceImage
                         src={picture}
+                        height={600}
+                        width={400}
+                        objectFit='cover'
                     />
                     <Info>
                         <h1>service #1</h1>
@@ -31,6 +31,9 @@ export default function Services() {
                 <Service>
                     <ServiceImage
                         src={picture}
+                        height={600}
+                        width={400}
+                        objectFit='cover'
                     />
                     <Info>
                         <h1>service #2</h1>
@@ -43,6 +46,9 @@ export default function Services() {
                 <Service>
                     <ServiceImage
                         src={picture}
+                        height={600}
+                        width={400}
+                        objectFit='cover'
                     />
                     <Info>
                         <h1>service #3</h1>
@@ -58,12 +64,18 @@ export default function Services() {
 }
 
 const SectionContainer = styled.div`  
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: #062942;
+    color: #fff;
+    padding: 20px;
+    h1, h3 {
+        font-weight: normal;
+    }
 `
 
 const ServicesContainer = styled.div`  
@@ -78,7 +90,7 @@ const Service = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: end;
-    background-color: lightblue;
+    /* background-color: lightblue; */
     width: 14rem;
     /* height: 25rem; */
 `
@@ -94,6 +106,9 @@ const Info = styled.div`
     align-items: center;
     h1 {
         font-weight: normal;
+    }
+    p {
+        margin: 0;
     }
 `
 
