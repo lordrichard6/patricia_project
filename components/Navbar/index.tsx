@@ -2,10 +2,16 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 import logo from '../../public/logo_neon.png'
+import pattern from '../../assets/images/pattern.png'
 
 export default function Navbar() {
     return (
         <Container>
+            <BG src={pattern} 
+                layout='fill'
+                objectFit='cover'
+                objectPosition='center'
+            />
             <InnerContainer>
                 <LogoContainer>
                     <Image 
@@ -21,12 +27,12 @@ export default function Navbar() {
                     <li><a>Contact Me</a></li>
                 </ItemsContainer>
             </InnerContainer>
-
         </Container>
     )
 }
 
 const Container = styled.div`
+    position: relative;
     margin: 0;
     padding: 8px;
     display: flex;
@@ -34,6 +40,11 @@ const Container = styled.div`
     width: 100%;
     z-index: 1;
     background-color: #062942;
+`
+
+const BG = styled(Image)`
+    z-index: 1;
+    opacity: 0.1;
 `
 
 const InnerContainer = styled.div`

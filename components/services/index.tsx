@@ -2,10 +2,16 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 import picture from '../../assets/images/image_01.jpg'
+import pattern from '../../assets/images/pattern.png'
 
 export default function Services() {
     return (
         <SectionContainer>
+            <BG src={pattern} 
+                layout='fill'
+                objectFit='cover'
+                objectPosition='center'
+            />
             <h3>
                 Services
             </h3>
@@ -64,6 +70,7 @@ export default function Services() {
 }
 
 const SectionContainer = styled.div`  
+    position: relative;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -75,11 +82,17 @@ const SectionContainer = styled.div`
     padding: 20px;
     h1, h3 {
         font-weight: normal;
+        z-index: 2;
     }
 `
 
+const BG = styled(Image)`
+    z-index: 1;
+    opacity: 0.1;
+`
+
 const ServicesContainer = styled.div`  
-    /* background-color: lightgray; */
+    z-index: 2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 4rem;

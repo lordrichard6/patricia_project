@@ -2,19 +2,24 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 import picture from '../../assets/images/image_01.jpg'
+import pattern from '../../assets/images/pattern.png'
 
 export default function WhyChooseMe() {
     return (
         <SectionContainer>
             <LeftContainer>
+                <BG src={pattern}
+                    layout='fill'
+                    objectFit='cover'
+                    objectPosition='center'
+                />
                 <ImageContainer >
                     <Image
-                    src={picture}
-                    objectFit='cover'
-                    layout='fill'
+                        src={picture}
+                        objectFit='cover'
+                        layout='fill'
                     />
                 </ImageContainer>
-
             </LeftContainer>
             <RightContainer>
                 <h3>
@@ -57,7 +62,13 @@ const LeftContainer = styled.div`
     background: #062942;
 `
 
+const BG = styled(Image)`
+    z-index: 1;
+    opacity: 0.1;
+`
+
 const ImageContainer = styled.div`
+z-index: 2;
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
