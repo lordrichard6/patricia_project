@@ -1,9 +1,96 @@
 import styled from 'styled-components'
+import Image from 'next/image'
+
+import pic from '../../assets/images/image_01.jpg'
 
 export default function Form() {
     return (
-        <div>
-            <h1>form</h1>
-        </div>
+        <SectionContainer>
+            <Background src={pic} layout="fill" objectFit='cover' />
+            <FormContainer>
+                <h1>Book a Service Now</h1>
+                <h3>Please fill the form below</h3>
+                <form>
+                    <input
+                        type="text"
+                        name="name"
+                        value='Name'
+                        placeholder="Name"
+                    />
+                    <input
+                        type="text"
+                        name="number"
+                        value='Phone Number'
+                        placeholder="Name"
+                    />
+                    <input
+                        type="email"
+                        name="email"
+                        value='Email'
+                        placeholder="Email"
+                    />
+                    <textarea
+                        name="message"
+                        value='Message'
+                        placeholder="Message"
+                    />
+                </form>
+            </FormContainer>
+
+
+        </SectionContainer>
     )
 }
+
+const SectionContainer = styled.div` 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+`
+
+const Background = styled(Image)`
+    z-index: -1;
+`
+
+const FormContainer = styled.div` 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+    background: #062942;
+    border-radius: 5px;
+    h1, h3 {
+        color: #eee;
+        font-weight: 600;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        color: #212121;
+        input {
+            background: #eee;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding: 10px;
+        }
+        textarea {
+            background: #eee;
+            border-radius: 5px;
+            border: 0;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+            min-height: 100px;
+        }
+    }
+`
