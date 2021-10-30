@@ -7,16 +7,21 @@ export default function WhyChooseMe() {
     return (
         <SectionContainer>
             <LeftContainer>
-                <LeftImage 
-                    // src={picture}
-                />
+                <ImageContainer >
+                    <Image
+                    src={picture}
+                    objectFit='cover'
+                    layout='fill'
+                    />
+                </ImageContainer>
+
             </LeftContainer>
             <RightContainer>
                 <h3>
                     Why choose Us?
                 </h3>
                 <h1>
-                    What you will<br/>enjoy with our service.
+                    What you will<br />enjoy with our service.
                 </h1>
                 <h3>
                     Each journey with fun and security
@@ -30,7 +35,7 @@ export default function WhyChooseMe() {
                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
                 </ul>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> Iaculis tellus, faucibus volutpat fusce consequat in.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /> Iaculis tellus, faucibus volutpat fusce consequat in.
                 </p>
             </RightContainer>
         </SectionContainer>
@@ -49,10 +54,10 @@ const LeftContainer = styled.div`
     width: 40%;
     height: 100%;
     margin-right: 0.5rem;
-    background: linear-gradient(259.91deg, #7F7FD5 -2.37%, #86A8E7 50.2%, #91EAE4 104.95%);
+    background: #062942;
 `
 
-const LeftImage = styled.img`
+const ImageContainer = styled.div`
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
@@ -61,7 +66,6 @@ const LeftImage = styled.img`
     margin-left: 6rem;
     width: 100%;
     height: 80%;
-    background-image: url(${picture});
 `
 
 const RightContainer = styled.div`
