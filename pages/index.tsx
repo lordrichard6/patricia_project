@@ -12,6 +12,7 @@ import BannerContactMe from '../components/BannerContactMe'
 import OtherPassions from '../components/OtherPassions'
 import Gallery from '../components/Gallery'
 import Form from '../components/Form'
+import Footer from '../components/Footer'
 
 const Home: NextPage = () => {
   return (
@@ -37,7 +38,7 @@ const Home: NextPage = () => {
       <Gallery />
       <Gap />
       <Form />
-
+      <Footer />
     </MainContainer>
   )
 }
@@ -45,8 +46,10 @@ const Home: NextPage = () => {
 export default Home
 
 const MainContainer = styled.div`
+  margin: 0;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 `
