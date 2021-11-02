@@ -38,7 +38,7 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     background-color: #062942;
 `
 
@@ -68,12 +68,13 @@ const ItemsContainer = styled.ul`
     list-style: none;
     color: #fff;
     font-size: 1.8rem;
+    font-weight: 200;
     margin: 0;
     li {
         padding-right: 1rem;
         padding-left: 1rem;
         a {
-            font-weight: 200;
+            cursor: pointer;
         }
     }
 `

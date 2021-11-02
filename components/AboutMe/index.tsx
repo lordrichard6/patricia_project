@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 
-import picture from '../../assets/images/image_01.jpg'
+import picture from '../../assets/images/aboutMe.jpg'
 
 export default function AboutMe() {
     return (
@@ -25,6 +25,7 @@ export default function AboutMe() {
                     height={200}
                     width={400}
                     objectFit='cover'
+                    alt='about me'
                 />
             </LeftContainer>
             <RightContainer>
@@ -33,6 +34,7 @@ export default function AboutMe() {
                     height={600}
                     width={600}
                     objectFit='cover'
+                    alt='about me'
                 />
                 <h3>
                     “I have a passion to drive and social interaction and i think the current available services are overrated. Therefore, i decided

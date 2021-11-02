@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 
-import picture from '../../assets/images/image_01.jpg'
+import picture from '../../assets/images/header.jpg'
 
 export default function Header() {
     return (
@@ -11,11 +11,12 @@ export default function Header() {
                 layout='fill'
                 objectFit='cover'
                 objectPosition='center'
+                alt='header'
             />
             <SloganContainer>
                 <Title>
-                    “Because driving<br />
-                    from A to B doesn’t have to be boring”
+                    Because driving<br />
+                    from A to B doesn’t have to be boring
                 </Title>
                 <SubTitle>
                     A driving service with a more friendly approach and a touch of humor.

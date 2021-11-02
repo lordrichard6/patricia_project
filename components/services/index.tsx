@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 
-import picture from '../../assets/images/image_01.jpg'
+import service_01 from '../../assets/images/service01.jpg'
+import service_02 from '../../assets/images/service02.jpg'
+import service_03 from '../../assets/images/service03.jpg'
 import pattern from '../../assets/images/pattern.png'
 
 export default function Services() {
@@ -21,10 +23,11 @@ export default function Services() {
             <ServicesContainer>
                 <Service>
                     <ServiceImage
-                        src={picture}
+                        src={service_01}
                         height={600}
                         width={400}
                         objectFit='cover'
+                        alt='service 1'
                     />
                     <Info>
                         <h1>service #1</h1>
@@ -36,10 +39,11 @@ export default function Services() {
                 </Service>
                 <Service>
                     <ServiceImage
-                        src={picture}
+                        src={service_02}
                         height={600}
                         width={400}
                         objectFit='cover'
+                        alt='service 1'
                     />
                     <Info>
                         <h1>service #2</h1>
@@ -51,10 +55,11 @@ export default function Services() {
                 </Service>
                 <Service>
                     <ServiceImage
-                        src={picture}
+                        src={service_03}
                         height={600}
                         width={400}
                         objectFit='cover'
+                        alt='service 1'
                     />
                     <Info>
                         <h1>service #3</h1>

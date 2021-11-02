@@ -1,18 +1,19 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 
-import pic from '../../assets/images/image_01.jpg'
+import background from '../../assets/images/form.jpg'
 import pattern from '../../assets/images/pattern.png'
 
 export default function Form() {
     return (
         <SectionContainer>
-            <Background src={pic} layout="fill" objectFit='cover' />
+            <Background src={background} layout="fill" objectFit='cover' />
             <FormContainer>
                 <BG src={pattern}
                     layout='fill'
                     objectFit='cover'
                     objectPosition='center'
+                    alt='pattern'
                 />
                 <h1>Book a Service Now</h1>
                 <h3>Please fill the form below</h3>
@@ -20,7 +21,7 @@ export default function Form() {
                     <input
                         type="text"
                         name="name"
-                        value='Name'
+                        // value='Name'
                         placeholder="Name"
                     />
                     <input
@@ -32,12 +33,12 @@ export default function Form() {
                     <input
                         type="email"
                         name="email"
-                        value='Email'
+                        // value='Email'
                         placeholder="Email"
                     />
                     <textarea
                         name="message"
-                        value='Message'
+                        // value='Message'
                         placeholder="Message"
                     />
                 </form>

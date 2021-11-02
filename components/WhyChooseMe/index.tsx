@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 
-import picture from '../../assets/images/image_01.jpg'
+import picture from '../../assets/images/whyChooseMe.jpg'
 import pattern from '../../assets/images/pattern.png'
 
 export default function WhyChooseMe() {
@@ -12,12 +12,14 @@ export default function WhyChooseMe() {
                     layout='fill'
                     objectFit='cover'
                     objectPosition='center'
+                    alt='pattern'
                 />
                 <ImageContainer >
                     <Image
                         src={picture}
                         objectFit='cover'
                         layout='fill'
+                        alt='why choose me'
                     />
                 </ImageContainer>
             </LeftContainer>
