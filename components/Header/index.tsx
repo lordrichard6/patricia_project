@@ -37,7 +37,7 @@ const SectionContainer = styled.div`
     min-height: 100vh;
     padding-left: 8rem;
     padding-right: 8rem;
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         padding-left: 2rem;
         padding-right: 2rem;
     }
@@ -53,7 +53,7 @@ const Title = styled.h1`
     font-size: 3rem;
     font-weight: normal;
     color: #FFFFFF;
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         font-size: 1.75rem;
     }
 `
@@ -62,11 +62,11 @@ const SubTitle = styled.h2`
     font-size: 1.5rem;
     font-weight: normal;
     color: #FFFFFF;
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         font-size: 1.25rem;
     }
 `
 
 const Background = styled(Image)`
-  z-index: 0;
+    z-index: 0;
 `

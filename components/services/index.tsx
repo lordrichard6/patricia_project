@@ -86,7 +86,7 @@ const SectionContainer = styled.div`
     background: #062942;
     color: #fff;
     padding: 20px;
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         /* padding: 4px; */
     }
     h1, h3 {
@@ -105,7 +105,7 @@ const ServicesContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 4rem;
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         grid-template-columns: 1fr;
         grid-row-gap: 2rem;
     }
@@ -121,7 +121,7 @@ const Service = styled.div`
 
 const ServiceImage = styled(Image)`
     height: 25rem;
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         height: 100px;
     }
 `
@@ -133,7 +133,7 @@ const Info = styled.div`
     align-items: center;
     h1 {
         font-weight: normal;
-        ${media("<=phone")} {
+        ${media("<=tablet")} {
         margin-top: 10px;
         margin-bottom: 10px;
         }

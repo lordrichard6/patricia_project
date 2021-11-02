@@ -89,7 +89,7 @@ const ContactContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         width: 90%;
     }
     h1 {
@@ -99,7 +99,7 @@ const ContactContainer = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        ${media("<=phone")} {
+        ${media("<=tablet")} {
             flex-direction: column;
             margin: 0;
         }
@@ -112,7 +112,7 @@ const Copyright = styled.div`
     width: 70%;
     display: flex;
     justify-content: space-between;
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         width: 90%;
     }
 `

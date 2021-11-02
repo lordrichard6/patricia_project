@@ -106,7 +106,7 @@ const ImagesContainer = styled.div`
   width: 60%;
   columns: 3;
   column-gap: 10px;
-  ${media("<=phone")} {
+  ${media("<=tablet")} {
     width: 90%;
     columns: 2;
   }

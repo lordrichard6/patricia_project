@@ -21,7 +21,7 @@ const SectionContainer = styled.div`
         color: #fff;
         font-weight: normal;
         font-size: 8rem;
-        ${media("<=phone")} {
+        ${media("<=tablet")} {
             font-size: 4rem;
         }
     }

@@ -80,7 +80,7 @@ const FormContainer = styled.div`
     background: #062942;
     opacity: 0.9;
     border-radius: 5px;
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         width: 90%;
         height: auto;
         padding-top: 2rem;

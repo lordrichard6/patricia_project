@@ -55,7 +55,7 @@ const SectionContainer = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         flex-direction: column;
         min-height: 100vh;
         align-items: center;
@@ -68,7 +68,7 @@ const LeftContainer = styled.div`
     height: 100%;
     margin-right: 0.5rem;
     background: #062942;
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         width: 100%;
     }
 `
@@ -88,7 +88,7 @@ const ImageContainer = styled.div`
     margin-left: 6rem;
     width: 100%;
     height: 80%;
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         display: none;
     }
 `
@@ -99,7 +99,7 @@ const RightContainer = styled.div`
     width: 50%;
     height: 100%;
     margin-left: 6rem;
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         width: 80%;
         margin: 0;
         
@@ -111,7 +111,7 @@ const RightContainer = styled.div`
     h3:first-child {
         margin-left: -6rem;
         margin-top: 1rem;
-        ${media("<=phone")} {
+        ${media("<=tablet")} {
             margin-left: 0;
         }
     }

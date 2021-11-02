@@ -42,7 +42,7 @@ const Container = styled.div`
     background-color: #062942;
     z-index: 1;
 
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         padding: 4px;
     }
 `
@@ -60,7 +60,7 @@ const InnerContainer = styled.div`
     padding-left: 8rem;
     padding-right: 8rem;
 
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         padding-left: 2rem;
         padding-right: 2rem;
     }
@@ -70,7 +70,7 @@ const LogoContainer = styled.div`
     display: flex;
     justify-content: center;
 
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         width: 40px;
     }
 `
@@ -86,7 +86,7 @@ const ItemsContainer = styled.ul`
     margin: 0;
     z-index: 1;
 
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         display: none;
     }
     li {

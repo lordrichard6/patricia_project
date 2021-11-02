@@ -59,7 +59,7 @@ const SectionContainer = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         width: 100%;
         padding-left: 4rem;
         padding-right: 4rem;
@@ -71,14 +71,14 @@ const LeftContainer = styled.div`
     width: 50%;
     height: 100%;
     margin-right: 0.5rem;
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         width: 100%;
         margin: 0;
     }
     h1 {
         font-size: 2.5rem;
         font-weight: normal;
-        ${media("<=phone")} {
+        ${media("<=tablet")} {
             font-size: 2rem;
         }
     }
@@ -90,7 +90,7 @@ const RightContainer = styled.div`
     width: 50%;
     height: 100%;
     margin-left: 0.5rem;
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         width: 100%;
         margin: 0;
     }
@@ -101,7 +101,7 @@ const RightContainer = styled.div`
 `
 
 const LeftImage = styled(Image)` 
-    ${media("<=phone")} {
+    ${media("<=tablet")} {
         display: none;
     }
 `
