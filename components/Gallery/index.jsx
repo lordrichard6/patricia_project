@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import media from "css-in-js-media";
 
 import picture_01 from "../../assets/images/gal01.jpg";
 import picture_02 from "../../assets/images/gal02.jpg";
@@ -105,6 +106,10 @@ const ImagesContainer = styled.div`
   width: 60%;
   columns: 3;
   column-gap: 10px;
+  ${media("<=phone")} {
+    width: 90%;
+    columns: 2;
+  }
   .grid-images {
     display: inline-block;
     margin-bottom: 10px;

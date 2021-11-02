@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import media from "css-in-js-media";
 
 import picture from '../../assets/images/whyChooseMe.jpg'
 import pattern from '../../assets/images/pattern.png'
@@ -54,6 +55,11 @@ const SectionContainer = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
+    ${media("<=phone")} {
+        flex-direction: column;
+        min-height: 100vh;
+        align-items: center;
+    }
 `
 
 const LeftContainer = styled.div` 
@@ -62,6 +68,9 @@ const LeftContainer = styled.div`
     height: 100%;
     margin-right: 0.5rem;
     background: #062942;
+    ${media("<=phone")} {
+        width: 100%;
+    }
 `
 
 const BG = styled(Image)`
@@ -70,7 +79,7 @@ const BG = styled(Image)`
 `
 
 const ImageContainer = styled.div`
-z-index: 2;
+    z-index: 2;
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
@@ -79,6 +88,9 @@ z-index: 2;
     margin-left: 6rem;
     width: 100%;
     height: 80%;
+    ${media("<=phone")} {
+        display: none;
+    }
 `
 
 const RightContainer = styled.div`
@@ -87,7 +99,11 @@ const RightContainer = styled.div`
     width: 50%;
     height: 100%;
     margin-left: 6rem;
-    /* background: lightblue; */
+    ${media("<=phone")} {
+        width: 80%;
+        margin: 0;
+        
+    }
     h3 {
         margin: 0;
         font-weight: normal;
@@ -95,6 +111,9 @@ const RightContainer = styled.div`
     h3:first-child {
         margin-left: -6rem;
         margin-top: 1rem;
+        ${media("<=phone")} {
+            margin-left: 0;
+        }
     }
     h1 {
         font-weight: normal;

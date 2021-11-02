@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import media from "css-in-js-media";
 
 import background from '../../assets/images/form.jpg'
 import pattern from '../../assets/images/pattern.png'
@@ -77,7 +78,14 @@ const FormContainer = styled.div`
     width: 30%;
     height: 80%;
     background: #062942;
+    opacity: 0.9;
     border-radius: 5px;
+    ${media("<=phone")} {
+        width: 90%;
+        height: auto;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
     h1, h3 {
         z-index: 2;
         color: #eee;
@@ -94,6 +102,7 @@ const FormContainer = styled.div`
         input {
             background: #eee;
             border-radius: 5px;
+            border: 0;
             margin-top: 5px;
             margin-bottom: 5px;
             padding: 10px;

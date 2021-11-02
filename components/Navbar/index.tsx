@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import media from "css-in-js-media";
 
 import logo from '../../public/logo_neon.png'
 import pattern from '../../assets/images/pattern.png'
@@ -7,14 +8,14 @@ import pattern from '../../assets/images/pattern.png'
 export default function Navbar() {
     return (
         <Container>
-            <BG src={pattern} 
+            <BG src={pattern}
                 layout='fill'
                 objectFit='cover'
                 objectPosition='center'
             />
             <InnerContainer>
                 <LogoContainer>
-                    <Image 
+                    <Image
                         src={logo}
                         height='60px'
                         width='60px'
@@ -40,6 +41,10 @@ const Container = styled.div`
     width: 100%;
     background-color: #062942;
     z-index: 1;
+
+    ${media("<=phone")} {
+        padding: 4px;
+    }
 `
 
 const BG = styled(Image)`
@@ -54,11 +59,20 @@ const InnerContainer = styled.div`
     width: 100%;
     padding-left: 8rem;
     padding-right: 8rem;
+
+    ${media("<=phone")} {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 `
 
 const LogoContainer = styled.div`
     display: flex;
     justify-content: center;
+
+    ${media("<=phone")} {
+        width: 40px;
+    }
 `
 
 const ItemsContainer = styled.ul`
@@ -71,6 +85,10 @@ const ItemsContainer = styled.ul`
     font-weight: 200;
     margin: 0;
     z-index: 1;
+
+    ${media("<=phone")} {
+        display: none;
+    }
     li {
         padding-right: 1rem;
         padding-left: 1rem;

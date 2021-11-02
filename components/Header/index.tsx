@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import media from "css-in-js-media";
 
 import picture from '../../assets/images/header.jpg'
 
 export default function Header() {
     return (
         <SectionContainer>
-            <Background 
+            <Background
                 src={picture}
                 layout='fill'
                 objectFit='cover'
@@ -36,6 +37,10 @@ const SectionContainer = styled.div`
     min-height: 100vh;
     padding-left: 8rem;
     padding-right: 8rem;
+    ${media("<=phone")} {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 `
 
 const SloganContainer = styled.div`  
@@ -45,15 +50,21 @@ const SloganContainer = styled.div`
 `
 
 const Title = styled.h1`
-  font-size: 3rem;
-  font-weight: normal;
-  color: #FFFFFF;
+    font-size: 3rem;
+    font-weight: normal;
+    color: #FFFFFF;
+    ${media("<=phone")} {
+        font-size: 1.75rem;
+    }
 `
 
 const SubTitle = styled.h2`
-  font-size: 1.5rem;
-  font-weight: normal;
-  color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #FFFFFF;
+    ${media("<=phone")} {
+        font-size: 1.25rem;
+    }
 `
 
 const Background = styled(Image)`

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import media from "css-in-js-media";
 
 import service_01 from '../../assets/images/service01.jpg'
 import service_02 from '../../assets/images/service02.jpg'
@@ -85,6 +86,9 @@ const SectionContainer = styled.div`
     background: #062942;
     color: #fff;
     padding: 20px;
+    ${media("<=phone")} {
+        /* padding: 4px; */
+    }
     h1, h3 {
         font-weight: normal;
         z-index: 2;
@@ -101,6 +105,10 @@ const ServicesContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 4rem;
+    ${media("<=phone")} {
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+    }
 `
 
 const Service = styled.div`
@@ -108,13 +116,14 @@ const Service = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: end;
-    /* background-color: lightblue; */
     width: 14rem;
-    /* height: 25rem; */
 `
 
 const ServiceImage = styled(Image)`
     height: 25rem;
+    ${media("<=phone")} {
+        height: 100px;
+    }
 `
 
 const Info = styled.div`
@@ -124,6 +133,10 @@ const Info = styled.div`
     align-items: center;
     h1 {
         font-weight: normal;
+        ${media("<=phone")} {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        }
     }
     p {
         margin: 0;

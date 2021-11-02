@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import media from "css-in-js-media";
 
 import logo from '../../public/logo_neon.png'
 import pattern from '../../assets/images/pattern.png'
@@ -88,6 +89,9 @@ const ContactContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    ${media("<=phone")} {
+        width: 90%;
+    }
     h1 {
         align-self: center;
     }
@@ -95,6 +99,10 @@ const ContactContainer = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        ${media("<=phone")} {
+            flex-direction: column;
+            margin: 0;
+        }
     }
 `
 
@@ -104,4 +112,7 @@ const Copyright = styled.div`
     width: 70%;
     display: flex;
     justify-content: space-between;
+    ${media("<=phone")} {
+        width: 90%;
+    }
 `
