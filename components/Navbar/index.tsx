@@ -22,9 +22,9 @@ export default function Navbar() {
                 </LogoContainer>
                 <ItemsContainer>
                     <li><a>Home</a></li>
-                    <li><a>About Me</a></li>
-                    <li><a>Services</a></li>
-                    <li><a>Contact Me</a></li>
+                    <li><a href="#aboutMe">About Me</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#form">Contact Me</a></li>
                 </ItemsContainer>
             </InnerContainer>
         </Container>
@@ -38,12 +38,12 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
-    z-index: 2;
     background-color: #062942;
+    z-index: 1;
 `
 
 const BG = styled(Image)`
-    z-index: 1;
+    z-index: 0;
     opacity: 0.1;
 `
 
@@ -70,6 +70,7 @@ const ItemsContainer = styled.ul`
     font-size: 1.8rem;
     font-weight: 200;
     margin: 0;
+    z-index: 1;
     li {
         padding-right: 1rem;
         padding-left: 1rem;

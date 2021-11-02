@@ -8,7 +8,7 @@ import pattern from '../../assets/images/pattern.png'
 
 export default function Services() {
     return (
-        <SectionContainer>
+        <SectionContainer id="services">
             <BG src={pattern} 
                 layout='fill'
                 objectFit='cover'

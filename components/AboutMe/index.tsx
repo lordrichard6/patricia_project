@@ -5,7 +5,7 @@ import picture from '../../assets/images/aboutMe.jpg'
 
 export default function AboutMe() {
     return (
-        <SectionContainer>
+        <SectionContainer id="aboutMe">
             <LeftContainer>
                 <h1>
                     Comfort and

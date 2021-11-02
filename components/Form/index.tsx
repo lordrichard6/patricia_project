@@ -6,7 +6,7 @@ import pattern from '../../assets/images/pattern.png'
 
 export default function Form() {
     return (
-        <SectionContainer>
+        <SectionContainer id="form">
             <Background src={background} layout="fill" objectFit='cover' />
             <FormContainer>
                 <BG src={pattern}
@@ -27,7 +27,7 @@ export default function Form() {
                     <input
                         type="text"
                         name="number"
-                        value='Phone Number'
+                        // value='Phone Number'
                         placeholder="Name"
                     />
                     <input
