@@ -47,6 +47,7 @@ export const Title3 = styled.h3`
     font-weight: 400;
     color: ${Colors.white};
     ${media("<=tablet")} {
+        
     }
 
 `
@@ -66,5 +67,4 @@ export const SmallText = styled.h1`
     ${media("<=tablet")} {
         
     }
-
 `

@@ -143,7 +143,7 @@ const Service = styled.div`
 const ServiceImage = styled(Image)`
     /* height: 25rem; */
     ${media("<=tablet")} {
-        /* height: 100px; */
+    /* height: 100px; */
     }
 `
 

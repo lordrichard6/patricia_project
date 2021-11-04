@@ -23,6 +23,7 @@ export default function Footer() {
                         src={logo}
                         height='90px'
                         width='90px'
+                        alt='logo patricia vila nova'
                     />
                 </LogoContainer>
                 <SocialContainer>

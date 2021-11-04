@@ -15,6 +15,7 @@ export default function Navbar() {
                 layout='fill'
                 objectFit='cover'
                 objectPosition='center'
+                alt='pattern'
             />
             <InnerContainer>
                 <LogoContainer>
@@ -22,6 +23,7 @@ export default function Navbar() {
                         src={logo}
                         height='60px'
                         width='60px'
+                        alt='logo patricia vila nova'
                     />
                 </LogoContainer>
                 <ItemsContainer>
