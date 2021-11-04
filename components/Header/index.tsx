@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
-import media from "css-in-js-media";
 
+import { Title1, Title2 } from '../../assets/variables'
 import picture from '../../assets/images/header.jpg'
 
 export default function Header() {
@@ -15,13 +15,13 @@ export default function Header() {
                 alt='header'
             />
             <SloganContainer>
-                <Title>
+                <Title1>
                     Because driving<br />
                     from A to B doesn’t have to be boring
-                </Title>
-                <SubTitle>
+                </Title1>
+                <Title2>
                     A driving service with a more friendly approach and a touch of humor.
-                </SubTitle>
+                </Title2>
             </SloganContainer>
 
         </SectionContainer>
@@ -29,42 +29,22 @@ export default function Header() {
 }
 
 const SectionContainer = styled.div`  
-    margin: 0;
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
-    min-height: 100vh;
-    padding-left: 8rem;
-    padding-right: 8rem;
-    ${media("<=tablet")} {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
+    align-items: center;
 `
 
-const SloganContainer = styled.div`  
+const SloganContainer = styled.div`
+    width: 80vw;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    
     z-index: 1;
-`
-
-const Title = styled.h1`
-    font-size: 3rem;
-    font-weight: normal;
-    color: #FFFFFF;
-    ${media("<=tablet")} {
-        font-size: 1.75rem;
-    }
-`
-
-const SubTitle = styled.h2`
-    font-size: 1.5rem;
-    font-weight: normal;
-    color: #FFFFFF;
-    ${media("<=tablet")} {
-        font-size: 1.25rem;
-    }
 `
 
 const Background = styled(Image)`

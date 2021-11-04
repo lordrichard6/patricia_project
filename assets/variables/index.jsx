@@ -1,0 +1,70 @@
+import styled from 'styled-components'
+import media from "css-in-js-media";
+
+export const Colors = {
+    primary: '#062942',
+    dark: '#1d2124',
+    white: '#eee',
+}
+
+export const TitleExtra = styled.h1`
+    font-size: 96px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: ${Colors.white};
+    ${media("<=tablet")} {
+        /* font-size: 36px; */
+        text-align: center;
+        line-height: 46px;
+    }
+`
+
+export const Title1 = styled.h1`
+    font-size: 64px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: ${Colors.white};
+    ${media("<=tablet")} {
+        font-size: 36px;
+        text-align: center;
+        line-height: 46px;
+    }
+`
+
+export const Title2 = styled.h2`
+    font-size: 48px;
+    font-weight: 400;
+    color: ${Colors.white};
+    ${media("<=tablet")} {
+        font-size: 30px;
+        text-align: center;
+        line-height: 38px;
+    }
+`
+
+export const Title3 = styled.h3`
+    font-size: 36px;
+    font-weight: 400;
+    color: ${Colors.white};
+    ${media("<=tablet")} {
+    }
+
+`
+
+export const NormalText = styled.p`
+    font-size: 20px;
+    font-weight: 400;
+    color: ${Colors.white};
+    ${media("<=tablet")} {
+        
+    }
+
+`
+
+export const SmallText = styled.h1`
+    color: ${Colors.white};
+    ${media("<=tablet")} {
+        
+    }
+
+`

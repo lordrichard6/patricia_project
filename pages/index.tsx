@@ -6,6 +6,7 @@ import Gap from '../components/SectionGap'
 import Navbar from '../components/Navbar'
 import Header from '../components/Header'
 import AboutMe from '../components/AboutMe'
+import BannerGallery from '../components/BannerGallery'
 import Services from '../components/services'
 import WhyChooseMe from '../components/WhyChooseMe'
 import BannerContactMe from '../components/BannerContactMe'
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
       <Gap />
       <AboutMe />
       <Gap /> 
+      <BannerGallery />
       <Services />
       <Gap />
       <WhyChooseMe />
@@ -36,7 +38,7 @@ const Home: NextPage = () => {
       <OtherPassions />
       <Gap />
       <Gallery />
-      <Gap />
+      {/* <Gap /> */}
       <Form />
       <Footer />
     </MainContainer>

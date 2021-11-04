@@ -2,6 +2,9 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import media from "css-in-js-media";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faFacebookSquare, faTwitterSquare, faLinkedin, faYoutubeSquare } from "@fortawesome/free-brands-svg-icons";
+import { Colors, Title2 } from '../../assets/variables'
 import logo from '../../public/logo_neon.png'
 import pattern from '../../assets/images/pattern.png'
 
@@ -22,10 +25,18 @@ export default function Navbar() {
                     />
                 </LogoContainer>
                 <ItemsContainer>
-                    <li><a>Home</a></li>
-                    <li><a href="#aboutMe">About Me</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#form">Contact Me</a></li>
+                    {/* <li><a>Home</a></li> */}
+                    <li><a href="#aboutMe"><Title2>About Me</Title2></a></li>
+                    <li><a href="#services"><Title2>Services</Title2></a></li>
+                    <li><a href="#"><Title2>Blog</Title2></a></li>
+                    <li><a href="#form"><Title2>Contact Me</Title2></a></li>
+                    <div className='align'>
+                        <a href="https://www.instagram.com/patriciavilanova93/"><Icon icon={faInstagram} /></a>
+                        <a href="https://www.facebook.com//vilanova.patricia/"><Icon icon={faFacebookSquare} /></a>
+                        <a href="https://twitter.com/patriciavilano5/"><Icon icon={faTwitterSquare} /></a>
+                        <a href="https://www.linkedin.com/in/patr%C3%ADcia-vila-nova-b22200b5/"><Icon icon={faLinkedin} /></a>
+                        <a href="https://www.youtube.com/channel/UC9SSRSUEyefD6K3lKpsBWpA"><Icon icon={faYoutubeSquare} /></a>
+                    </div>
                 </ItemsContainer>
             </InnerContainer>
         </Container>
@@ -33,17 +44,22 @@ export default function Navbar() {
 }
 
 const Container = styled.div`
+    width: 100%;
     position: relative;
-    margin: 0;
     padding: 8px;
     display: flex;
     justify-content: center;
-    width: 100%;
-    background-color: #062942;
+    background-color: ${Colors.primary};
     z-index: 1;
 
     ${media("<=tablet")} {
         padding: 4px;
+    }
+    .align {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1rem;
     }
 `
 
@@ -53,16 +69,15 @@ const BG = styled(Image)`
 `
 
 const InnerContainer = styled.div`
+    width: 80vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding-left: 8rem;
-    padding-right: 8rem;
+    
 
     ${media("<=tablet")} {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        /* padding-left: 2rem;
+        padding-right: 2rem; */
     }
 `
 
@@ -71,19 +86,18 @@ const LogoContainer = styled.div`
     justify-content: center;
 
     ${media("<=tablet")} {
-        width: 40px;
+        /* width: 40px; */
     }
 `
 
 const ItemsContainer = styled.ul`
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     list-style: none;
     color: #fff;
     font-size: 1.8rem;
     font-weight: 200;
-    margin: 0;
     z-index: 1;
 
     ${media("<=tablet")} {
@@ -96,4 +110,11 @@ const ItemsContainer = styled.ul`
             cursor: pointer;
         }
     }
+`
+
+const Icon = styled(FontAwesomeIcon)`
+    color: ${Colors.white};
+    width: 40px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 `
