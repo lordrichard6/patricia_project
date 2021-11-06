@@ -52,7 +52,7 @@ export default function AboutMe() {
                             objectPosition='center'
                             alt='about me'
                         />
-                    <Title3 className='black-font margin'>
+                    <Title3 className='black-font margin-top'>
                         “I have a passion to drive and social interaction and i think the current available services are overrated. Therefore, i decided
                         to create my own brand.”
                     </Title3>
@@ -91,6 +91,9 @@ const InnerContainer = styled.div`
     ${media("<=tablet")} {
         flex-direction: column;
     }
+    ${media("<=desktop", ">tablet")} {
+        flex-direction: column;
+    }
 `
 
 const LeftContainer = styled.div` 
@@ -100,6 +103,11 @@ const LeftContainer = styled.div`
     color: ${Colors.primary};
 
     ${media("<=tablet")} {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 1.5rem;
+    }
+    ${media("<=desktop", ">tablet")} {
         width: 100%;
         padding-right: 0;
         margin-bottom: 1.5rem;
@@ -121,8 +129,12 @@ const RightContainer = styled.div`
         width: 100%;
         margin: 0;
     }
+    ${media("<=desktop", ">tablet")} {
+        width: 100%;
+        margin: 0;
+    }
     ${media("<=desktop")} {
-        min-height: 100%;
+        /* min-height: 100%; */
     }
     ${media(">largeDesktop")} {
         /* margin-left: 1rem; */

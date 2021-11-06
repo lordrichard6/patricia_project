@@ -98,22 +98,31 @@ export default function Gallery() {
 }
 
 const SectionContainer = styled.div`
-  position: relative;
-  min-height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: ${Colors.primary};
-  padding-bottom: 4rem;
-  padding-top: 4rem;
-  .underline {
-    text-decoration: underline;
-  }
-  .black-font {
-    color: ${Colors.dark};
-  }
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: ${Colors.primary};
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+
+    ${media("<=tablet")} {
+      padding-bottom: 8rem;
+      padding-top: 8rem;
+    }
+    ${media("<=desktop", ">tablet")} {
+      padding-bottom: 8rem;
+      padding-top: 8rem;  
+    }
+    .underline {
+      text-decoration: underline;
+    }
+    .black-font {
+      color: ${Colors.dark};
+    }
 `;
 
 const BG = styled(Image)`

@@ -125,7 +125,6 @@ const ServicesContainer = styled.div`
     z-index: 2;
     display: flex;
 
-
     ${media("<=tablet")} {
         flex-direction: column;
     }
@@ -135,6 +134,10 @@ const Service = styled.div`
     align-self: center;
     display: grid;
     padding: 2rem;
+
+    ${media("<=desktop", ">tablet")} {
+        padding: 1rem;
+    }
     ${media(">largeDesktop")} {
         /* width: 20rem; */
     }

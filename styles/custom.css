@@ -4,10 +4,16 @@
 .text-justify {
     text-align: justify;
 }
+.text-center {
+    text-align: center;
+}
 .underline {
     text-decoration: underline;
 }
 .margin-y {
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+.margin-top {
+    margin-top: 1.5rem;
 }

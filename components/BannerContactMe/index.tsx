@@ -15,7 +15,7 @@ export default function BannerContactMe() {
 
 const SectionContainer = styled.div`
     width: 100%;
-    height: 80vh;
+    height: 60vh;
     display: flex;
     flex-direction: row;
     justify-content: center;

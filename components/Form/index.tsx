@@ -57,8 +57,14 @@ const SectionContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .underline {
-        text-decoration: underline;
+    
+    ${media("<=tablet")} {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    ${media("<=desktop", ">tablet")} {
+        padding-bottom: 6rem;
+        padding-top: 6rem;  
     }
 `
 

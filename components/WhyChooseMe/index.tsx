@@ -45,8 +45,8 @@ export default function WhyChooseMe() {
                     {/* </ImageContainer> */}
                 </LeftContainer>
                 <RightContainer>
-                    <Title1 className='black-font'>
-                        What you will<br />enjoy with our service.
+                    <Title1 className='black-font margin-y'>
+                        What you will enjoy with our service.
                     </Title1>
                     <Title3 className='black-font'>
                         Patricia Vila Nova - Privat Chauffeur is:
@@ -122,6 +122,10 @@ const InnerContainer = styled.div`
         flex-direction: column;
         align-items: center;
     }
+    ${media("<=desktop", ">tablet")} {
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 const LeftContainer = styled.div` 
@@ -131,6 +135,11 @@ const LeftContainer = styled.div`
     margin-right: 1rem;
     /* background: #062942; */
     ${media("<=tablet")} {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 1rem;
+    }
+    ${media("<=desktop", ">tablet")} {
         width: 100%;
         margin-right: 0;
         margin-top: 1rem;
@@ -168,6 +177,10 @@ const RightContainer = styled.div`
     /* height: 100%; */
     margin-left: 1rem;
     ${media("<=tablet")} {
+        width: 100%;
+        margin: 0;
+    }
+    ${media("<=desktop", ">tablet")} {
         width: 100%;
         margin: 0;
     }
