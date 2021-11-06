@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-// import media from "css-in-js-media";
+import media from "css-in-js-media";
 
 import { TitleExtra, Colors } from '../../assets/variables'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -27,4 +27,7 @@ const Icon = styled(FontAwesomeIcon)`
     color: ${Colors.white};
     width: 100px;
     margin-left: 1rem;
+    ${media("<=tablet")} {
+        width: 60px;
+    }
 `

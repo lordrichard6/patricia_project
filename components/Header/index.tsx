@@ -19,7 +19,7 @@ export default function Header() {
                     Because driving<br />
                     from A to B doesn’t have to be boring
                 </Title1>
-                <Title2>
+                <Title2 className='italic text-justify'>
                     A driving service with a more friendly approach and a touch of humor.
                 </Title2>
             </SloganContainer>
@@ -39,12 +39,11 @@ const SectionContainer = styled.div`
 
 const SloganContainer = styled.div`
     width: 80vw;
-    /* height: 100%; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    
+    justify-content: center; 
     z-index: 1;
+    line-height: 05rem;
 `
 
 const Background = styled(Image)`

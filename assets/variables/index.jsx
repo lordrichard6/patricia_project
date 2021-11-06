@@ -8,12 +8,12 @@ export const Colors = {
 }
 
 export const TitleExtra = styled.h1`
-    font-size: 96px;
+    font-size: 64px;
     font-weight: 500;
     margin-bottom: 20px;
     color: ${Colors.white};
     ${media("<=tablet")} {
-        /* font-size: 36px; */
+        font-size: 48px;
         text-align: center;
         line-height: 46px;
     }
@@ -22,6 +22,9 @@ export const TitleExtra = styled.h1`
 export const Title1 = styled.h1`
     font-size: 48px;
     font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
     margin-bottom: 20px;
     color: ${Colors.white};
     ${media("<=tablet")} {
@@ -40,8 +43,11 @@ export const Title2 = styled.h2`
         text-align: center;
         line-height: 38px;
     }
+    ${media("<=phone")} {
+        font-size: 38px;
+    }
     ${media("<=desktop", ">tablet")} {
-    font-size: 20px;
+    /* font-size: 20px; */
   }
 
 `
@@ -50,8 +56,8 @@ export const Title3 = styled.h3`
     font-size: 28px;
     font-weight: 400;
     color: ${Colors.white};
-    ${media("<=tablet")} {
-
+    ${media("<=tablet", ">phone")} {
+    
     }
 `
 
@@ -59,14 +65,18 @@ export const NormalText = styled.p`
     font-size: 20px;
     font-weight: 400;
     color: ${Colors.white};
-    ${media("<=tablet")} {
-        
+
+    ${media("<=tablet", ">phone")} {
+    
     }
 `
 
 export const SmallText = styled.h1`
+    font-size: 18px;
+    font-weight: 400;
     color: ${Colors.white};
+    
     ${media("<=tablet")} {
-        
+        font-size: 14px;
     }
 `

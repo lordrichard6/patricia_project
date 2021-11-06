@@ -25,7 +25,7 @@ export default function Services() {
                 </Title1>
                 <ServicesContainer>
                     <Service>
-                        <ServiceImage
+                        <Image
                             src={service_01}
                             height={600}
                             width={400}
@@ -41,7 +41,7 @@ export default function Services() {
 
                     </Service>
                     <Service>
-                        <ServiceImage
+                        <Image
                             src={service_02}
                             height={600}
                             width={400}
@@ -57,7 +57,7 @@ export default function Services() {
 
                     </Service>
                     <Service>
-                        <ServiceImage
+                        <Image
                             src={service_03}
                             height={600}
                             width={400}
@@ -89,6 +89,7 @@ const SectionContainer = styled.div`
     background: ${Colors.primary};
     padding-bottom: 4rem;
     padding-top: 4rem;
+
     ${media("<=tablet")} {
         /* padding: 4px; */
     }
@@ -126,8 +127,7 @@ const ServicesContainer = styled.div`
 
 
     ${media("<=tablet")} {
-        grid-template-columns: 1fr;
-        grid-row-gap: 2rem;
+        flex-direction: column;
     }
 `
 
@@ -137,13 +137,6 @@ const Service = styled.div`
     padding: 2rem;
     ${media(">largeDesktop")} {
         /* width: 20rem; */
-    }
-`
-
-const ServiceImage = styled(Image)`
-    /* height: 25rem; */
-    ${media("<=tablet")} {
-    /* height: 100px; */
     }
 `
 

@@ -117,6 +117,11 @@ const InnerContainer = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    ${media("<=tablet")} {
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 const LeftContainer = styled.div` 
@@ -126,7 +131,9 @@ const LeftContainer = styled.div`
     margin-right: 1rem;
     /* background: #062942; */
     ${media("<=tablet")} {
-        /* width: 100%; */
+        width: 100%;
+        margin-right: 0;
+        margin-top: 1rem;
     }
     ${media(">largeDesktop")} {
         /* width: 50%; */
@@ -161,8 +168,8 @@ const RightContainer = styled.div`
     /* height: 100%; */
     margin-left: 1rem;
     ${media("<=tablet")} {
-        /* width: 80%; */
-        /* margin: 0; */
+        width: 100%;
+        margin: 0;
     }
 `
 
@@ -175,6 +182,9 @@ const QualitiesContainer = styled.div`
         align-content: center;
     }
     ${media("<=tablet")} {
+        padding: 0;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
         /* width: 80%; */
         /* margin: 0; */
     }

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-// import media from "css-in-js-media";
+import media from "css-in-js-media";
 
 import { TitleExtra, Colors } from '../../assets/variables'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -28,6 +28,9 @@ const SectionContainer = styled.div`
 
 const Icon = styled(FontAwesomeIcon)`
     color: ${Colors.primary};
-    width: 100px;
+    width: 80px;
     margin-left: 1rem;
+    ${media("<=tablet")} {
+        width: 60px;
+    }
 `

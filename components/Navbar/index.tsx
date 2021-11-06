@@ -27,7 +27,6 @@ export default function Navbar() {
                     />
                 </LogoContainer>
                 <ItemsContainer>
-                    {/* <li><a>Home</a></li> */}
                     <li><a href="#aboutMe"><Title2>About Me</Title2></a></li>
                     <li><a href="#services"><Title2>Services</Title2></a></li>
                     <li><a href="#"><Title2>Blog</Title2></a></li>
@@ -48,14 +47,16 @@ export default function Navbar() {
 const Container = styled.div`
     width: 100%;
     position: relative;
-    padding: 8px;
     display: flex;
     justify-content: center;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
     background-color: ${Colors.primary};
     z-index: 1;
 
-    ${media("<=tablet")} {
-        padding: 4px;
+    ${media("<=desktop")} {
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
     }
     .align {
         display: flex;
@@ -75,12 +76,6 @@ const InnerContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-
-    ${media("<=tablet")} {
-        /* padding-left: 2rem;
-        padding-right: 2rem; */
-    }
 `
 
 const LogoContainer = styled.div`
@@ -88,7 +83,7 @@ const LogoContainer = styled.div`
     justify-content: center;
 
     ${media("<=tablet")} {
-        /* width: 40px; */
+        width: 40px;
     }
 `
 
@@ -102,7 +97,7 @@ const ItemsContainer = styled.ul`
     font-weight: 200;
     z-index: 1;
 
-    ${media("<=tablet")} {
+    ${media("<=desktop")} {
         display: none;
     }
     li {

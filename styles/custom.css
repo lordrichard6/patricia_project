@@ -1,0 +1,13 @@
+.italic {
+    font-style: italic;
+}
+.text-justify {
+    text-align: justify;
+}
+.underline {
+    text-decoration: underline;
+}
+.margin-y {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

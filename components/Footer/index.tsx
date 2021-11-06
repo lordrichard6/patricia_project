@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import media from "css-in-js-media";
 
-import { Colors, Title1, Title2, Title3, NormalText } from '../../assets/variables'
+import { Colors, Title1, Title2, Title3, NormalText, SmallText } from '../../assets/variables'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faFacebookSquare, faTwitterSquare, faLinkedin, faYoutubeSquare } from "@fortawesome/free-brands-svg-icons";
 import { faPhoneSquareAlt, faEnvelopeSquare, faHome } from "@fortawesome/free-solid-svg-icons";
@@ -60,12 +60,10 @@ export default function Footer() {
                     </div>
                 </ContactContainer>
                 <Copyright>
-                    <NormalText>Copyright © 2021 Patricia Vila Nova.</NormalText>
-                    <NormalText>All rights reserved.</NormalText>
+                    <SmallText>Copyright © 2021 Patricia Vila Nova.</SmallText>
+                    <SmallText>All rights reserved.</SmallText>
                 </Copyright>
             </InnerContainer>
-
-
         </SectionContainer>
     )
 }
@@ -114,12 +112,18 @@ const Icon = styled(FontAwesomeIcon)`
     color: ${Colors.white};
     width: 40px;
     margin: 1rem;
+    ${media("<=tablet")} {
+        margin: 0.5rem;
+    }
 `
 
 const IconSmall = styled(FontAwesomeIcon)`
     color: ${Colors.white};
     width: 20px;
     margin: 0.5rem;
+    ${media("<=tablet")} {
+    
+    }
 `
 
 const ContactContainer = styled.div`
@@ -127,7 +131,7 @@ const ContactContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     ${media("<=tablet")} {
- 
+
     }
     .info-container {
         display: flex;
@@ -135,7 +139,7 @@ const ContactContainer = styled.div`
         justify-content: space-between;
         ${media("<=tablet")} {
             flex-direction: column;
-            margin: 0;
+
         }
     }
     .flex-row {
@@ -143,6 +147,9 @@ const ContactContainer = styled.div`
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        ${media("<=tablet")} {
+            justify-content: flex-start;
+        }
     }
 `
 

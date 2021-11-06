@@ -8,7 +8,7 @@ import picture from '../../assets/images/aboutMe.jpg'
 export default function AboutMe() {
     return (
         <SectionContainer id="aboutMe">
-            <Title2 className='black-font margin underline'>
+            <Title2 className='black-font margin-y underline'>
                 About Me
             </Title2>
             <InnerContainer>
@@ -45,9 +45,10 @@ export default function AboutMe() {
 
                 </LeftContainer>
                 <RightContainer>
-                        <RightImage
+                        <Image
                             src={picture}
                             objectFit='cover'
+                            layout='responsive'
                             objectPosition='center'
                             alt='about me'
                         />
@@ -71,42 +72,40 @@ const SectionContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    ${media("<=tablet")} {
-        /* flex-direction: column; */
-    }
+
     ${media(">largeDesktop")} {
         /* height: 120vh; */
     }
     .black-font {
         color: ${Colors.dark}
     }
-    .margin {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    .underline {
-        text-decoration: underline;
-    }
 `
 
 const InnerContainer = styled.div`  
     width: 80vw;
-    /* height: 80vh; */
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-content: center;
+
+    ${media("<=tablet")} {
+        flex-direction: column;
+    }
 `
 
-const LeftContainer = styled.div`  
+const LeftContainer = styled.div` 
     width: 50%;
-    /* height: 100%; */
+    height: 100%;
     padding-right: 0.5rem;
     color: ${Colors.primary};
+
     ${media("<=tablet")} {
-        /* width: 100%;
-        margin: 0; */
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 1.5rem;
     }
     ${media(">largeDesktop")} {
-        margin-right: 1rem;
+        /* margin-right: 1rem; */
     }
 `
 
@@ -114,22 +113,18 @@ const RightContainer = styled.div`
     width: 50%;
     min-height: 100%;
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
+    justify-content: flex-end;
     margin-left: 0.5rem;
-    ${media("<=tablet")} {
-        /* width: 100%;
-        margin: 0; */
-    }
-    ${media(">largeDesktop")} {
-        margin-left: 1rem;
-    }
-`
 
-const RightImage = styled(Image)`
-    margin-bottom: 20px;
     ${media("<=tablet")} {
+        width: 100%;
+        margin: 0;
+    }
+    ${media("<=desktop")} {
+        min-height: 100%;
     }
     ${media(">largeDesktop")} {
-        /* width: 100%; */
+        /* margin-left: 1rem; */
     }
 `

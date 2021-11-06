@@ -72,7 +72,7 @@ const BG = styled(Image)`
 `
 
 const FormContainer = styled.div`
-    width: 600px;
+    width: 45%;
     min-height: 80%;
     position: relative;
     display: flex;
@@ -92,23 +92,18 @@ const FormContainer = styled.div`
         padding-top: 2rem;
         padding-bottom: 2rem;
     }
-    /* h1, h3 {
-        z-index: 2;
-        color: #eee;
-        font-weight: 600;
-        margin: 0;
-        margin-bottom: 10px;
-    } */
     form {
         z-index: 2;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 70%;
         color: ${Colors.dark};
-        font-size: 24px;
-        margin-top: 2rem;;
+        margin-top: 2rem;
+
         input {
-            width: 400px;
+            width: 95%;
             height: 60px;
             background: #eee;
             border-radius: 5px;
@@ -117,17 +112,26 @@ const FormContainer = styled.div`
             margin-bottom: 5px;
             padding: 10px;
             font-size: 20px;
+
+            ${media("<=tablet")} {
+                width: 90%;
+                height: 40px;
+                font-size: 16px;
+            }
         }
         textarea {
-            width: 400px;
+            width: 95%;
             background: #eee;
             border-radius: 5px;
             border: 0;
             margin-top: 5px;
-            /* margin-bottom: 10px; */
             padding: 10px;
             min-height: 200px;
             font-size: 20px;
+            ${media("<=tablet")} {
+                width: 90%;
+                font-size: 16px;
+            }
         }
     }
 `
