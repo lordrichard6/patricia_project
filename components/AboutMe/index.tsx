@@ -94,6 +94,9 @@ const InnerContainer = styled.div`
     ${media("<=desktop", ">tablet")} {
         flex-direction: column;
     }
+    ${media(">largeDesktop")} {
+        width: 60vw;
+    }
 `
 
 const LeftContainer = styled.div` 

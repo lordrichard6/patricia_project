@@ -126,6 +126,9 @@ const InnerContainer = styled.div`
         flex-direction: column;
         align-items: center;
     }
+    ${media(">largeDesktop")} {
+        width: 60vw;
+    }
 `
 
 const LeftContainer = styled.div` 

@@ -117,6 +117,10 @@ const SectionContainer = styled.div`
       padding-bottom: 8rem;
       padding-top: 8rem;  
     }
+    ${media(">largeDesktop")} {
+        min-height: 100vh;
+    }
+
     .underline {
       text-decoration: underline;
     }
@@ -143,10 +147,15 @@ const ImagesContainer = styled.div`
   columns: 3;
   column-gap: 10px;
   text-align: center;
+
   ${media("<=tablet")} {
     /* width: 90%; */
     columns: 2;
   }
+  ${media(">largeDesktop")} {
+      width: 60vw;
+  }
+
   .grid-images {
     display: inline-block;
     margin-bottom: 10px;

@@ -66,6 +66,11 @@ const SectionContainer = styled.div`
         padding-bottom: 6rem;
         padding-top: 6rem;  
     }
+    ${media(">largeDesktop")} {
+        min-height: 100vh;
+        padding-bottom: 10rem;
+        padding-top: 10rem;
+    }
 `
 
 const Background = styled(Image)`
@@ -92,12 +97,17 @@ const FormContainer = styled.div`
     margin-bottom: 4rem;
     padding-top: 4rem;
     padding-bottom: 4rem;
+
     ${media("<=tablet")} {
         width: 90%;
         height: auto;
         padding-top: 2rem;
         padding-bottom: 2rem;
     }
+    ${media(">largeDesktop")} {
+        width: 25%;
+    }
+
     form {
         z-index: 2;
         display: flex;

@@ -29,7 +29,7 @@ export default function Navbar() {
                 <ItemsContainer>
                     <li><a href="#aboutMe"><Title2>About Me</Title2></a></li>
                     <li><a href="#services"><Title2>Services</Title2></a></li>
-                    <li><a href="#"><Title2>Blog</Title2></a></li>
+                    {/* <li><a href="#"><Title2>Blog</Title2></a></li> */}
                     <li><a href="#form"><Title2>Contact Me</Title2></a></li>
                     <div className='align'>
                         <a href="https://www.instagram.com/patriciavilanova93/"><Icon icon={faInstagram} /></a>
@@ -76,6 +76,10 @@ const InnerContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    ${media(">largeDesktop")} {
+        width: 60vw;
+    }
 `
 
 const LogoContainer = styled.div`

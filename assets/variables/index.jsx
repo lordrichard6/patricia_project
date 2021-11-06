@@ -17,6 +17,9 @@ export const TitleExtra = styled.h1`
         text-align: center;
         line-height: 46px;
     }
+    ${media("<=largeDesktop")} {
+        /* font-size: 72px; */
+    }
 `
 
 export const Title1 = styled.h1`
@@ -27,10 +30,15 @@ export const Title1 = styled.h1`
 
     margin-bottom: 20px;
     color: ${Colors.white};
+
     ${media("<=tablet")} {
         font-size: 36px;
         text-align: center;
         line-height: 46px;
+    }
+    ${media(">largeDesktop")} {
+        font-size: 64px;
+        /* letter-spacing: 1rem; */
     }
 `
 
@@ -46,9 +54,10 @@ export const Title2 = styled.h2`
     ${media("<=phone")} {
         font-size: 38px;
     }
-    ${media("<=desktop", ">tablet")} {
-    /* font-size: 20px; */
-  }
+    ${media(">largeDesktop")} {
+        /* font-size: 48px;
+        letter-spacing: 1rem; */
+    }
 
 `
 
@@ -58,6 +67,10 @@ export const Title3 = styled.h3`
     color: ${Colors.white};
     ${media("<=tablet", ">phone")} {
     
+    }
+    ${media(">largeDesktop")} {
+        /* font-size: 48px;
+        letter-spacing: 1rem; */
     }
 `
 
@@ -75,7 +88,7 @@ export const SmallText = styled.h1`
     font-size: 18px;
     font-weight: 400;
     color: ${Colors.white};
-    
+
     ${media("<=tablet")} {
         font-size: 14px;
     }

@@ -94,9 +94,9 @@ const SectionContainer = styled.div`
         /* padding: 4px; */
     }
     ${media(">largeDesktop")} {
-            /* padding-top: 6rem;
-            padding-bottom: 6rem; */
+        min-height: 100vh;
     }
+    
     .underline {
         text-decoration: underline;
     }
@@ -114,6 +114,10 @@ const InnerContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    ${media(">largeDesktop")} {
+        width: 60vw;
+    }
 `
 
 const BG = styled(Image)`

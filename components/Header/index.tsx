@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import media from "css-in-js-media";
 
 import { Title1, Title2 } from '../../assets/variables'
 import picture from '../../assets/images/header.jpg'
@@ -44,6 +45,10 @@ const SloganContainer = styled.div`
     justify-content: center; 
     z-index: 1;
     line-height: 05rem;
+
+    ${media(">largeDesktop")} {
+        width: 60vw;
+    }
 `
 
 const Background = styled(Image)`

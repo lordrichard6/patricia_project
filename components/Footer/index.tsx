@@ -94,6 +94,10 @@ const InnerContainer = styled.div`
     z-index: 1;
     /* justify-content: center; */
     /* align-items: center; */
+
+    ${media(">largeDesktop")} {
+        width: 60vw;
+    }
 `
 
 const LogoContainer = styled.div`
@@ -124,22 +128,26 @@ const IconSmall = styled(FontAwesomeIcon)`
     ${media("<=tablet")} {
     
     }
+    ${media(">largeDesktop")} {
+        width: 30px;
+    }
 `
 
 const ContactContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     ${media("<=tablet")} {
 
     }
+
     .info-container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         ${media("<=tablet")} {
             flex-direction: column;
-
         }
     }
     .flex-row {
