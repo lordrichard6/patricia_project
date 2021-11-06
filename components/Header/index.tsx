@@ -39,7 +39,7 @@ const SectionContainer = styled.div`
 
 const SloganContainer = styled.div`
     width: 80vw;
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: center;

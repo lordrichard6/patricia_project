@@ -20,7 +20,7 @@ export const TitleExtra = styled.h1`
 `
 
 export const Title1 = styled.h1`
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 500;
     margin-bottom: 20px;
     color: ${Colors.white};
@@ -32,7 +32,7 @@ export const Title1 = styled.h1`
 `
 
 export const Title2 = styled.h2`
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 400;
     color: ${Colors.white};
     ${media("<=tablet")} {
@@ -40,16 +40,19 @@ export const Title2 = styled.h2`
         text-align: center;
         line-height: 38px;
     }
+    ${media("<=desktop", ">tablet")} {
+    font-size: 20px;
+  }
+
 `
 
 export const Title3 = styled.h3`
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 400;
     color: ${Colors.white};
     ${media("<=tablet")} {
-        
-    }
 
+    }
 `
 
 export const NormalText = styled.p`
@@ -59,7 +62,6 @@ export const NormalText = styled.p`
     ${media("<=tablet")} {
         
     }
-
 `
 
 export const SmallText = styled.h1`

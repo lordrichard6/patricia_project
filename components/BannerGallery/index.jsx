@@ -15,7 +15,7 @@ export default function BannerGallery() {
 
 const SectionContainer = styled.div`
     width: 100%;
-    height: 70vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: row;
     justify-content: center;

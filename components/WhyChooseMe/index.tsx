@@ -12,14 +12,14 @@ import picture from '../../assets/images/whyChooseMe.jpg'
 export default function WhyChooseMe() {
     return (
         <SectionContainer>
-            <BackgroundContainer>
+            {/* <BackgroundContainer> */}
                 {/* <BG src={pattern}
                     layout='fill'
                     objectFit='cover'
                     objectPosition='center'
                     alt='pattern'
                 /> */}
-            </BackgroundContainer>
+            {/* </BackgroundContainer> */}
 
             <Title2 className='underline black-font'>
                 Why choose Us?
@@ -39,7 +39,7 @@ export default function WhyChooseMe() {
                     <Image
                         src={picture}
                         objectFit='cover'
-                        layout='fill'
+                        // layout='fill'
                         alt='why choose me'
                     />
                     {/* </ImageContainer> */}
@@ -74,16 +74,16 @@ export default function WhyChooseMe() {
 
 const SectionContainer = styled.div`
     position: relative;
-    height: 100vh;
+    min-height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     ${media("<=tablet")} {
-        flex-direction: column;
-        min-height: 100vh;
-        align-items: center;
+        /* flex-direction: column; */
+        /* min-height: 100vh; */
+        /* align-items: center; */
     }
     .underline {
         text-decoration: underline;
@@ -93,26 +93,26 @@ const SectionContainer = styled.div`
     }
 `
 
-const BackgroundContainer = styled.div`  
-    width: 40%;
-    height: 90vh;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    -ms-transform: translateY(-45%);
-    transform: translateY(-45%);
-    /* content: ''; */
-    background: ${Colors.primary};
-    div {
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-`
+// const BackgroundContainer = styled.div`  
+//     width: 40%;
+//     height: 90vh;
+//     position: absolute;
+//     top: 50%;
+//     left: 0;
+//     -ms-transform: translateY(-45%);
+//     transform: translateY(-45%);
+//     /* content: ''; */
+//     background: ${Colors.primary};
+//     div {
+//         width: 100%;
+//         height: 100%;
+//         position: relative;
+//     }
+// `
 
 const InnerContainer = styled.div`  
     width: 80vw;
-    height: 80vh;
+    min-height: 80%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -134,10 +134,10 @@ const LeftContainer = styled.div`
     }
 `
 
-const BG = styled(Image)`
-    z-index: 1;
-    opacity: 0.1;
-`
+// const BG = styled(Image)`
+//     z-index: 1;
+//     opacity: 0.1;
+// `
 
 const ImageContainer = styled.div`
     /* z-index: 2; */

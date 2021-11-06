@@ -25,7 +25,7 @@ const Home: NextPage = () => {
       </Head>
       <Navbar />
       <Header />
-      <Gap />
+      {/* <Gap /> */}
       <AboutMe />
       <Gap /> 
       <BannerGallery />

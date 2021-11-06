@@ -66,7 +66,7 @@ export default function AboutMe() {
 
 const SectionContainer = styled.div`  
     width: 100%;
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,14 +91,14 @@ const SectionContainer = styled.div`
 
 const InnerContainer = styled.div`  
     width: 80vw;
-    height: 80vh;
+    /* height: 80vh; */
     display: flex;
     flex-direction: row;
 `
 
 const LeftContainer = styled.div`  
     width: 50%;
-    height: 100%;
+    /* height: 100%; */
     padding-right: 0.5rem;
     color: ${Colors.primary};
     ${media("<=tablet")} {
@@ -112,7 +112,7 @@ const LeftContainer = styled.div`
 
 const RightContainer = styled.div`
     width: 50%;
-    height: 100%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;  
     margin-left: 0.5rem;
@@ -126,7 +126,7 @@ const RightContainer = styled.div`
 `
 
 const RightImage = styled(Image)`
-    /* margin-bottom: 20px; */
+    margin-bottom: 20px;
     ${media("<=tablet")} {
     }
     ${media(">largeDesktop")} {

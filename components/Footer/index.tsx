@@ -41,21 +41,21 @@ export default function Footer() {
                     <div className="info-container">
                         <div className="adress flex-row">
                         <IconSmall icon={faHome} />
-                            <Title3>
+                            <NormalText>
                                 8212 Neuhausen Am Rheinfall - Switzerland
-                            </Title3>
+                            </NormalText>
                         </div>
                         <div className="telephone flex-row">
                         <IconSmall icon={faPhoneSquareAlt} />
-                            <Title3>
+                            <NormalText>
                                 +41 76 816 91 11
-                            </Title3>
+                            </NormalText>
                         </div>
                         <div className="email flex-row">
                         <IconSmall icon={faEnvelopeSquare} />
-                            <Title3>
+                            <NormalText>
                                 patriciavilanova93@gmail.com
-                            </Title3>
+                            </NormalText>
                         </div>
                     </div>
                 </ContactContainer>
@@ -112,13 +112,13 @@ const SocialContainer = styled.div`
 
 const Icon = styled(FontAwesomeIcon)`
     color: ${Colors.white};
-    width: 60px;
+    width: 40px;
     margin: 1rem;
 `
 
 const IconSmall = styled(FontAwesomeIcon)`
     color: ${Colors.white};
-    width: 40px;
+    width: 20px;
     margin: 0.5rem;
 `
 

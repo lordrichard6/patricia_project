@@ -49,14 +49,14 @@ export default function Form() {
     )
 }
 
-const SectionContainer = styled.div` 
+const SectionContainer = styled.div`
+    width: 100%;
+    min-height: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100vh;
     .underline {
         text-decoration: underline;
     }
@@ -72,16 +72,20 @@ const BG = styled(Image)`
 `
 
 const FormContainer = styled.div`
+    width: 600px;
+    min-height: 80%;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 600px;
-    height: 80%;
     background: ${Colors.primary};
     opacity: 0.9;
     border-radius: 5px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     ${media("<=tablet")} {
         width: 90%;
         height: auto;
@@ -102,6 +106,7 @@ const FormContainer = styled.div`
         width: 70%;
         color: ${Colors.dark};
         font-size: 24px;
+        margin-top: 2rem;;
         input {
             width: 400px;
             height: 60px;
@@ -111,7 +116,7 @@ const FormContainer = styled.div`
             margin-top: 5px;
             margin-bottom: 5px;
             padding: 10px;
-            font-size: 24px;
+            font-size: 20px;
         }
         textarea {
             width: 400px;
@@ -122,7 +127,7 @@ const FormContainer = styled.div`
             /* margin-bottom: 10px; */
             padding: 10px;
             min-height: 200px;
-            font-size: 24px;
+            font-size: 20px;
         }
     }
 `
