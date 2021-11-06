@@ -11,9 +11,9 @@ export default function OtherPassions() {
             <Title2 className='black-font margin-y underline'>
                 My Passions
             </Title2>
-            <Title3 className='black-font'>
+            <TitleBreak className='black-font'>
                 Because life doesn't resume to work.
-            </Title3>
+            </TitleBreak>
             <InnerContainer>
                 <Hobby>
                     <ImageContainer>
@@ -38,7 +38,7 @@ export default function OtherPassions() {
                 </Hobby>
                 <HobbyReverse>
                     <Text>
-                        <Title3 className='black-font'>Hobby #1</Title3>
+                        <Title3 className='black-font'>Hobby #2</Title3>
                         <NormalText className='black-font'>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in. Quam tincidunt congue turpis non massa. Augue euismod sit lobortis metus, tincidunt aliquet quam ut mauris.
                             <br />
@@ -69,7 +69,7 @@ export default function OtherPassions() {
                         />
                     </ImageContainer>
                     <Text>
-                        <Title3 className='black-font'>Hobby #1</Title3>
+                        <Title3 className='black-font'>Hobby #3</Title3>
                         <NormalText className='black-font'>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in. Quam tincidunt congue turpis non massa. Augue euismod sit lobortis metus, tincidunt aliquet quam ut mauris.
                             <br />
@@ -80,7 +80,7 @@ export default function OtherPassions() {
                 </Hobby>
                 <HobbyReverse>
                     <Text>
-                        <Title3 className='black-font'>Hobby #1</Title3>
+                        <Title3 className='black-font'>Hobby #4</Title3>
                         <NormalText className='black-font'>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in. Quam tincidunt congue turpis non massa. Augue euismod sit lobortis metus, tincidunt aliquet quam ut mauris.
                             <br />
@@ -117,6 +117,15 @@ const SectionContainer = styled.div`
     }
 `
 
+const TitleBreak = styled(Title2)`
+    width: 50%;
+    padding: 1rem;
+
+    ${media("<=tablet")} {
+        width: 80%;
+    }
+`
+
 const InnerContainer = styled.div`
     width: 80vw;
     display: flex;
@@ -124,18 +133,33 @@ const InnerContainer = styled.div`
     justify-content: center;
     align-content: center;
 
-    ${media(">largeDesktop")} {
+    ${media("<=tablet")} {
+        /* width: 80vw; */
+        .width {
+            /* width: 80vw; */
+        }
+    }
+    ${media("<=desktop", ">tablet")} {
         width: 60vw;
     }
+    ${media(">largeDesktop")} {
+        width: 50vw;
+    }
 `
+
+
 
 const Hobby = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
 
+    ${media("<=tablet")} {
+        flex-direction: column;
+    }
     ${media("<=desktop", ">tablet")} {
         flex-direction: column;
+        margin-bottom: 1rem;
     }
 `
 
@@ -144,6 +168,9 @@ const HobbyReverse = styled.div`
     display: flex;
     flex-direction: row;
 
+    ${media("<=tablet")} {
+        flex-direction: column-reverse;
+    }
     ${media("<=desktop", ">tablet")} {
         flex-direction: column-reverse;
     }
@@ -152,11 +179,25 @@ const HobbyReverse = styled.div`
 const ImageContainer = styled.div`
     width: 50%;
     padding: 1rem;
+
+    ${media("<=tablet")} {
+        width: 100%;
+    }
+    ${media("<=desktop", ">tablet")} {
+        width: 100%;
+    }
 `
 
 const Text = styled.div`
     width: 50%;
     padding: 1rem;
+
+    ${media("<=tablet")} {
+        width: 100%;
+    }
+    ${media("<=desktop", ">tablet")} {
+        width: 100%;
+    }
 `
 
 
