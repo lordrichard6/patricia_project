@@ -76,7 +76,7 @@ const SectionContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: ${Colors.secondary};
+    background: ${Colors.primary};
     .center {
         align-self: center;
     }

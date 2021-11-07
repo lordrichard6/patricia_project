@@ -86,7 +86,7 @@ const SectionContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: ${Colors.secondary};
+    background: ${Colors.primary};
     padding-bottom: 4rem;
     padding-top: 4rem;
 

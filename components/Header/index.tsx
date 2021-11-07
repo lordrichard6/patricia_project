@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import media from "css-in-js-media";
 
-import { Title1, Title2 } from '../../assets/variables'
+import { Title1, Title2, Colors } from '../../assets/variables'
 import picture from '../../assets/images/header.jpg'
 import picture_mobile from '../../assets/images/header_mobile.jpg'
 
@@ -46,6 +46,7 @@ const SloganContainer = styled.div`
     justify-content: center; 
     z-index: 1;
     line-height: 05rem;
+    text-shadow: ${Colors.secondary} 1px 0 10px;
 
     ${media(">largeDesktop")} {
         width: 60vw;

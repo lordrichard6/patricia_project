@@ -105,7 +105,7 @@ const SectionContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: ${Colors.secondary};
+    background: ${Colors.primary};
     padding-bottom: 4rem;
     padding-top: 4rem;
 
