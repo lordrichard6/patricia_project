@@ -90,7 +90,7 @@ const FormContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: ${Colors.primary};
+    background: ${Colors.secondary};
     opacity: 0.9;
     border-radius: 5px;
     margin-top: 4rem;

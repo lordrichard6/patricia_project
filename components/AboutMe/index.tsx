@@ -95,7 +95,7 @@ const InnerContainer = styled.div`
         flex-direction: column;
     }
     ${media(">largeDesktop")} {
-        width: 60vw;
+        width: 50vw;
     }
 `
 

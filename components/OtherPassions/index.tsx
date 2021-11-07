@@ -135,9 +135,6 @@ const InnerContainer = styled.div`
 
     ${media("<=tablet")} {
         /* width: 80vw; */
-        .width {
-            /* width: 80vw; */
-        }
     }
     ${media("<=desktop", ">tablet")} {
         width: 60vw;

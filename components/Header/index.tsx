@@ -4,12 +4,13 @@ import media from "css-in-js-media";
 
 import { Title1, Title2 } from '../../assets/variables'
 import picture from '../../assets/images/header.jpg'
+import picture_mobile from '../../assets/images/header_mobile.jpg'
 
 export default function Header() {
     return (
         <SectionContainer>
             <Background
-                src={picture}
+                src={picture_mobile}
                 layout='fill'
                 objectFit='cover'
                 objectPosition='center'

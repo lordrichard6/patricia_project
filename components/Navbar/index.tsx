@@ -51,7 +51,7 @@ const Container = styled.div`
     justify-content: center;
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
-    background-color: ${Colors.primary};
+    background-color: ${Colors.secondary};
     z-index: 1;
 
     ${media("<=desktop")} {

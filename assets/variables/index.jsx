@@ -3,6 +3,7 @@ import media from "css-in-js-media";
 
 export const Colors = {
     primary: '#062942',
+    secondary: '#4b0082',
     dark: '#1d2124',
     white: '#eee',
 }
