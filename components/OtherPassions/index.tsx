@@ -12,7 +12,7 @@ export default function OtherPassions() {
                 My Passions
             </Title2>
             <TitleBreak className='black-font'>
-                Because life doesn't resume to work.
+                Because life doesn`t resume to work.
             </TitleBreak>
             <InnerContainer>
                 <Hobby>
