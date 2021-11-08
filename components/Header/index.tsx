@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 import Image from 'next/image'
-import media from "css-in-js-media";
 
 import { Title1, Title2, Colors } from '../../assets/variables'
-import picture from '../../assets/images/header.jpg'
+// import picture from '../../assets/images/header.jpg'
 import picture_mobile from '../../assets/images/header_mobile.jpg'
 
 export default function Header() {
@@ -25,7 +24,6 @@ export default function Header() {
                     A driving service with a more friendly approach and a touch of humor.
                 </Title2>
             </SloganContainer>
-
         </SectionContainer>
     )
 }
@@ -48,7 +46,7 @@ const SloganContainer = styled.div`
     line-height: 05rem;
     text-shadow: ${Colors.secondary} 1px 0 10px;
 
-    ${media(">largeDesktop")} {
+    @media screen and (min-width: 1920px) {
         width: 60vw;
     }
 `

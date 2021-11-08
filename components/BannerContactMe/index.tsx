@@ -1,14 +1,12 @@
 import styled from 'styled-components'
-import media from "css-in-js-media";
 
 import { TitleExtra, Colors } from '../../assets/variables'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretSquareLeft } from "@fortawesome/free-solid-svg-icons";
+import { BsArrowLeftSquareFill } from "react-icons/bs";
 
 export default function BannerContactMe() {
     return (
         <SectionContainer>
-            <TitleExtra>Contact Me</TitleExtra><a href="#form"><Icon icon={faCaretSquareLeft} /></a>
+            <TitleExtra>Contact Me</TitleExtra><a href="#form"><Icon /></a>
         </SectionContainer>
     )
 }
@@ -23,11 +21,12 @@ const SectionContainer = styled.div`
     background-color: ${Colors.dark};
 `
 
-const Icon = styled(FontAwesomeIcon)`
+const Icon = styled(BsArrowLeftSquareFill)`
     color: ${Colors.white};
-    width: 100px;
+    font-size: 4rem;
     margin-left: 1rem;
-    ${media("<=tablet")} {
-        width: 60px;
+
+    @media screen and (max-width: 1024px) {
+        font-size: 3rem;
     }
 `

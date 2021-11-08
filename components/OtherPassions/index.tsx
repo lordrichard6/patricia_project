@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
-import media from "css-in-js-media";
 
-import { Colors, Title1, Title2, Title3, NormalText } from '../../assets/variables'
+import { Colors, Title2, Title3, NormalText } from '../../assets/variables'
 import picture from '../../assets/images/aboutMe.jpg'
 
 export default function OtherPassions() {
@@ -118,10 +117,11 @@ const SectionContainer = styled.div`
 `
 
 const TitleBreak = styled(Title2)`
+    text-align: center;
     width: 50%;
     padding: 1rem;
 
-    ${media("<=tablet")} {
+    @media screen and (max-width: 1024px) {
         width: 80%;
     }
 `
@@ -133,28 +133,23 @@ const InnerContainer = styled.div`
     justify-content: center;
     align-content: center;
 
-    ${media("<=tablet")} {
-        /* width: 80vw; */
+    @media screen and (max-width: 390px) {
+        width: 80vw;
     }
-    ${media("<=desktop", ">tablet")} {
+    /* @media screen and (max-width: 1024px) {
         width: 60vw;
-    }
-    ${media(">largeDesktop")} {
+    } */
+    @media screen and (min-width: 1920px) {
         width: 50vw;
     }
 `
-
-
 
 const Hobby = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
 
-    ${media("<=tablet")} {
-        flex-direction: column;
-    }
-    ${media("<=desktop", ">tablet")} {
+    @media screen and (max-width: 1024px) {
         flex-direction: column;
         margin-bottom: 1rem;
     }
@@ -165,10 +160,7 @@ const HobbyReverse = styled.div`
     display: flex;
     flex-direction: row;
 
-    ${media("<=tablet")} {
-        flex-direction: column-reverse;
-    }
-    ${media("<=desktop", ">tablet")} {
+    @media screen and (max-width: 1024px) {
         flex-direction: column-reverse;
     }
 `
@@ -177,10 +169,7 @@ const ImageContainer = styled.div`
     width: 50%;
     padding: 1rem;
 
-    ${media("<=tablet")} {
-        width: 100%;
-    }
-    ${media("<=desktop", ">tablet")} {
+    @media screen and (max-width: 1024px) {
         width: 100%;
     }
 `
@@ -189,10 +178,7 @@ const Text = styled.div`
     width: 50%;
     padding: 1rem;
 
-    ${media("<=tablet")} {
-        width: 100%;
-    }
-    ${media("<=desktop", ">tablet")} {
+    @media screen and (max-width: 1024px) {
         width: 100%;
     }
 `

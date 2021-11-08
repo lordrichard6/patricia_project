@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
-import media from "css-in-js-media";
 
-import { Colors, Title1, Title2, Title3, NormalText } from '../../assets/variables'
+import { Colors, Title2, NormalText } from '../../assets/variables'
 import background from '../../assets/images/form.jpg'
 import pattern from '../../assets/images/pattern.png'
 
@@ -58,15 +57,11 @@ const SectionContainer = styled.div`
     justify-content: center;
     align-items: center;
     
-    ${media("<=tablet")} {
+    @media screen and (max-width: 1024px) {
         padding-top: 6rem;
         padding-bottom: 6rem;
     }
-    ${media("<=desktop", ">tablet")} {
-        padding-bottom: 6rem;
-        padding-top: 6rem;  
-    }
-    ${media(">largeDesktop")} {
+    @media screen and (min-width: 1920px) {
         min-height: 100vh;
         padding-bottom: 10rem;
         padding-top: 10rem;
@@ -98,13 +93,13 @@ const FormContainer = styled.div`
     padding-top: 4rem;
     padding-bottom: 4rem;
 
-    ${media("<=tablet")} {
+    @media screen and (max-width: 768px) {
         width: 90%;
         height: auto;
         padding-top: 2rem;
         padding-bottom: 2rem;
     }
-    ${media(">largeDesktop")} {
+    @media screen and (min-width: 1920px) {
         width: 25%;
     }
 
@@ -129,7 +124,7 @@ const FormContainer = styled.div`
             padding: 10px;
             font-size: 20px;
 
-            ${media("<=tablet")} {
+            @media screen and (max-width: 768px) {
                 width: 90%;
                 height: 40px;
                 font-size: 16px;
@@ -144,7 +139,7 @@ const FormContainer = styled.div`
             padding: 10px;
             min-height: 200px;
             font-size: 20px;
-            ${media("<=tablet")} {
+            @media screen and (max-width: 768px) {
                 width: 90%;
                 font-size: 16px;
             }

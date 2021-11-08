@@ -1,11 +1,9 @@
 import styled from 'styled-components'
 import Image from 'next/image'
-import media from "css-in-js-media";
 
-import { Colors, Title1, Title2, Title3, NormalText, SmallText } from '../../assets/variables'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faFacebookSquare, faTwitterSquare, faLinkedin, faYoutubeSquare } from "@fortawesome/free-brands-svg-icons";
-import { faPhoneSquareAlt, faEnvelopeSquare, faHome } from "@fortawesome/free-solid-svg-icons";
+import { Colors, Title2, NormalText, SmallText } from '../../assets/variables'
+import { ImInstagram, ImFacebook2, ImTwitter, ImLinkedin, ImYoutube} from "react-icons/im";
+import { BsHouseFill, BsTelephoneFill, BsMailbox2 } from "react-icons/bs";
 import logo from '../../public/logo_neon.png'
 import pattern from '../../assets/images/pattern.png'
 
@@ -29,30 +27,30 @@ export default function Footer() {
                 <SocialContainer>
                     <Title2>Social</Title2>
                     <div className="icons">
-                        <a href="https://www.instagram.com/patriciavilanova93/"><Icon icon={faInstagram} /></a>
-                        <a href="https://www.facebook.com//vilanova.patricia/"><Icon icon={faFacebookSquare} /></a>
-                        <a href="https://twitter.com/patriciavilano5/"><Icon icon={faTwitterSquare} /></a>
-                        <a href="https://www.linkedin.com/in/patr%C3%ADcia-vila-nova-b22200b5/"><Icon icon={faLinkedin} /></a>
-                        <a href="https://www.youtube.com/channel/UC9SSRSUEyefD6K3lKpsBWpA"><Icon icon={faYoutubeSquare} /></a>
+                        <a href="https://www.instagram.com/patriciavilanova93/"><ImInstagram/></a>
+                        <a href="https://www.facebook.com//vilanova.patricia/"><ImFacebook2/></a>
+                        <a href="https://twitter.com/patriciavilano5/"><ImTwitter/></a>
+                        <a href="https://www.linkedin.com/in/patr%C3%ADcia-vila-nova-b22200b5/"><ImLinkedin/></a>
+                        <a href="https://www.youtube.com/channel/UC9SSRSUEyefD6K3lKpsBWpA"><ImYoutube/></a>
                     </div>
                 </SocialContainer>
                 <ContactContainer>
                     <Title2 className='center'>Contact</Title2>
                     <div className="info-container">
                         <div className="adress flex-row">
-                        <IconSmall icon={faHome} />
+                        <BsHouseFill className="small-icons" />
                             <NormalText>
                                 8212 Neuhausen Am Rheinfall - Switzerland
                             </NormalText>
                         </div>
                         <div className="telephone flex-row">
-                        <IconSmall icon={faPhoneSquareAlt} />
+                        <BsTelephoneFill className="small-icons" />
                             <NormalText>
                                 +41 76 816 91 11
                             </NormalText>
                         </div>
                         <div className="email flex-row">
-                        <IconSmall icon={faEnvelopeSquare} />
+                        <BsMailbox2 className="small-icons" />
                             <NormalText>
                                 patriciavilanova93@gmail.com
                             </NormalText>
@@ -92,10 +90,8 @@ const InnerContainer = styled.div`
     display: flex;
     flex-direction: column;
     z-index: 1;
-    /* justify-content: center; */
-    /* align-items: center; */
 
-    ${media(">largeDesktop")} {
+    @media screen and (min-width: 1920px) {
         width: 60vw;
     }
 `
@@ -110,26 +106,16 @@ const SocialContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-`
-
-const Icon = styled(FontAwesomeIcon)`
-    color: ${Colors.white};
-    width: 40px;
-    margin: 1rem;
-    ${media("<=tablet")} {
-        margin: 0.5rem;
-    }
-`
-
-const IconSmall = styled(FontAwesomeIcon)`
-    color: ${Colors.white};
-    width: 20px;
-    margin: 0.5rem;
-    ${media("<=tablet")} {
-    
-    }
-    ${media(">largeDesktop")} {
-        width: 30px;
+    .icons {
+        color: ${Colors.white};
+        font-size: 2.5rem;
+        a { 
+            margin: 0 1rem;
+            &:hover {
+                color: ${Colors.secondary};
+                transition: 0.2s ease-in-out;
+            }
+        }
     }
 `
 
@@ -138,15 +124,12 @@ const ContactContainer = styled.div`
     flex-direction: column;
     justify-content: center;
 
-    ${media("<=tablet")} {
-
-    }
-
     .info-container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        ${media("<=tablet")} {
+
+        @media screen and (max-width: 768px) {
             flex-direction: column;
         }
     }
@@ -155,8 +138,18 @@ const ContactContainer = styled.div`
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        ${media("<=tablet")} {
+
+        @media screen and (max-width: 768px) {
             justify-content: flex-start;
+        }
+    }
+    .small-icons {
+        font-size: 1.5rem;
+        color: ${Colors.white};
+        margin: 0 0.5rem;
+
+        @media screen and (min-width: 1920px) {
+            width: 2.5rem;
         }
     }
 `
@@ -166,7 +159,4 @@ const Copyright = styled.div`
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
-    ${media("<=tablet")} {
-
-    }
 `

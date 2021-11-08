@@ -25,16 +25,16 @@ export default function Navbar({toggle}) {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="about" smooth={true}><Title3>About</Title3></NavLinks>
+              <NavLinks to="about" smooth={true} duration={600} spy={true} offset={80}><Title>About</Title></NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="services" smooth={true}><Title3>Services</Title3></NavLinks>
+              <NavLinks to="services" smooth={true} duration={600} spy={true} offset={240}><Title>Services</Title></NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="gallery" smooth={true}><Title3>Gallery</Title3></NavLinks>
+              <NavLinks to="gallery" smooth={true} duration={700} spy={true} offset={220}><Title>Gallery</Title></NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="form" smooth={true}><Title3>Contact</Title3></NavLinks>
+              <NavLinks to="form" smooth={true} duration={800} spy={true} offset={140}><Title>Contact</Title></NavLinks>
             </NavItem>
           </NavMenu>
         </NavbarContainer>
@@ -122,4 +122,10 @@ const NavLinks = styled(LinkScroll)`
   &.active {
     border-bottom: 3px solid ${Colors.secondary};
   }
+`
+const Title = styled(Title3)`
+  &.active {
+    border-bottom: 3px solid ${Colors.secondary};
+  }
+
 `;

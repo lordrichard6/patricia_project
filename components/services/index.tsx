@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import Image from 'next/image'
-import media from "css-in-js-media";
 
 import { Colors, Title1, Title2, Title3, NormalText } from '../../assets/variables'
 import service_01 from '../../assets/images/service01.jpg'
@@ -38,7 +37,6 @@ export default function Services() {
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in.
                             </NormalText>
                         </Info>
-
                     </Service>
                     <Service>
                         <Image
@@ -54,7 +52,6 @@ export default function Services() {
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in.
                             </NormalText>
                         </Info>
-
                     </Service>
                     <Service>
                         <Image
@@ -70,11 +67,9 @@ export default function Services() {
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in.
                             </NormalText>
                         </Info>
-
                     </Service>
                 </ServicesContainer>
             </InnerContainer>
-
         </SectionContainer>
     )
 }
@@ -90,13 +85,10 @@ const SectionContainer = styled.div`
     padding-bottom: 4rem;
     padding-top: 4rem;
 
-    ${media("<=tablet")} {
-        /* padding: 4px; */
-    }
-    ${media(">largeDesktop")} {
+    @media screen and (min-width: 1920px) {
         min-height: 100vh;
     }
-    
+
     .underline {
         text-decoration: underline;
     }
@@ -115,7 +107,7 @@ const InnerContainer = styled.div`
     justify-content: center;
     align-items: center;
 
-    ${media(">largeDesktop")} {
+    @media screen and (min-width: 1920px) {
         width: 60vw;
     }
 `
@@ -129,7 +121,7 @@ const ServicesContainer = styled.div`
     z-index: 2;
     display: flex;
 
-    ${media("<=tablet")} {
+    @media screen and (max-width: 810px) {
         flex-direction: column;
     }
 `
@@ -139,16 +131,12 @@ const Service = styled.div`
     display: grid;
     padding: 2rem;
 
-    ${media("<=desktop", ">tablet")} {
+    @media screen and (max-width: 1024px) {
         padding: 1rem;
-    }
-    ${media(">largeDesktop")} {
-        /* width: 20rem; */
     }
 `
 
 const Info = styled.div`
-    /* flex-grow: 1; */
     display: flex;
     flex-direction: column;
     align-items: center;

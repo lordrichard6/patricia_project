@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import Image from 'next/image'
-import media from "css-in-js-media";
 
 import { Colors, Title1, Title2, Title3, NormalText } from '../../assets/variables'
 import picture from '../../assets/images/aboutMe.jpg'
@@ -73,9 +72,6 @@ const SectionContainer = styled.div`
     justify-content: center;
     align-items: center;
 
-    ${media(">largeDesktop")} {
-        /* height: 120vh; */
-    }
     .black-font {
         color: ${Colors.dark}
     }
@@ -88,13 +84,10 @@ const InnerContainer = styled.div`
     justify-content: center;
     align-content: center;
 
-    ${media("<=tablet")} {
+    @media screen and (max-width: 1024px) {
         flex-direction: column;
     }
-    ${media("<=desktop", ">tablet")} {
-        flex-direction: column;
-    }
-    ${media(">largeDesktop")} {
+    @media screen and (min-width: 1920px) {
         width: 50vw;
     }
 `
@@ -105,18 +98,10 @@ const LeftContainer = styled.div`
     padding-right: 0.5rem;
     color: ${Colors.primary};
 
-    ${media("<=tablet")} {
+    @media screen and (max-width: 1024px) {
         width: 100%;
         padding-right: 0;
         margin-bottom: 1.5rem;
-    }
-    ${media("<=desktop", ">tablet")} {
-        width: 100%;
-        padding-right: 0;
-        margin-bottom: 1.5rem;
-    }
-    ${media(">largeDesktop")} {
-        /* margin-right: 1rem; */
     }
 `
 
@@ -128,18 +113,8 @@ const RightContainer = styled.div`
     justify-content: flex-end;
     margin-left: 0.5rem;
 
-    ${media("<=tablet")} {
+    @media screen and (max-width: 1024px) {
         width: 100%;
         margin: 0;
-    }
-    ${media("<=desktop", ">tablet")} {
-        width: 100%;
-        margin: 0;
-    }
-    ${media("<=desktop")} {
-        /* min-height: 100%; */
-    }
-    ${media(">largeDesktop")} {
-        /* margin-left: 1rem; */
     }
 `

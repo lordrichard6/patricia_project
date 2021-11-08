@@ -1,13 +1,10 @@
 import styled from "styled-components";
 import Image from "next/image";
-import media from "css-in-js-media";
 
 import {
   Colors,
   Title1,
-  Title2,
-  Title3,
-  NormalText,
+  Title2
 } from "../../assets/variables";
 import pattern from "../../assets/images/pattern.png";
 import picture_01 from "../../assets/images/gal01.jpg";
@@ -109,15 +106,11 @@ const SectionContainer = styled.div`
     padding-bottom: 4rem;
     padding-top: 4rem;
 
-    ${media("<=tablet")} {
+    @media screen and (max-width: 1024px) {
       padding-bottom: 8rem;
       padding-top: 8rem;
     }
-    ${media("<=desktop", ">tablet")} {
-      padding-bottom: 8rem;
-      padding-top: 8rem;  
-    }
-    ${media(">largeDesktop")} {
+    @media screen and (min-width: 1920px) {
         min-height: 100vh;
     }
 
@@ -148,11 +141,10 @@ const ImagesContainer = styled.div`
   column-gap: 10px;
   text-align: center;
 
-  ${media("<=tablet")} {
-    /* width: 90%; */
+  @media screen and (max-width: 768px) {
     columns: 2;
   }
-  ${media(">largeDesktop")} {
+  @media screen and (min-width: 1920px) {
       width: 60vw;
   }
 
