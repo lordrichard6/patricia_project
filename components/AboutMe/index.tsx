@@ -7,7 +7,7 @@ import picture from '../../assets/images/aboutMe.jpg'
 
 export default function AboutMe() {
     return (
-        <SectionContainer id="aboutMe">
+        <SectionContainer id="about">
             <Title2 className='black-font margin-y underline'>
                 About Me
             </Title2>

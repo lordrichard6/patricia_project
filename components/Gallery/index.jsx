@@ -19,7 +19,7 @@ import picture_06 from "../../assets/images/gal06.jpg";
 
 export default function Gallery() {
   return (
-    <SectionContainer>
+    <SectionContainer id='gallery'>
       <BG
         src={pattern}
         layout="fill"
@@ -27,7 +27,7 @@ export default function Gallery() {
         objectPosition="center"
       />
       <Title>
-        <Title2 className="underline">Gallery</Title2>
+        <Title2 className="underline"></Title2>
         <Title1>This is me without(and with) filters.</Title1>
       </Title>
 
