@@ -13,7 +13,7 @@ export default function Header() {
     }
 
     return (
-        <SectionContainer>
+        <SectionContainer id='header'>
             <Background
                 src={data.picture}
                 layout='fill'
