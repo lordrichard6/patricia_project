@@ -20,7 +20,7 @@ export default function Services() {
                     Services
                 </Title2>
                 <Title1 className='margin-bottom'>
-                    “Better than one is 3 or more”
+                    “Better than one is three or more”
                 </Title1>
                 <ServicesContainer>
                     <Service>
