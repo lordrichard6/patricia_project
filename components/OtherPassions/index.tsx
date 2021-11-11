@@ -7,99 +7,66 @@ import hobby_02 from '../../assets/images/hobby_02.jpg'
 import hobby_03 from '../../assets/images/hobby_03.jpg'
 
 export default function OtherPassions() {
+    let data = [
+        {
+            id: 1,
+            imgSrc: require('../../assets/images/hobby_01.jpg'),
+            alt: 'hobby',
+            classname: 'black-font',
+            hobbyTitle: 'Creative writing',
+            hobbyText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in. Quam tincidunt congue turpis non massa. Augue euismod sit lobortis metus, tincidunt aliquet quam ut mauris.',
+            container: 'hobby',
+        },
+        {
+            id: 2,
+            imgSrc: require('../../assets/images/hobby_02.jpg'),
+            alt: 'hobby',
+            classname: 'black-font',
+            hobbyTitle: 'Events organization',
+            hobbyText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in. Quam tincidunt congue turpis non massa. Augue euismod sit lobortis metus, tincidunt aliquet quam ut mauris.',
+            container: 'hobby-reverse',
+        },
+        {
+            id: 3,
+            imgSrc: require('../../assets/images/hobby_03.jpg'),
+            alt: 'hobby',
+            classname: 'black-font',
+            hobbyTitle: 'Helping animals cause',
+            hobbyText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in. Quam tincidunt congue turpis non massa. Augue euismod sit lobortis metus, tincidunt aliquet quam ut mauris.',
+            container: 'hobby',
+        }
+    ]
     return (
         <SectionContainer>
             <Title2 className='black-font margin-y underline'>
                 My Passions
             </Title2>
             <TitleBreak className='black-font'>
-            “Hearts beats better and faster we make things we love”
+                “Hearts beats better and faster we make things we love”
             </TitleBreak>
             <InnerContainer>
-                <Hobby>
-                    <ImageContainer>
-                        <Image src={hobby_01}
-                            objectFit='cover'
-                            layout='responsive'
-                            objectPosition='center'
-                            height={250}
-                            width={400}
-                            alt='hobby'
-                        />
-                    </ImageContainer>
-                    <Text>
-                        <Title3 className='black-font'>Creative writing</Title3>
-                        <NormalText className='black-font'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in. Quam tincidunt congue turpis non massa. Augue euismod sit lobortis metus, tincidunt aliquet quam ut mauris.
-                            <br />
-                            <br />
-                            Maecenas nisl, donec mollis mauris. Accumsan placerat adipiscing mauris enim interdum hac pretium. Sit eu leo risus odio non eu dolor. Iaculis gravida viverra vulputate sed elit. Egestas sagittis amet eu malesuada. Massa nibh massa purus odio pharetra, tellus accumsan tincidunt.
-                        </NormalText>
-                    </Text>
-                </Hobby>
-                <HobbyReverse>
-                    <Text>
-                        <Title3 className='black-font'>Events organization</Title3>
-                        <NormalText className='black-font'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in. Quam tincidunt congue turpis non massa. Augue euismod sit lobortis metus, tincidunt aliquet quam ut mauris.
-                            <br />
-                            <br />
-                            Maecenas nisl, donec mollis mauris. Accumsan placerat adipiscing mauris enim interdum hac pretium. Sit eu leo risus odio non eu dolor. Iaculis gravida viverra vulputate sed elit. Egestas sagittis amet eu malesuada. Massa nibh massa purus odio pharetra, tellus accumsan tincidunt.
-                        </NormalText>
-                    </Text>
-                    <ImageContainer>
-                        <Image src={hobby_02}
-                            objectFit='cover'
-                            layout='responsive'
-                            objectPosition='center'
-                            height={250}
-                            width={400}
-                            alt='hobby'
-                        />
-                    </ImageContainer>
-                </HobbyReverse>
-                <Hobby>
-                    <ImageContainer>
-                        <Image src={hobby_03}
-                            objectFit='cover'
-                            layout='responsive'
-                            objectPosition='center'
-                            height={250}
-                            width={400}
-                            alt='hobby'
-                        />
-                    </ImageContainer>
-                    <Text>
-                        <Title3 className='black-font'>Helping animals cause</Title3>
-                        <NormalText className='black-font'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in. Quam tincidunt congue turpis non massa. Augue euismod sit lobortis metus, tincidunt aliquet quam ut mauris.
-                            <br />
-                            <br />
-                            Maecenas nisl, donec mollis mauris. Accumsan placerat adipiscing mauris enim interdum hac pretium. Sit eu leo risus odio non eu dolor. Iaculis gravida viverra vulputate sed elit. Egestas sagittis amet eu malesuada. Massa nibh massa purus odio pharetra, tellus accumsan tincidunt.
-                        </NormalText>
-                    </Text>
-                </Hobby>
-                {/* <HobbyReverse>
-                    <Text>
-                        <Title3 className='black-font'>Hobby #4</Title3>
-                        <NormalText className='black-font'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in. Quam tincidunt congue turpis non massa. Augue euismod sit lobortis metus, tincidunt aliquet quam ut mauris.
-                            <br />
-                            <br />
-                            Maecenas nisl, donec mollis mauris. Accumsan placerat adipiscing mauris enim interdum hac pretium. Sit eu leo risus odio non eu dolor. Iaculis gravida viverra vulputate sed elit. Egestas sagittis amet eu malesuada. Massa nibh massa purus odio pharetra, tellus accumsan tincidunt.
-                        </NormalText>
-                    </Text>
-                    <ImageContainer>
-                        <Image src={picture}
-                            objectFit='cover'
-                            layout='responsive'
-                            objectPosition='center'
-                            height={250}
-                            width={400}
-                            alt='hobby'
-                        />
-                    </ImageContainer>
-                </HobbyReverse> */}
+                {data.map((item, index) => {
+                    return (
+                        <div className={item.container} key={index}>
+                            <ImageContainer>
+                                <Image src={item.imgSrc}
+                                    objectFit='cover'
+                                    layout='responsive'
+                                    objectPosition='center'
+                                    height={250}
+                                    width={400}
+                                    alt={item.alt}
+                                />
+                            </ImageContainer>
+                            <Text>
+                                <Title3 className={item.classname}>{item.hobbyTitle}</Title3>
+                                <NormalText className={item.classname}>
+                                    {item.hobbyText}
+                                </NormalText>
+                            </Text>
+                        </div>
+                    )
+                })}
             </InnerContainer>
         </SectionContainer>
     )
@@ -115,6 +82,25 @@ const SectionContainer = styled.div`
 
     .black-font {
         color: ${Colors.dark}; 
+    }
+    .hobby {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        
+        @media screen and (max-width: 1024px) {
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }   
+    }
+    .hobby-reverse {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+
+        @media screen and (max-width: 1024px) {
+            flex-direction: column;
+        }
     }
 `
 
@@ -146,16 +132,6 @@ const InnerContainer = styled.div`
     }
 `
 
-const Hobby = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-
-    @media screen and (max-width: 1024px) {
-        flex-direction: column;
-        margin-bottom: 1rem;
-    }
-`
 
 const HobbyReverse = styled.div`
     width: 100%;
@@ -163,7 +139,7 @@ const HobbyReverse = styled.div`
     flex-direction: row;
 
     @media screen and (max-width: 1024px) {
-        flex-direction: column-reverse;
+        
     }
 `
 

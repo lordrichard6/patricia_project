@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import { Link as LinkScroll } from "react-scroll";
 
 import { TitleExtra, Colors } from '../../assets/variables'
 import { BsArrowLeftSquareFill } from "react-icons/bs";
@@ -9,12 +10,15 @@ export default function BannerContactMe() {
     return (
         <SectionContainer>
             <BG
-        src={background}
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-      />
-            <TitleExtra>Contact Me</TitleExtra><a href="#form"><Icon /></a>
+                src={background}
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center"
+            />
+            <TitleExtra className="font-color">Contact</TitleExtra>
+            <GoTo to="form" smooth={true} duration={600}>
+                <Icon />
+            </GoTo>
         </SectionContainer>
     )
 }
@@ -28,15 +32,17 @@ position: relative;
     justify-content: center;
     align-items: center;
     background-color: ${Colors.dark};
-    a {
-        z-index: 10;
-    }
 `
 
 const BG = styled(Image)`
   z-index: 0;
   /* opacity: 0.1; */
 `;
+
+const GoTo = styled(LinkScroll)`
+  z-index: 10;
+  cursor: pointer;
+`
 
 const Icon = styled(BsArrowLeftSquareFill)`
     color: ${Colors.white};

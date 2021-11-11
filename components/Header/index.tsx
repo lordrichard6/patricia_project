@@ -2,25 +2,32 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 import { Title1, Title2, Colors } from '../../assets/variables'
-import header from '../../assets/images/header.jpg'
-// import picture_mobile from '../../assets/images/header_mobile.jpg'
+
 
 export default function Header() {
+    const data = {
+        picture: require('../../assets/images/header.jpg'),
+        alt:'patricia vila nova driving service',
+        title: 'We drive & You smile',
+        quote: 'We provide more than transport, we create a moment dedicated to you.'
+    }
+
     return (
         <SectionContainer>
             <Background
-                src={header}
+                src={data.picture}
                 layout='fill'
                 objectFit='cover'
                 objectPosition='center'
-                alt='particia vila nova driving service'
+                alt={data.picture}
+                priority
             />
             <SloganContainer>
                 <Title1 className='dark-font'>
-                    We drive & You smile
+                    {data.title}
                 </Title1>
                 <Title2 className='italic text-justify'>
-                    We provide more than transport, we create a moment dedicated to you.
+                    {data.quote}
                 </Title2>
             </SloganContainer>
         </SectionContainer>

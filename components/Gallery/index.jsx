@@ -75,7 +75,7 @@ export default function Gallery() {
         objectPosition="center"
       />
       <Title>
-        <Title2 className="underline"></Title2>
+        <Title2 className="underline">Gallery</Title2>
         <Title1>This is me without (and with) filters.</Title1>
       </Title>
       <div onClick={() => setModel(false)} className={model ? 'model open' : 'model'}>

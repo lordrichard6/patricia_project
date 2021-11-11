@@ -5,6 +5,19 @@ import { Colors, Title1, Title2, Title3, NormalText } from '../../assets/variabl
 import picture from '../../assets/images/aboutMe.jpg'
 
 export default function AboutMe() {
+    const data = {
+            title: 'Energy and dedication',
+            text: `Each trip represents for us an opportunity to surprise you.
+                    Good vibes, energy, sense of humour, friendliness and politeness 
+                    are among the many qualities that will travel with us.
+            `,
+            picture: picture,
+            alt: 'patricia',
+            quote: 'Driving besides a passion, is a means to meet new people and share moments'
+    }
+        
+    
+
     return (
         <SectionContainer id="about">
             <Title2 className='black-font margin-y underline'>
@@ -13,22 +26,10 @@ export default function AboutMe() {
             <InnerContainer>
                 <LeftContainer>
                     <Title1 className='black-font'>
-                        Energy and dedication
+                        {data.title}
                     </Title1>
                     <NormalText className='black-font'>
-                    Each trip represents for us an opportunity to surprise you.
-                        <br />
-                        <br />
-                        Good vibes, energy, sense of humour, friendliness and politeness are among the many qualities that will travel with us.
-                        <br />
-                        {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in. Quam tincidunt congue turpis non massa. Augue euismod sit lobortis metus, tincidunt aliquet quam ut mauris.
-                        <br />
-                        <br />
-                        Maecenas nisl, donec mollis mauris. Accumsan placerat adipiscing mauris enim interdum hac pretium. Sit eu leo risus odio non eu dolor. Iaculis gravida viverra vulputate sed elit. Egestas sagittis amet eu malesuada. Massa nibh massa purus odio pharetra, tellus accumsan tincidunt.
-                        <br />
-                        <br />
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in. */}
+                        {data.text}
                     </NormalText>
                     {/* <LeftImage>
                         <Image
@@ -43,14 +44,14 @@ export default function AboutMe() {
                 </LeftContainer>
                 <RightContainer>
                         <Image
-                            src={picture}
+                            src={data.picture}
                             objectFit='cover'
                             layout='responsive'
                             objectPosition='center'
-                            alt='about me'
+                            alt={data.alt}
                         />
                     <Title3 className='black-font margin-top'>
-                        Driving besides a passion, is a means to meet new people and share moments
+                       {data.quote}
                     </Title3>
                     <NormalText className='black-font'>
                         Patricia Vila Nova

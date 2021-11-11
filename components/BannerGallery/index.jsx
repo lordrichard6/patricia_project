@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import { Link as LinkScroll } from "react-scroll";
 
 import { TitleExtra, Colors } from "../../assets/variables";
 import { BsArrowLeftSquareFill } from "react-icons/bs";
@@ -15,9 +16,9 @@ export default function BannerGallery() {
         objectPosition="center"
       />
       <TitleExtra className="font-color">Gallery</TitleExtra>
-      <a href="#gallery">
+      <GoTo to="gallery" smooth={true} duration={600}>
         <Icon />
-      </a>
+      </GoTo>
     </SectionContainer>
   );
 }
@@ -32,13 +33,15 @@ const SectionContainer = styled.div`
   align-items: center;
   /* background-color: #68a7f0; */
 
-  a {
-    z-index: 10;
-  }
   .font-color {
     color: ${Colors.white};
   }
 `;
+
+const GoTo = styled(LinkScroll)`
+  z-index: 10;
+  cursor: pointer;
+`
 
 const BG = styled(Image)`
   z-index: 0;
