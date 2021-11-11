@@ -9,7 +9,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Patricia Vila Nova</title>
         <meta name="Patricia Vila Nova" content="Patricia Vila Nova" />
-        <link rel="icon" href="/logo_neon.png" />
+        <link rel="icon" href="/logo.png" />
       </Head>
       <Homepage />
     </>

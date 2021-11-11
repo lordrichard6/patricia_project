@@ -2,26 +2,25 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 import { Title1, Title2, Colors } from '../../assets/variables'
-// import picture from '../../assets/images/header.jpg'
-import picture_mobile from '../../assets/images/header_mobile.jpg'
+import header from '../../assets/images/header.jpg'
+// import picture_mobile from '../../assets/images/header_mobile.jpg'
 
 export default function Header() {
     return (
         <SectionContainer>
             <Background
-                src={picture_mobile}
+                src={header}
                 layout='fill'
                 objectFit='cover'
                 objectPosition='center'
-                alt='header'
+                alt='particia vila nova driving service'
             />
             <SloganContainer>
-                <Title1>
-                    Because driving<br />
-                    from A to B doesn’t have to be boring
+                <Title1 className='dark-font'>
+                    We drive & You smile
                 </Title1>
                 <Title2 className='italic text-justify'>
-                    A driving service with a more friendly approach and a touch of humor.
+                    We provide more than transport, we create a moment dedicated to you.
                 </Title2>
             </SloganContainer>
         </SectionContainer>
@@ -44,7 +43,7 @@ const SloganContainer = styled.div`
     justify-content: center; 
     z-index: 1;
     line-height: 05rem;
-    text-shadow: ${Colors.secondary} 1px 0 10px;
+    text-shadow: ${Colors.dark} 1px 0 10px;
 
     @media screen and (min-width: 1920px) {
         width: 60vw;

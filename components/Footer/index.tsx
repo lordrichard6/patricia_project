@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Colors, Title2, NormalText, SmallText } from '../../assets/variables'
 import { ImInstagram, ImFacebook2, ImTwitter, ImLinkedin, ImYoutube} from "react-icons/im";
 import { BsHouseFill, BsTelephoneFill, BsMailbox2 } from "react-icons/bs";
-import logo from '../../public/logo_neon.png'
+import logo from '../../public/logo.png'
 import pattern from '../../assets/images/pattern.png'
 
 export default function Footer() {

@@ -8,10 +8,13 @@ export const Colors = {
 }
 
 export const TitleExtra = styled.h1`
+    z-index: 10;
     font-size: 64px;
     font-weight: 500;
     margin-bottom: 20px;
     color: ${Colors.white};
+    text-shadow: ${Colors.dark} 1px 0 10px;
+    
     @media screen and (max-width: 768px) {
         font-size: 48px;
         text-align: center;

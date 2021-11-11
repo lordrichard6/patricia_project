@@ -20,7 +20,7 @@ export default function Services() {
                     Services
                 </Title2>
                 <Title1 className='margin-bottom'>
-                    Every bit of Joy of Driving
+                    “Better than one is 3 or more”
                 </Title1>
                 <ServicesContainer>
                     <Service>
@@ -32,9 +32,9 @@ export default function Services() {
                             alt='service 1'
                         />
                         <Info>
-                            <Title3 className='margin-top'>service #1</Title3>
+                            <Title3 className='margin-top'>Transport from A-B</Title3>
                             <NormalText>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in.
+                                Transport from A-B – From Earth to heaven – Well, we can not take to heaven but it similar. Just let us know where we pick you up and where is your destination.
                             </NormalText>
                         </Info>
                     </Service>
@@ -47,9 +47,9 @@ export default function Services() {
                             alt='service 1'
                         />
                         <Info>
-                            <Title3 className='margin-top'>service #2</Title3>
+                            <Title3 className='margin-top'>Driving around</Title3>
                             <NormalText>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in.
+                                Do you need our service for more than 3 hours or for more than 1 day? Do you need to go shopping or travel in Switzerland? Don’t worry, we can help you.
                             </NormalText>
                         </Info>
                     </Service>
@@ -62,9 +62,9 @@ export default function Services() {
                             alt='service 1'
                         />
                         <Info>
-                            <Title3 className='margin-top'>service #3</Title3>
+                            <Title3 className='margin-top'>Only the driver</Title3>
                             <NormalText>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in.
+                                Do you have a car but for some reason you can’t drive or your prefer use your car do the transport? Please, give us the key and we drive your car for you. If you need to take your car to control, or mechanic, we do it for you. Everything for you like Bryan Adams sing.
                             </NormalText>
                         </Info>
                     </Service>
@@ -120,6 +120,8 @@ const BG = styled(Image)`
 const ServicesContainer = styled.div`
     z-index: 2;
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 
     @media screen and (max-width: 810px) {
         flex-direction: column;
@@ -127,11 +129,13 @@ const ServicesContainer = styled.div`
 `
 
 const Service = styled.div`
+    width: 30%;
     align-self: center;
     display: grid;
     padding: 2rem;
 
     @media screen and (max-width: 1024px) {
+        width: 100%;
         padding: 1rem;
     }
 `

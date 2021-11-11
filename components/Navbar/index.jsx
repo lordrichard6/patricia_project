@@ -119,6 +119,11 @@ const NavLinks = styled(LinkScroll)`
   height: 100%;
   cursor: pointer;
 
+  &:hover {
+    /* transition: 0.2s ease-in-out; */
+    border-bottom: 3px solid ${Colors.secondary};
+  }
+
   &.active {
     border-bottom: 3px solid ${Colors.secondary};
   }

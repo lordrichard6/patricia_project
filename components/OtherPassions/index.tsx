@@ -2,7 +2,9 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 import { Colors, Title2, Title3, NormalText } from '../../assets/variables'
-import picture from '../../assets/images/aboutMe.jpg'
+import hobby_01 from '../../assets/images/hobby_01.jpg'
+import hobby_02 from '../../assets/images/hobby_02.jpg'
+import hobby_03 from '../../assets/images/hobby_03.jpg'
 
 export default function OtherPassions() {
     return (
@@ -11,12 +13,12 @@ export default function OtherPassions() {
                 My Passions
             </Title2>
             <TitleBreak className='black-font'>
-                Because life doesn`t resume to work.
+            “Hearts beats better and faster we make things we love”
             </TitleBreak>
             <InnerContainer>
                 <Hobby>
                     <ImageContainer>
-                        <Image src={picture}
+                        <Image src={hobby_01}
                             objectFit='cover'
                             layout='responsive'
                             objectPosition='center'
@@ -26,7 +28,7 @@ export default function OtherPassions() {
                         />
                     </ImageContainer>
                     <Text>
-                        <Title3 className='black-font'>Hobby #1</Title3>
+                        <Title3 className='black-font'>Creative writing</Title3>
                         <NormalText className='black-font'>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in. Quam tincidunt congue turpis non massa. Augue euismod sit lobortis metus, tincidunt aliquet quam ut mauris.
                             <br />
@@ -37,7 +39,7 @@ export default function OtherPassions() {
                 </Hobby>
                 <HobbyReverse>
                     <Text>
-                        <Title3 className='black-font'>Hobby #2</Title3>
+                        <Title3 className='black-font'>Events organization</Title3>
                         <NormalText className='black-font'>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in. Quam tincidunt congue turpis non massa. Augue euismod sit lobortis metus, tincidunt aliquet quam ut mauris.
                             <br />
@@ -46,7 +48,7 @@ export default function OtherPassions() {
                         </NormalText>
                     </Text>
                     <ImageContainer>
-                        <Image src={picture}
+                        <Image src={hobby_02}
                             objectFit='cover'
                             layout='responsive'
                             objectPosition='center'
@@ -58,7 +60,7 @@ export default function OtherPassions() {
                 </HobbyReverse>
                 <Hobby>
                     <ImageContainer>
-                        <Image src={picture}
+                        <Image src={hobby_03}
                             objectFit='cover'
                             layout='responsive'
                             objectPosition='center'
@@ -68,7 +70,7 @@ export default function OtherPassions() {
                         />
                     </ImageContainer>
                     <Text>
-                        <Title3 className='black-font'>Hobby #3</Title3>
+                        <Title3 className='black-font'>Helping animals cause</Title3>
                         <NormalText className='black-font'>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in. Quam tincidunt congue turpis non massa. Augue euismod sit lobortis metus, tincidunt aliquet quam ut mauris.
                             <br />
@@ -77,7 +79,7 @@ export default function OtherPassions() {
                         </NormalText>
                     </Text>
                 </Hobby>
-                <HobbyReverse>
+                {/* <HobbyReverse>
                     <Text>
                         <Title3 className='black-font'>Hobby #4</Title3>
                         <NormalText className='black-font'>
@@ -97,7 +99,7 @@ export default function OtherPassions() {
                             alt='hobby'
                         />
                     </ImageContainer>
-                </HobbyReverse>
+                </HobbyReverse> */}
             </InnerContainer>
         </SectionContainer>
     )

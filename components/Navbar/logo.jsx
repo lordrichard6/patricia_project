@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import logo from "../../public/logo_neon.png";
+import logo from "../../public/logo.png";
 import { Title3 } from '../../assets/variables'
 
 export default function Logo(props) {
@@ -17,7 +17,7 @@ export default function Logo(props) {
               objectPosition='center'
           />
           </LogoImg>
-          <Title3>Patricia Vila Nova</Title3>
+          <Title3>Carapau Service</Title3>
       </LogoWrapper>
   )
 }
