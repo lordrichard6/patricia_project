@@ -50,7 +50,7 @@ export default function AboutMe() {
                             alt='about me'
                         />
                     <Title3 className='black-font margin-top'>
-                        "Driving besides a passion, is a means to meet new people and share moments"
+                        Driving besides a passion, is a means to meet new people and share moments
                     </Title3>
                     <NormalText className='black-font'>
                         Patricia Vila Nova
