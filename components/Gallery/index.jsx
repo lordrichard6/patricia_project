@@ -108,7 +108,7 @@ export default function Gallery() {
 
 const SectionContainer = styled.section`
   position: relative;
-  height: 140vh;
+  min-height: 140vh;
   width: 100%;
   display: flex;
   flex-direction: column;
