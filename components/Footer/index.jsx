@@ -28,20 +28,20 @@ export default function Footer() {
           <FooterSection>
             <Title2 className="center">Contact</Title2>
             <div className="info-container">
-              <div className="adress flex-row">
+              <adress className="adress flex-row">
                 <BsHouseFill className="small-icons" />
                 <NormalText>
                   8212 Neuhausen Am Rheinfall - Switzerland
                 </NormalText>
-              </div>
-              <div className="telephone flex-row">
+              </adress>
+              <adress className="telephone flex-row">
                 <BsTelephoneFill className="small-icons" />
                 <NormalText>+41 76 816 91 11</NormalText>
-              </div>
-              <div className="email flex-row">
+              </adress>
+              <adress className="email flex-row">
                 <BsMailbox2 className="small-icons" />
                 <NormalText>patriciavilanova93@gmail.com</NormalText>
-              </div>
+              </adress>
             </div>
           </FooterSection>
           <FooterSection>
@@ -102,7 +102,7 @@ export default function Footer() {
   );
 }
 
-const SectionContainer = styled.div`
+const SectionContainer = styled.footer`
   position: relative;
   width: 100%;
   padding-top: 2rem;

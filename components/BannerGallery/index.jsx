@@ -23,7 +23,7 @@ export default function BannerGallery() {
   );
 }
 
-const SectionContainer = styled.div`
+const SectionContainer = styled.section`
   position: relative;
   width: 100%;
   min-height: 60vh;
@@ -41,7 +41,7 @@ const SectionContainer = styled.div`
 const GoTo = styled(LinkScroll)`
   z-index: 10;
   cursor: pointer;
-`
+`;
 
 const BG = styled(Image)`
   z-index: 0;

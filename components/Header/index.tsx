@@ -7,7 +7,7 @@ import { Title1, Title2, Colors } from '../../assets/variables'
 export default function Header() {
     const data = {
         picture: require('../../assets/images/header.jpg'),
-        alt:'patricia vila nova driving service',
+        alt: 'patricia vila nova driving service',
         title: 'We drive & You smile',
         quote: 'We provide more than transport, we create a moment dedicated to you.'
     }
@@ -34,7 +34,7 @@ export default function Header() {
     )
 }
 
-const SectionContainer = styled.div`  
+const SectionContainer = styled.header`  
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -43,7 +43,7 @@ const SectionContainer = styled.div`
     align-items: center;
 `
 
-const SloganContainer = styled.div`
+const SloganContainer = styled.hgroup`
     width: 80vw;
     display: flex;
     flex-direction: column;

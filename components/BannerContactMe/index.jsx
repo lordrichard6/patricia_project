@@ -23,7 +23,7 @@ export default function BannerContactMe() {
     )
 }
 
-const SectionContainer = styled.div`
+const SectionContainer = styled.section`
 position: relative;
     width: 100%;
     height: 60vh;
@@ -36,7 +36,6 @@ position: relative;
 
 const BG = styled(Image)`
   z-index: 0;
-  /* opacity: 0.1; */
 `;
 
 const GoTo = styled(LinkScroll)`

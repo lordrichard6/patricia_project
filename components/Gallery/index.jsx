@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
@@ -13,8 +13,8 @@ import picture_05 from "../../assets/images/gal05.jpg";
 import picture_06 from "../../assets/images/gal06.jpg";
 
 export default function Gallery() {
-  const [model, setModel] = useState(false)
-  const [tempImgSrc, setTempImgSrc] = useState('')
+  const [model, setModel] = useState(false);
+  const [tempImgSrc, setTempImgSrc] = useState("");
 
   let data = [
     {
@@ -63,11 +63,11 @@ export default function Gallery() {
 
   const getImg = (imgSrc) => {
     setTempImgSrc(imgSrc);
-    setModel(true)
-  }
+    setModel(true);
+  };
 
   return (
-    <SectionContainer id="gallery">
+    <SectionContainer id="gallery" className="padding-y">
       <BG
         src={pattern}
         layout="fill"
@@ -75,12 +75,15 @@ export default function Gallery() {
         objectPosition="center"
       />
       <Title>
-        <Title2 className="underline">Gallery</Title2>
+        <Title2 className="underline margin-y">Gallery</Title2>
         <Title1>This is me without (and with) filters.</Title1>
       </Title>
-      <div onClick={() => setModel(false)} className={model ? 'model open' : 'model'}>
+      <div
+        onClick={() => setModel(false)}
+        className={model ? "model open" : "model"}
+      >
         <Image src={tempImgSrc} />
-        <FaWindowClose onClick={() => setModel(false)}/>
+        <FaWindowClose onClick={() => setModel(false)} />
       </div>
       <ImagesContainer>
         {data.map((item, index) => {
@@ -103,32 +106,24 @@ export default function Gallery() {
   );
 }
 
-const SectionContainer = styled.div`
+const SectionContainer = styled.section`
   position: relative;
-  min-height: 100%;
+  height: 140vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background: ${Colors.primary};
-  padding-bottom: 4rem;
-  padding-top: 4rem;
 
   @media screen and (max-width: 1024px) {
     padding-bottom: 8rem;
     padding-top: 8rem;
   }
   @media screen and (min-width: 1920px) {
-    min-height: 100vh;
+    height: 120vh;
   }
 
-  .underline {
-    text-decoration: underline;
-  }
-  .black-font {
-    color: ${Colors.dark};
-  }
   .model {
     width: 100%;
     height: 100vh;
@@ -139,7 +134,8 @@ const SectionContainer = styled.div`
     justify-content: center;
     align-items: center;
     background: ${Colors.dark};
-    transition: opacity .4s ease, visibility .4s ease, transform .5s ease-in-out;
+    transition: opacity 0.4s ease, visibility 0.4s ease,
+      transform 0.5s ease-in-out;
     visibility: hidden;
     opacity: 0;
     transform: scale(0);
@@ -193,7 +189,7 @@ const ImagesContainer = styled.div`
   column-gap: 10px;
   text-align: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     columns: 2;
   }
   @media screen and (min-width: 1920px) {
@@ -210,9 +206,9 @@ const ImagesContainer = styled.div`
   }
 
   .grid-images {
-    display: inline-block;
+    display: flex;
     margin-bottom: 10px;
     position: relative;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   }
-
 `;

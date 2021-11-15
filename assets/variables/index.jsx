@@ -77,9 +77,13 @@ export const NormalText = styled.p`
     font-size: 20px;
     font-weight: 400;
     color: ${Colors.white};
+
+    @media screen and (min-width: 1920px) {
+        font-size: 24px;
+    }
 `
 
-export const SmallText = styled.h1`
+export const SmallText = styled.p`
     font-size: 18px;
     font-weight: 400;
     color: ${Colors.white};

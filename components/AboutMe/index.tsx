@@ -6,17 +6,17 @@ import picture from '../../assets/images/aboutMe.jpg'
 
 export default function AboutMe() {
     const data = {
-            title: 'Energy and dedication',
-            text: `Each trip represents for us an opportunity to surprise you.
+        title: 'Energy and dedication',
+        text: `Each trip represents for us an opportunity to surprise you.
                     Good vibes, energy, sense of humour, friendliness and politeness 
                     are among the many qualities that will travel with us.
             `,
-            picture: picture,
-            alt: 'patricia',
-            quote: 'Driving besides a passion, is a means to meet new people and share moments'
+        picture: picture,
+        alt: 'patricia',
+        quote: 'Driving besides a passion, is a means to meet new people and share moments'
     }
-        
-    
+
+
 
     return (
         <SectionContainer id="about">
@@ -43,15 +43,18 @@ export default function AboutMe() {
 
                 </LeftContainer>
                 <RightContainer>
+                    <ImageWrapper>
                         <Image
-                            src={data.picture}
-                            objectFit='cover'
-                            layout='responsive'
-                            objectPosition='center'
-                            alt={data.alt}
-                        />
+                        src={data.picture}
+                        objectFit='cover'
+                        layout='responsive'
+                        objectPosition='center'
+                        alt={data.alt}
+                    />
+                    </ImageWrapper>
+                    
                     <Title3 className='black-font margin-top'>
-                       {data.quote}
+                        {data.quote}
                     </Title3>
                     <NormalText className='black-font'>
                         Patricia Vila Nova
@@ -62,7 +65,7 @@ export default function AboutMe() {
     )
 }
 
-const SectionContainer = styled.div`  
+const SectionContainer = styled.section`  
     width: 100%;
     min-height: 100%;
     display: flex;
@@ -70,8 +73,12 @@ const SectionContainer = styled.div`
     justify-content: center;
     align-items: center;
 
+    @media screen and (min-width: 1920px) {
+        height: 80vh;
+    }
+
     .black-font {
-        color: ${Colors.dark}
+        color: ${Colors.dark};
     }
 `
 
@@ -105,7 +112,6 @@ const LeftContainer = styled.div`
 
 const RightContainer = styled.div`
     width: 50%;
-    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -115,4 +121,8 @@ const RightContainer = styled.div`
         width: 100%;
         margin: 0;
     }
+`
+
+const ImageWrapper = styled.div`  
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 `
