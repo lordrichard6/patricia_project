@@ -26,12 +26,15 @@ export default function BannerGallery() {
 const SectionContainer = styled.section`
   position: relative;
   width: 100%;
-  min-height: 60vh;
+  height: 60vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   /* background-color: #68a7f0; */
+  @media screen and (max-width: 500px) {
+    height: 25rem;
+  }
 
   .font-color {
     color: ${Colors.white};

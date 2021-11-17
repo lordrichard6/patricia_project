@@ -17,7 +17,7 @@ export default function Logo(props) {
           objectPosition="center"
         />
       </LogoImg>
-      <Title3>Carapau Service</Title3>
+      <Title3>Vila Nova Services</Title3>
     </LogoWrapper>
   );
 }

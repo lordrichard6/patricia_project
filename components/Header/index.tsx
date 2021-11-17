@@ -34,13 +34,18 @@ export default function Header() {
     )
 }
 
-const SectionContainer = styled.header`  
+const SectionContainer = styled.header`
+    position: relative;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 500px) {
+        height: 45rem;
+    }
 `
 
 const SloganContainer = styled.hgroup`
