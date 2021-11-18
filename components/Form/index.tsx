@@ -10,12 +10,6 @@ export default function Form() {
         <SectionContainer id="form">
             <Background src={background} layout="fill" objectFit='cover' />
             <FormContainer>
-                <BG src={pattern}
-                    layout='fill'
-                    objectFit='cover'
-                    objectPosition='center'
-                    alt='pattern'
-                />
                 <Title2 className='underline'>Book a Service Now</Title2>
                 <NormalText>Please fill the form below</NormalText>
                 <form>
@@ -72,11 +66,6 @@ const Background = styled(Image)`
     z-index: -1;
 `
 
-const BG = styled(Image)`
-    z-index: 1;
-    opacity: 0.1;
-`
-
 const FormContainer = styled.div`
     width: 45%;
     min-height: 80%;
@@ -85,13 +74,13 @@ const FormContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: ${Colors.primary};
     opacity: 0.9;
     border-radius: 5px;
     margin-top: 4rem;
     margin-bottom: 4rem;
     padding-top: 4rem;
     padding-bottom: 4rem;
+    background: url("/pattern.png"), ${Colors.primary};
 
     @media screen and (max-width: 768px) {
         width: 90%;

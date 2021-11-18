@@ -1,25 +1,16 @@
 import styled from "styled-components";
-import Image from "next/image";
 // import Link from "next/link";
 import { Link as LinkScroll } from "react-scroll";
 
 import { FaBars } from "react-icons/fa";
 import { Colors, Title3 } from "../../assets/variables";
 import Logo from "./logo";
-import pattern from "../../public/images/pattern.png";
 
 
 export default function Navbar({ toggle }) {
   return (
     <>
       <Nav>
-        <BG
-          src={pattern}
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          alt="background pattern"
-        />
         <NavbarContainer>
           <Logo />
           <MobileIcon onClick={toggle}>
@@ -79,7 +70,7 @@ export default function Navbar({ toggle }) {
 
 const Nav = styled.nav`
   z-index: 10;
-  background: ${Colors.primary};
+  background: url("/pattern.png"), ${Colors.primary};
   height: 60px;
   width: 100%;
   display: flex;
@@ -92,11 +83,6 @@ const Nav = styled.nav`
   @media screen and (max-width: 1024px) {
     transition: 0.8s all ease;
   }
-`;
-
-const BG = styled(Image)`
-  z-index: 0;
-  opacity: 0.1;
 `;
 
 const NavbarContainer = styled.div`

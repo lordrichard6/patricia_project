@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Image from "next/image";
 
 import { Colors, SmallText } from "../../assets/variables";
 
@@ -36,23 +35,10 @@ const SectionContainer = styled.footer`
   justify-content: center;
   align-items: center;
   background: url("/pattern.png"), ${Colors.primary};
-  /* background-image: url('/pattern.png'); */
-  /* background-size: cover; */
-  /* background-repeat: repeat; */
-  /* background-blend-mode: blend; */
 
   .center {
     align-self: center;
   }
-`;
-
-const Background = styled.div`
-  width: 100%;
-  height: 100%;
-  background-image: url("/pattern.png");
-  background-size: cover;
-  background-repeat: repeat;
-  opacity: 0.1;
 `;
 
 const InnerContainer = styled.div`

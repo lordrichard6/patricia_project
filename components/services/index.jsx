@@ -8,18 +8,11 @@ import {
   Title3,
   NormalText,
 } from "../../assets/variables";
-import pattern from "../../public/images/pattern.png";
-import {services} from '../../assets/data'
+import { services } from "../../assets/data";
 
 export default function Services() {
   return (
     <SectionContainer id="services" className="padding-y">
-      <BG
-        src={pattern}
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-      />
       <InnerContainer>
         <Title2 className="underline margin-y">Services</Title2>
         <Title1 className="margin-bottom">
@@ -53,7 +46,7 @@ const SectionContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${Colors.primary};
+  background: url("/pattern.png"), ${Colors.primary};
   padding-bottom: 4rem;
   padding-top: 4rem;
 
@@ -73,11 +66,6 @@ const InnerContainer = styled.div`
   @media screen and (min-width: 1920px) {
     width: 60vw;
   }
-`;
-
-const BG = styled(Image)`
-  z-index: 1;
-  opacity: 0.1;
 `;
 
 const ServicesContainer = styled.div`

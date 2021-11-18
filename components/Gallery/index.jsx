@@ -19,12 +19,6 @@ export default function Gallery() {
 
   return (
     <SectionContainer id="gallery" className="padding-y">
-      <BG
-        src={pattern}
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-      />
       <Title>
         <Title2 className="underline margin-y">Gallery</Title2>
         <Title1>This is me without (and with) filters.</Title1>
@@ -65,7 +59,7 @@ const SectionContainer = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: ${Colors.primary};
+  background: url("/pattern.png"), ${Colors.primary};
 
   @media screen and (max-width: 1024px) {
     padding-bottom: 8rem;
@@ -119,11 +113,6 @@ const SectionContainer = styled.section`
     color: ${Colors.white};
     cursor: pointer;
   }
-`;
-
-const BG = styled(Image)`
-  z-index: 1;
-  opacity: 0.1;
 `;
 
 const Title = styled.div`
