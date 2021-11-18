@@ -6,7 +6,7 @@ import { Colors, TitleSection, Text } from "../../assets/variables";
 export default function Sitemap() {
   const data = [
     {
-      to: "header",
+      to: "top",
       text: "Go to top",
     },
     {

@@ -6,7 +6,7 @@ import { homepageHeader } from "../../assets/data";
 
 export default function Header() {
   return (
-    <SectionContainer id="header">
+    <SectionContainer>
       <Background
         src={homepageHeader.picture}
         layout="fill"

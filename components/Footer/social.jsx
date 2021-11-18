@@ -9,7 +9,7 @@ import {
   ImLinkedin,
   ImYoutube,
 } from "react-icons/im";
-import logo from "../../public/logo.png";
+import logo from "../../public/logo_white.png";
 
 export default function Social() {
   const data = [

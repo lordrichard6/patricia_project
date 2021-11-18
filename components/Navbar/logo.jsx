@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import logo from "../../public/logo.png";
+import logo from "../../public/logo_white.png";
 import { Colors, TitleSmall } from "../../assets/variables";
 
-export default function Logo(props) {
+export default function Logo() {
   return (
     <LogoWrapper>
       <LogoImg href="/">
@@ -17,7 +17,7 @@ export default function Logo(props) {
           objectPosition="center"
         />
       </LogoImg>
-      <TitleSmall color={Colors.white}>Vila Nova Services</TitleSmall>
+      <TitleSmall color={Colors.white}>Sardinha Drive</TitleSmall>
     </LogoWrapper>
   );
 }

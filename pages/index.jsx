@@ -8,7 +8,7 @@ export default function Home() {
       <Head>
         <title>Patricia Vila Nova</title>
         <meta name="Patricia Vila Nova" content="Patricia Vila Nova" />
-        <link rel="icon" href="/logo.png" />
+        <link rel="icon" href="/logo_white.png" />
       </Head>
       <Homepage />
     </>
