@@ -20,7 +20,7 @@ export default function Services() {
           {services.map((item, index) => {
             return (
               <Service
-                i={index}
+                key={index}
                 imgSrc={item.picture}
                 alt={item.alt}
                 title={item.serviceTitle}

@@ -20,7 +20,7 @@ export default function Passions() {
         {passions.map((item, index) => {
           return (
             <Passion
-              i={index}
+              key={index}
               classname={item.container}
               image={item.imgSrc}
               alt={item.alt}
