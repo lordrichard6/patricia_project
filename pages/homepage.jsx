@@ -10,8 +10,8 @@ import Header from "../components/Header";
 import AboutMe from "../components/AboutMe";
 import Banner from "../components/Banner";
 import Services from "../components/services";
-import WhyChooseMe from "../components/WhyChooseMe";
-import OtherPassions from "../components/OtherPassions";
+// import WhyChooseMe from "../components/WhyChooseMe";
+import Passions from "../components/Passions";
 import Gallery from "../components/Gallery";
 import Form from "../components/Form";
 import Footer from "../components/Footer";
@@ -32,9 +32,9 @@ export default function Homepage() {
         <AboutMe />
         <Banner name="Gallery" to="gallery" image={bannerGallery} />
         <Services />
-        <WhyChooseMe />
+        {/* <WhyChooseMe /> */}
         <Banner name="Contact Me" to="form" image={bannerContact} />
-        <OtherPassions />
+        <Passions />
         <Gallery />
         <Form />
         <Footer />

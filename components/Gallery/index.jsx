@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
+import breakpoint from "../../assets/variables/breakpoints";
 import { FaWindowClose } from "react-icons/fa";
-import { Colors, Title1, Title2 } from "../../assets/variables";
-import { gallery } from '../../assets/data'
-import pattern from "../../public/images/pattern.png";
-
+import {
+  SectionContainerBlue,
+  Colors,
+  TitleMain,
+  TitleSection,
+} from "../../assets/variables";
+import { gallery } from "../../assets/data";
 
 export default function Gallery() {
   const [model, setModel] = useState(false);
@@ -18,56 +22,47 @@ export default function Gallery() {
   };
 
   return (
-    <SectionContainer id="gallery" className="padding-y">
-      <Title>
-        <Title2 className="underline margin-y">Gallery</Title2>
-        <Title1>This is me without (and with) filters.</Title1>
-      </Title>
-      <div
-        onClick={() => setModel(false)}
-        className={model ? "model open" : "model"}
-      >
-        <img src={tempImgSrc} />
-        <FaWindowClose onClick={() => setModel(false)} />
-      </div>
-      <ImagesContainer>
-        {gallery.map((item, index) => {
-          return (
-            <div key={index} className="pics grid-images">
-              <Image
-                src={item.imgSrc}
-                height={item.height}
-                width={item.width}
-                alt={item.alt}
-                objectFit="cover"
-                objectPosition="center"
-                onClick={() => getImg(item.imgSrc)}
-              />
-            </div>
-          );
-        })}
-      </ImagesContainer>
-    </SectionContainer>
+    <SectionContainerBlue color={Colors.white}>
+      <TitleSection id="gallery">Gallery</TitleSection>
+      <TitleMain>This is me without (and with) filters.</TitleMain>
+      <InnerContainer>
+        <div
+          onClick={() => setModel(false)}
+          className={model ? "model open" : "model"}
+        >
+          <Image src={tempImgSrc} />
+          <FaWindowClose onClick={() => setModel(false)} />
+        </div>
+        <ImagesContainer>
+          {gallery.map((item, index) => {
+            return (
+              <div key={index} className="pics grid-images">
+                <Image
+                  src={item.imgSrc}
+                  height={item.height}
+                  width={item.width}
+                  alt={item.alt}
+                  objectFit="cover"
+                  objectPosition="center"
+                  onClick={() => getImg(item.imgSrc)}
+                />
+              </div>
+            );
+          })}
+        </ImagesContainer>
+      </InnerContainer>
+    </SectionContainerBlue>
   );
 }
 
-const SectionContainer = styled.section`
-  position: relative;
+const InnerContainer = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background: url("/pattern.png"), ${Colors.primary};
-
-  @media screen and (max-width: 1024px) {
-    padding-bottom: 8rem;
-    padding-top: 4rem;
-  }
-  @media screen and (min-width: 1920px) {
-    height: 120vh;
-  }
+  align-items: center;
+  margin: 3rem 0;
 
   .model {
     width: 100%;
@@ -115,13 +110,6 @@ const SectionContainer = styled.section`
   }
 `;
 
-const Title = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 4rem;
-`;
-
 const ImagesContainer = styled.div`
   z-index: 1;
   width: 80vw;
@@ -129,11 +117,12 @@ const ImagesContainer = styled.div`
   column-gap: 10px;
   text-align: center;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (${breakpoint.device.tablet}) {
     columns: 2;
   }
-  @media screen and (min-width: 1920px) {
+  @media screen and (${breakpoint.device.desktop}) {
     width: 60vw;
+    column-gap: 20px;
   }
 
   .pics {

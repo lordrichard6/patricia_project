@@ -1,17 +1,18 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 
-import { Colors, Title2, NormalText } from '../../assets/variables'
+import breakpoint from "../../assets/variables/breakpoints";
+import { Colors, TitleSection, Text } from '../../assets/variables'
 import background from '../../public/images/form.jpg'
-import pattern from '../../public/images/pattern.png'
+
 
 export default function Form() {
     return (
-        <SectionContainer id="form">
+        <SectionContainer color={Colors.white}>
             <Background src={background} layout="fill" objectFit='cover' />
             <FormContainer>
-                <Title2 className='underline'>Book a Service Now</Title2>
-                <NormalText>Please fill the form below</NormalText>
+                <TitleSection id="form">Book a Service Now</TitleSection>
+                <Text>Please fill the form below</Text>
                 <form>
                     <input
                         type="text"
@@ -44,21 +45,20 @@ export default function Form() {
 
 const SectionContainer = styled.div`
     width: 100%;
-    min-height: 100%;
+    height: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 6rem 0;
     
-    @media screen and (max-width: 1024px) {
-        padding-top: 6rem;
-        padding-bottom: 6rem;
+    @media screen and (${breakpoint.device.tablet}) {
+        padding: 6rem 0;
     }
-    @media screen and (min-width: 1920px) {
+    @media screen and (${breakpoint.device.desktop}) {
         min-height: 100vh;
-        padding-bottom: 10rem;
-        padding-top: 10rem;
+        padding: 10rem 0;
     }
 `
 
@@ -81,14 +81,15 @@ const FormContainer = styled.div`
     padding-top: 4rem;
     padding-bottom: 4rem;
     background: url("/pattern.png"), ${Colors.primary};
+    color: ${Colors.white};
 
-    @media screen and (max-width: 768px) {
+    @media screen and (${breakpoint.device.mobile}) {
         width: 90%;
         height: auto;
         padding-top: 2rem;
         padding-bottom: 2rem;
     }
-    @media screen and (min-width: 1920px) {
+    @media screen and (${breakpoint.device.desktop}) {
         width: 25%;
     }
 
@@ -113,7 +114,7 @@ const FormContainer = styled.div`
             padding: 10px;
             font-size: 20px;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (${breakpoint.device.mobile}) {
                 width: 90%;
                 height: 40px;
                 font-size: 16px;
@@ -128,7 +129,8 @@ const FormContainer = styled.div`
             padding: 10px;
             min-height: 200px;
             font-size: 20px;
-            @media screen and (max-width: 768px) {
+
+            @media screen and (${breakpoint.device.mobile}) {
                 width: 90%;
                 font-size: 16px;
             }

@@ -1,67 +1,21 @@
 import styled from "styled-components";
-// import Link from "next/link";
-import { Link as LinkScroll } from "react-scroll";
 
 import { FaBars } from "react-icons/fa";
-import { Colors, Title3 } from "../../assets/variables";
+import { Colors } from "../../assets/variables";
 import Logo from "./logo";
+import NavItems from "./navItems";
 
 
 export default function Navbar({ toggle }) {
   return (
     <>
-      <Nav>
+      <Nav id="top">
         <NavbarContainer>
           <Logo />
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
-          <NavMenu>
-            <NavItem>
-              <NavLinks
-                to="about"
-                smooth={true}
-                duration={600}
-                spy={true}
-                offset={80}
-              >
-                <Title>About</Title>
-              </NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks
-                to="services"
-                smooth={true}
-                duration={600}
-                spy={true}
-                offset={240}
-              >
-                <Title>Services</Title>
-              </NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks
-                to="gallery"
-                smooth={true}
-                duration={700}
-                spy={true}
-                offset={220}
-              >
-                <Title>Gallery</Title>
-              </NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks
-                to="form"
-                smooth={true}
-                duration={800}
-                spy={true}
-                offset={140}
-              >
-                <Title>Contact</Title>
-              </NavLinks>
-            </NavItem>
-          </NavMenu>
+          <NavItems />
         </NavbarContainer>
       </Nav>
     </>
@@ -109,44 +63,5 @@ const MobileIcon = styled.div`
     font-size: 1.8rem;
     cursor: pointer;
     color: #fff;
-  }
-`;
-
-const NavMenu = styled.ul`
-  display: flex;
-  align-items: center;
-  list-style: none;
-  text-align: center;
-
-  @media (max-width: 1024px) {
-    display: none;
-  }
-`;
-
-const NavItem = styled.li`
-  height: 60px;
-`;
-
-const NavLinks = styled(LinkScroll)`
-  color: #fff;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
-  cursor: pointer;
-
-  &:hover {
-    /* transition: 0.2s ease-in-out; */
-    border-bottom: 3px solid ${Colors.secondary};
-  }
-
-  &.active {
-    border-bottom: 3px solid ${Colors.secondary};
-  }
-`;
-const Title = styled(Title3)`
-  &.active {
-    border-bottom: 3px solid ${Colors.secondary};
   }
 `;

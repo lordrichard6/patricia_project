@@ -1,28 +1,54 @@
 import styled from "styled-components";
 import { Link as LinkScroll } from "react-scroll";
 
-import { Colors, Title2, NormalText, SmallText } from "../../assets/variables";
+import breakpoint from "../../assets/variables/breakpoints";
+import { Colors, TitleSection, Text } from "../../assets/variables";
 
 export default function Sitemap() {
+  const data = [
+    {
+      to: "header",
+      text: "Go to top",
+    },
+    {
+      to: "about",
+      text: "About",
+    },
+    {
+      to: "services",
+      text: "Services",
+    },
+    {
+      to: "hobby",
+      text: "Hobbies",
+    },
+    {
+      to: "services",
+      text: "Gallery",
+    },
+    {
+      to: "form",
+      text: "Contact",
+    },
+  ];
+
   return (
     <FooterSection>
-      <Title2>Sitemap</Title2>
+      <TitleSection className="margin">Sitemap</TitleSection>
       <div>
-        <LinkScroll className="link" to="header" smooth={true} duration={600}>
-          <NormalText>Go to top</NormalText>
-        </LinkScroll>
-        <LinkScroll className="link" to="about" smooth={true} duration={600}>
-          <NormalText>About</NormalText>
-        </LinkScroll>
-        <LinkScroll className="link" to="services" smooth={true} duration={600}>
-          <NormalText>Services</NormalText>
-        </LinkScroll>
-        <LinkScroll className="link" to="gallery" smooth={true} duration={700}>
-          <NormalText>Gallery</NormalText>
-        </LinkScroll>
-        <LinkScroll className="link" to="form" smooth={true} duration={800}>
-          <NormalText>Contact</NormalText>
-        </LinkScroll>
+        {data.map((item, i) => {
+          return (
+            <LinkScroll
+              key={i}
+              className="link"
+              to={item.to}
+              smooth={true}
+              duration={600}
+            >
+              <Text className="font">{item.text}</Text>
+            </LinkScroll>
+          );
+        })}
       </div>
     </FooterSection>
   );
@@ -35,8 +61,12 @@ const FooterSection = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (${breakpoint.device.mobile}) {
     margin: 1rem 0;
+  }
+
+  .margin {
+    margin-bottom: 1rem;
   }
 
   .link {
@@ -46,15 +76,9 @@ const FooterSection = styled.div`
       color: ${Colors.secondary};
     }
   }
-
-  .flex-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-
-    @media screen and (max-width: 768px) {
-      justify-content: flex-start;
-    }
+  .font {
+    font-size: 1.6rem;
+    padding: 2px 0;
+    letter-spacing: 2px;
   }
 `;

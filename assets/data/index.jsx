@@ -21,13 +21,13 @@ export const homepageHeader = {
 export const aboutMe = {
   title: "Energy and dedication",
   text: `Each trip represents for us an opportunity to surprise you.
-                Good vibes, energy, sense of humour, friendliness and politeness 
-                are among the many qualities that will travel with us.
+          Good vibes, energy, sense of humour, friendliness and politeness 
+          are among the many qualities that will travel with us.
         `,
   picture: aboutMeImage,
   alt: "patricia",
   quote:
-    "Driving besides a passion, is a means to meet new people and share moments",
+    '"Driving besides a passion, is a means to meet new people and share moments."',
 };
 // SERVICES -----------------------------------------------------------------------------
 export const services = [
@@ -100,43 +100,43 @@ export const gallery = [
   {
     id: 1,
     imgSrc: gallery_01,
-    height: 300,
-    width: 400,
+    height: 500,
+    width: 600,
     alt: "patricia vila nova",
   },
   {
     id: 2,
     imgSrc: gallery_02,
-    height: 500,
-    width: 400,
+    height: 700,
+    width: 600,
     alt: "patricia vila nova",
   },
   {
     id: 3,
     imgSrc: gallery_03,
-    height: 400,
-    width: 400,
+    height: 600,
+    width: 600,
     alt: "patricia vila nova",
   },
   {
     id: 4,
     imgSrc: gallery_04,
-    height: 400,
-    width: 400,
+    height: 600,
+    width: 600,
     alt: "patricia vila nova",
   },
   {
     id: 5,
     imgSrc: gallery_05,
-    height: 500,
-    width: 400,
+    height: 700,
+    width: 600,
     alt: "patricia vila nova",
   },
   {
     id: 6,
     imgSrc: gallery_06,
-    height: 300,
-    width: 400,
+    height: 500,
+    width: 600,
     alt: "patricia vila nova",
   },
 ];

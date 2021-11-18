@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import { Colors, Title2, NormalText, SmallText } from "../../assets/variables";
+import breakpoint from "../../assets/variables/breakpoints";
+import { Colors, TitleSection } from "../../assets/variables";
 import {
   ImInstagram,
   ImFacebook2,
@@ -12,33 +13,43 @@ import {
 import logo from "../../public/logo.png";
 
 export default function Social() {
+  const data = [
+    {
+      href: "https://www.instagram.com/patriciavilanova93/",
+      icon: <ImInstagram />,
+    },
+    {
+      href: "https://www.facebook.com//vilanova.patricia/",
+      icon: <ImFacebook2 />,
+    },
+    {
+      href: "https://twitter.com/patriciavilano5/",
+      icon: <ImTwitter />,
+    },
+    {
+      href: "https://www.linkedin.com/in/patr%C3%ADcia-vila-nova-b22200b5/",
+      icon: <ImLinkedin />,
+    },
+    {
+      href: "https://www.youtube.com/channel/UC9SSRSUEyefD6K3lKpsBWpA",
+      icon: <ImYoutube />,
+    },
+  ];
+
   return (
     <FooterSection>
-      <Title2>Social</Title2>
-      <div className="icons">
-        <a href="https://www.instagram.com/patriciavilanova93/">
-          <ImInstagram />
-        </a>
-        <a href="https://www.facebook.com//vilanova.patricia/">
-          <ImFacebook2 />
-        </a>
-        <a href="https://twitter.com/patriciavilano5/">
-          <ImTwitter />
-        </a>
-        <a href="https://www.linkedin.com/in/patr%C3%ADcia-vila-nova-b22200b5/">
-          <ImLinkedin />
-        </a>
-        <a href="https://www.youtube.com/channel/UC9SSRSUEyefD6K3lKpsBWpA">
-          <ImYoutube />
-        </a>
-      </div>
+      <TitleSection className="margin">Social</TitleSection>
+      <IconWrapper>
+        {data.map((item, i) => {
+          return (
+            <a key={i} href={item.href}>
+              {item.icon}
+            </a>
+          );
+        })}
+      </IconWrapper>
       <LogoContainer>
-        <Image
-          src={logo}
-          height="90px"
-          width="90px"
-          alt="logo patricia vila nova"
-        />
+        <Image src={logo} alt="logo patricia vila nova" />
       </LogoContainer>
     </FooterSection>
   );
@@ -51,37 +62,27 @@ const FooterSection = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+  .margin {
+    margin-bottom: 1rem;
+  }
+
+  @media screen and (${breakpoint.device.mobile}) {
     margin: 1rem 0;
   }
+`;
+const IconWrapper = styled.div`
+  color: ${Colors.white};
+  font-size: 2.2rem;
 
-  .link {
-    cursor: pointer;
-    &:hover {
-      text-decoration: underline;
-      color: ${Colors.secondary};
-    }
-  }
-
-  .flex-row {
+  @media screen and (${breakpoint.device.tablet}) {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-
-    @media screen and (max-width: 768px) {
-      justify-content: flex-start;
-    }
+    justify-content: center;
   }
-  .icons {
-    color: ${Colors.white};
-    font-size: 2.2rem;
-    a {
-      margin: 0 1rem;
-      &:hover {
-        color: ${Colors.secondary};
-        transition: 0.2s ease-in-out;
-      }
+  a {
+    margin: 0 1rem;
+    &:hover {
+      color: ${Colors.secondary};
+      transition: 0.2s ease-in-out;
     }
   }
 `;
@@ -89,4 +90,16 @@ const FooterSection = styled.div`
 const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
+  width: 100px;
+  height: 100px;
+  margin-top: 1rem;
+
+  @media screen and (${breakpoint.device.mobile}) {
+    width: 150px;
+    height: 150px;
+  }
+  @media screen and (${breakpoint.device.desktop}) {
+    width: 200px;
+    height: 200px;
+  }
 `;

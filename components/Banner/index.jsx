@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import { Link as LinkScroll } from "react-scroll";
 
-import { TitleExtra, Colors } from "../../assets/variables";
+import { TitleBig, Colors } from "../../assets/variables";
 import { BsArrowLeftSquareFill } from "react-icons/bs";
 
 export default function Banner({name, to, image}) {
@@ -14,7 +14,7 @@ export default function Banner({name, to, image}) {
         objectFit="cover"
         objectPosition="center"
       />
-      <TitleExtra className="font-color">{name}</TitleExtra>
+      <TitleBig className="font-color">{name}</TitleBig>
       <GoTo to={to} smooth={true} duration={600}>
         <Icon />
       </GoTo>

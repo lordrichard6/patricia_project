@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-import { Colors, SmallText } from "../../assets/variables";
+import breakpoint from "../../assets/variables/breakpoints";
+import { Colors, TextSmall } from "../../assets/variables";
 
 import Contact from "./contact";
 import Social from "./social";
@@ -16,10 +17,10 @@ export default function Footer() {
           <Sitemap />
         </GroupContainer>
         <Copyright>
-          <SmallText>
+          <TextSmall>
             Copyright &copy; {new Date().getFullYear()} Patricia Vila Nova.
-          </SmallText>
-          <SmallText>All rights reserved.</SmallText>
+          </TextSmall>
+          <TextSmall>All rights reserved.</TextSmall>
         </Copyright>
       </InnerContainer>
     </SectionContainer>
@@ -29,36 +30,38 @@ export default function Footer() {
 const SectionContainer = styled.footer`
   position: relative;
   width: 100%;
+  height: 100%;
   padding-top: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background: url("/pattern.png"), ${Colors.primary};
-
-  .center {
-    align-self: center;
-  }
+  color: ${Colors.white};
 `;
 
 const InnerContainer = styled.div`
+  height: 100%;
   width: 80vw;
   display: flex;
   flex-direction: column;
   z-index: 1;
 
-  @media screen and (min-width: 1920px) {
+  @media screen and (${breakpoint.device.desktop}) {
     width: 60vw;
   }
 `;
 
 const GroupContainer = styled.div`
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  margin-bottom: 1rem;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (${breakpoint.device.mobile}) {
     flex-direction: column-reverse;
   }
 `;

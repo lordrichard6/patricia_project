@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 
-import { Colors, Title1, Title2, Title3, NormalText } from '../../assets/variables'
+import { Colors, TitleMain, TitleSection, TitleSmall, Text } from '../../assets/variables'
 import { BsCheckSquareFill } from "react-icons/bs";
 import picture from '../../public/images/whyChooseMe.jpg'
 
@@ -9,9 +9,9 @@ import picture from '../../public/images/whyChooseMe.jpg'
 export default function WhyChooseMe() {
     return (
         <SectionContainer>
-            <Title2 className='underline black-font'>
+            <TitleSection className='underline black-font'>
                 Why choose Us?
-            </Title2>
+            </TitleSection>
             <InnerContainer>
                 <LeftContainer>
                     <Image
@@ -21,26 +21,26 @@ export default function WhyChooseMe() {
                     />
                 </LeftContainer>
                 <RightContainer>
-                    <Title1 className='black-font margin-y'>
+                    <TitleMain>
                         What you will enjoy with our service.
-                    </Title1>
-                    <Title3 className='black-font'>
+                    </TitleMain>
+                    <TitleSmall>
                         Patricia Vila Nova - Privat Chauffeur is:
-                    </Title3>
+                    </TitleSmall>
                     <QualitiesContainer>
                         <div>
-                            <Icon/><TextBlack>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</TextBlack>
+                            <Icon /><Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
                         </div>
                         <div>
-                            <Icon/><TextBlack>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</TextBlack>
+                            <Icon /><Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
                         </div>
                         <div>
-                            <Icon/><TextBlack>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</TextBlack>
+                            <Icon /><Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
                         </div>
                     </QualitiesContainer>
-                    <TextBlack>
+                    <Text>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /> Iaculis tellus, faucibus volutpat fusce consequat in.
-                    </TextBlack>
+                    </Text>
                 </RightContainer>
             </InnerContainer>
         </SectionContainer>
@@ -55,12 +55,6 @@ const SectionContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .underline {
-        text-decoration: underline;
-    }
-    .black-font {
-        color: ${Colors.dark}
-    }
 `
 
 const InnerContainer = styled.div`  
@@ -125,11 +119,5 @@ const Icon = styled(BsCheckSquareFill)`
     font-size: 2rem;
     justify-self: center;
     margin-right: 1rem;
-`
-
-const TextBlack = styled(NormalText)`
-    color: ${Colors.dark};
-    padding-top: 1rem;
-    padding-bottom: 1rem;
 `
 

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Image from "next/image";
 
 import logo from "../../public/logo.png";
-import { Title3 } from "../../assets/variables";
+import { Colors, TitleSmall } from "../../assets/variables";
 
 export default function Logo(props) {
   return (
@@ -17,7 +17,7 @@ export default function Logo(props) {
           objectPosition="center"
         />
       </LogoImg>
-      <Title3>Vila Nova Services</Title3>
+      <TitleSmall color={Colors.white}>Vila Nova Services</TitleSmall>
     </LogoWrapper>
   );
 }
