@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import breakpoint from "../../assets/variables/breakpoints";
 import { Colors, TitleSection } from "../../assets/variables";
 import {
   ImInstagram,
@@ -66,7 +65,7 @@ const FooterSection = styled.div`
     margin-bottom: 1rem;
   }
 
-  @media screen and (${breakpoint.device.mobile}) {
+  @media screen and (max-width: 768px) {
     margin: 1rem 0;
   }
 `;
@@ -74,7 +73,7 @@ const IconWrapper = styled.div`
   color: ${Colors.white};
   font-size: 2.2rem;
 
-  @media screen and (${breakpoint.device.tablet}) {
+  @media screen and (max-width: 1024px) {
     display: flex;
     justify-content: center;
   }
@@ -94,11 +93,11 @@ const LogoContainer = styled.div`
   height: 100px;
   margin-top: 1rem;
 
-  @media screen and (${breakpoint.device.mobile}) {
+  @media screen and (max-width: 768px) {
     width: 150px;
     height: 150px;
   }
-  @media screen and (${breakpoint.device.desktop}) {
+  @media screen and (min-width: 2024px) {
     width: 200px;
     height: 200px;
   }

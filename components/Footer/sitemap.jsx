@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Link as LinkScroll } from "react-scroll";
 
-import breakpoint from "../../assets/variables/breakpoints";
 import { Colors, TitleSection, Text } from "../../assets/variables";
 
 export default function Sitemap() {
@@ -61,7 +60,7 @@ const FooterSection = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media screen and (${breakpoint.device.mobile}) {
+  @media screen and (max-width: 768px) {
     margin: 1rem 0;
   }
 

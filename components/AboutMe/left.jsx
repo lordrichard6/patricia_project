@@ -1,9 +1,8 @@
 import styled from "styled-components";
 // import Image from "next/image";
 
-import breakpoint from "../../assets/variables/breakpoints";
 import { TitleMain, Text } from "../../assets/variables";
-import { aboutMe } from '../../assets/data'
+import { aboutMe } from "../../assets/data";
 
 export default function Left() {
   return (
@@ -28,7 +27,7 @@ const LeftContainer = styled.div`
   height: 100%;
   margin-right: 0.6rem;
 
-  @media screen and (${breakpoint.device.tablet}) {
+  @media screen and (max-width: 1024px) {
     width: 100%;
     display: flex;
     flex-direction: column;

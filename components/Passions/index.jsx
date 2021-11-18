@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-import breakpoint from "../../assets/variables/breakpoints";
 import {
   SectionContainer,
   TitleSection,
@@ -41,13 +40,13 @@ const InnerContainer = styled.div`
   justify-content: center;
   align-content: center;
 
-  @media screen and (${breakpoint.device.mobile}) {
+  @media screen and (max-width: 768px) {
     width: 80vw;
   }
-  @media screen and (min-width: 768px) and (${breakpoint.device.tablet}) {
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
     width: 60vw;
   }
-  @media screen and (${breakpoint.device.desktop}) {
+  @media screen and (min-width: 2024px) {
     width: 50vw;
   }
 `;

@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import Image from 'next/image'
+// import Image from 'next/image'
 
 import { Colors, TitleMain, TitleSection, TitleSmall, Text } from '../../assets/variables'
 import { BsCheckSquareFill } from "react-icons/bs";
-import picture from '../../public/images/whyChooseMe.jpg'
+// import picture from '../../public/images/whyChooseMe.jpg'
 
 
 export default function WhyChooseMe() {
@@ -14,11 +14,11 @@ export default function WhyChooseMe() {
             </TitleSection>
             <InnerContainer>
                 <LeftContainer>
-                    <Image
+                    {/* <Image
                         src={picture}
                         objectFit='cover'
                         alt='why choose me'
-                    />
+                    /> */}
                 </LeftContainer>
                 <RightContainer>
                     <TitleMain>

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-import breakpoint from "../../assets/variables/breakpoints";
 import { BsHouseFill, BsTelephoneFill, BsMailbox2 } from "react-icons/bs";
 import { TitleSection, Text } from "../../assets/variables";
 
@@ -45,7 +44,7 @@ const FooterSection = styled.div`
   justify-content: flex-start;
   align-items: center;
 
-  @media screen and (${breakpoint.device.mobile}) {
+  @media screen and (max-width: 768px) {
     margin: 1rem 0;
   }
 
@@ -57,7 +56,7 @@ const FooterSection = styled.div`
     font-size: 1.5rem;
     margin: 0 0.5rem;
 
-    @media screen and (${breakpoint.device.desktop}) {
+    @media screen and (min-width: 2024px) {
       width: 2.5rem;
     }
   }
@@ -67,7 +66,7 @@ const ContactWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
 
-  @media screen and (${breakpoint.device.mobile}) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;
@@ -79,7 +78,7 @@ const ContactItem = styled.div`
   align-items: center;
   margin: 4px 0;
 
-  @media screen and (${breakpoint.device.mobile}) {
+  @media screen and (max-width: 768px) {
     justify-content: flex-start;
   }
 `;

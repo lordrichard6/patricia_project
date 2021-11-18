@@ -6,7 +6,6 @@ import {
   TitleMain,
   TitleSection,
 } from "../../assets/variables";
-import breakpoint from "../../assets/variables/breakpoints";
 import { services } from "../../assets/data";
 import Service from "./service";
 
@@ -42,7 +41,7 @@ const InnerContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media only screen and (${breakpoint.device.desktop}) {
+  @media only screen and (min-width: 2024px) {
     width: 60vw;
   }
 `;
@@ -53,7 +52,7 @@ const ServicesContainer = styled.div`
   justify-content: center;
   align-items: flex-start;
 
-  @media only screen and (${breakpoint.device.mobile}) {
+  @media only screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;

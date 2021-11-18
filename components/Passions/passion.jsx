@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import breakpoint from "../../assets/variables/breakpoints";
 import { TitleSmall, Text } from "../../assets/variables";
 
 export default function Passion({ i, classname, image, alt, title, text }) {
@@ -35,7 +34,7 @@ const HobbyWrapper = styled.div`
     display: flex;
     flex-direction: row;
 
-    @media screen and (${breakpoint.device.tablet}) {
+    @media screen and (max-width: 1024px) {
       flex-direction: column;
       margin-bottom: 1rem;
     }
@@ -45,7 +44,7 @@ const HobbyWrapper = styled.div`
     display: flex;
     flex-direction: row-reverse;
 
-    @media screen and (${breakpoint.device.tablet}) {
+    @media screen and (max-width: 1024px) {
       flex-direction: column;
     }
   }
@@ -58,7 +57,7 @@ const ImageContainer = styled.div`
     rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
     rgba(0, 0, 0, 0.09) 0px 32px 16px;
 
-  @media only screen and (${breakpoint.device.tablet}) {
+  @media only screen and (max-width: 1024px) {
     width: 100%;
     margin: 0;
   }
@@ -68,7 +67,7 @@ const TextWrapper = styled.div`
   width: 50%;
   padding: 1rem;
 
-  @media only screen and (${breakpoint.device.tablet}) {
+  @media only screen and (max-width: 1024px) {
     width: 100%;
   }
 `;

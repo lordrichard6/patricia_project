@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import breakpoint from "../../assets/variables/breakpoints";
 import { TitleSmall, Text } from "../../assets/variables";
 
 export default function Service({ i, imgSrc, alt, title, text }) {
@@ -22,7 +21,7 @@ const ServiceWrapper = styled.div`
   width: 30%;
   padding: 2rem;
 
-  @media only screen and (${breakpoint.device.tablet}) {
+  @media only screen and (max-width: 1024px) {
     width: 100%;
     padding: 1rem;
   }

@@ -1,9 +1,8 @@
-import styled from 'styled-components'
-import Image from 'next/image'
+import styled from "styled-components";
+import Image from "next/image";
 
-import breakpoint from "../../assets/variables/breakpoints";
-import { TitleSmall, Text } from '../../assets/variables'
-import { aboutMe } from '../../assets/data'
+import { TitleSmall, Text } from "../../assets/variables";
+import { aboutMe } from "../../assets/data";
 
 export default function Right() {
   return (
@@ -30,7 +29,7 @@ const RightContainer = styled.div`
   justify-content: flex-end;
   margin-left: 0.6rem;
 
-  @media screen and (${breakpoint.device.tablet}) {
+  @media screen and (max-width: 1024px) {
     width: 100%;
     margin: 0;
   }

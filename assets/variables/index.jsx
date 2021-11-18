@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import breakpoint from "../../assets/variables/breakpoints";
 
 export const Colors = {
   primary: "#062942",
@@ -18,12 +17,12 @@ export const TitleBig = styled.h1`
   color: ${Colors.white};
   text-shadow: ${Colors.dark} 1px 0 10px;
 
-  @media screen and (${breakpoint.device.mobile}) {
+  @media screen and (max-width: 768px) {
     font-size: 48px;
     text-align: center;
     line-height: 46px;
   }
-  @media screen and (${breakpoint.device.desktop}) {
+  @media screen and (min-width: 2024px) {
     font-size: 72px;
     letter-spacing: 4px;
   }
@@ -37,16 +36,16 @@ export const TitleMain = styled.h1`
   color: ${(props) => props.color};
   margin: 1rem 0;
 
-  @media screen and (${breakpoint.device.mobile}) {
+  @media screen and (max-width: 768px) {
     font-size: 36px;
     text-align: center;
   }
-  @media screen and (${breakpoint.device.tablet}) {
+  @media screen and (max-width: 1024px) {
     text-align: center;
     width: 80%;
   }
 
-  @media screen and (${breakpoint.device.desktop}) {
+  @media screen and (min-width: 2024px) {
     font-size: 64px;
     /* letter-spacing: 1rem; */
   }
@@ -60,13 +59,13 @@ export const TitleSection = styled.h2`
   letter-spacing: 1px;
   margin: 2rem 0;
 
-  @media screen and (${breakpoint.device.mobile}) {
+  @media screen and (max-width: 768px) {
     font-size: 30px;
     text-align: center;
     margin: 1rem 0;
   }
 
-  @media screen and (${breakpoint.device.desktop}) {
+  @media screen and (min-width: 2024px) {
     font-size: 42px;
     letter-spacing: 2px;
   }
@@ -79,11 +78,11 @@ export const TitleSmall = styled.h3`
   color: ${(props) => props.color};
   margin: 1rem 0;
 
-  @media screen and (${breakpoint.device.mobile}) {
+  @media screen and (max-width: 768px) {
     text-align: center;
   }
 
-  @media screen and (${breakpoint.device.desktop}) {
+  @media screen and (min-width: 2024px) {
     font-size: 32px;
     letter-spacing: 2px;
   }
@@ -94,7 +93,7 @@ export const Text = styled.p`
   font-weight: 400;
   color: ${(props) => props.color};
 
-  @media screen and (${breakpoint.device.desktop}) {
+  @media screen and (min-width: 2024px) {
     font-size: 24px;
   }
 `;
@@ -104,7 +103,7 @@ export const TextSmall = styled.p`
   font-weight: 400;
   color: ${(props) => props.color};
 
-  @media screen and (${breakpoint.device.mobile}) {
+  @media screen and (max-width: 768px) {
     font-size: 14px;
   }
 `;
@@ -119,10 +118,10 @@ export const SectionContainer = styled.section`
   align-items: center;
   margin: 5rem 0;
 
-  @media screen and (${breakpoint.device.tablet}) {
+  @media screen and (max-width: 1024px) {
     margin: 2rem 0;
   }
-  @media screen and (${breakpoint.device.desktop}) {
+  @media screen and (min-width: 2024px) {
     margin: 8rem 0;
   }
 `;
@@ -139,10 +138,10 @@ export const SectionContainerBlue = styled.section`
   background: url("/pattern.png"), ${Colors.primary};
   color: ${(props) => props.color};
 
-  @media screen and (${breakpoint.device.tablet}) {
+  @media screen and (max-width: 1024px) {
     padding: 4rem 0;
   }
-  @media screen and (${breakpoint.device.desktop}) {
+  @media screen and (min-width: 2024px) {
     padding: 8rem 0;
   }
 `;

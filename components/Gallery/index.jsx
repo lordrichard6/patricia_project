@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
-import breakpoint from "../../assets/variables/breakpoints";
 import { FaWindowClose } from "react-icons/fa";
 import {
   SectionContainerBlue,
@@ -30,7 +29,7 @@ export default function Gallery() {
           onClick={() => setModel(false)}
           className={model ? "model open" : "model"}
         >
-          <Image src={tempImgSrc} alt=''/>
+          {/* <Image src={tempImgSrc} alt=''/> */}
           <FaWindowClose onClick={() => setModel(false)} />
         </div>
         <ImagesContainer>
@@ -117,10 +116,10 @@ const ImagesContainer = styled.div`
   column-gap: 10px;
   text-align: center;
 
-  @media screen and (${breakpoint.device.tablet}) {
+  @media screen and (max-width: 1024px) {
     columns: 2;
   }
-  @media screen and (${breakpoint.device.desktop}) {
+  @media screen and (min-width: 2024px) {
     width: 60vw;
     column-gap: 20px;
   }

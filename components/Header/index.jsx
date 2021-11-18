@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import breakpoint from "../../assets/variables/breakpoints";
 import { TitleBig, Colors } from "../../assets/variables";
 import { homepageHeader } from "../../assets/data";
 
@@ -33,7 +32,7 @@ const SectionContainer = styled.header`
   justify-content: center;
   align-items: center;
 
-  @media only screen and (${breakpoint.device.mobile}) {
+  @media only screen and (max-width: 768px) {
     height: 45rem;
   }
 `;
@@ -47,11 +46,11 @@ const SloganContainer = styled.hgroup`
   line-height: 05rem;
   text-shadow: ${Colors.dark} 1px 0 10px;
 
-  @media screen and (${breakpoint.device.tablet}) {
+  @media screen and (max-width: 1024px) {
     text-align: center;
   }
 
-  @media screen and (${breakpoint.device.desktop}) {
+  @media screen and (min-width: 2024px) {
     width: 60vw;
   }
 `;
@@ -62,17 +61,17 @@ const Quote = styled.h2`
   color: ${Colors.white};
   margin: 1rem 0;
 
-  @media screen and (${breakpoint.device.mobile}) {
+  @media screen and (max-width: 768px) {
     font-size: 30px;
     line-height: 38px;
     text-align: center;
   }
-  @media screen and (min-width: 600px) and (${breakpoint.device.tablet}) {
+  @media screen and (min-width: 600px) and (max-width: 1024px) {
     font-size: 40px;
     line-height: 38px;
     text-align: center;
   }
-  @media screen and (${breakpoint.device.desktop}) {
+  @media screen and (min-width: 2024px) {
     font-size: 38px;
     letter-spacing: 2px;
   }
