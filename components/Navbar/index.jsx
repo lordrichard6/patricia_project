@@ -6,7 +6,7 @@ import { Link as LinkScroll } from "react-scroll";
 import { FaBars } from "react-icons/fa";
 import { Colors, Title3 } from "../../assets/variables";
 import Logo from "./logo";
-import pattern from "../../assets/images/pattern.png";
+import pattern from "../../public/images/pattern.png";
 
 
 export default function Navbar({ toggle }) {

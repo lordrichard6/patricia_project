@@ -4,19 +4,18 @@ import { Link as LinkScroll } from "react-scroll";
 
 import { TitleExtra, Colors } from "../../assets/variables";
 import { BsArrowLeftSquareFill } from "react-icons/bs";
-import background from "../../assets/images/contact_banner.jpg";
 
-export default function BannerContactMe() {
+export default function Banner({name, to, image}) {
   return (
     <SectionContainer>
       <BG
-        src={background}
+        src={image}
         layout="fill"
         objectFit="cover"
         objectPosition="center"
       />
-      <TitleExtra className="font-color">Contact</TitleExtra>
-      <GoTo to="form" smooth={true} duration={600}>
+      <TitleExtra className="font-color">{name}</TitleExtra>
+      <GoTo to={to} smooth={true} duration={600}>
         <Icon />
       </GoTo>
     </SectionContainer>
@@ -31,20 +30,24 @@ const SectionContainer = styled.section`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: ${Colors.dark};
-
+  /* background-color: #68a7f0; */
   @media screen and (max-width: 500px) {
     height: 25rem;
   }
-`;
 
-const BG = styled(Image)`
-  z-index: 0;
+  .font-color {
+    color: ${Colors.white};
+  }
 `;
 
 const GoTo = styled(LinkScroll)`
   z-index: 10;
   cursor: pointer;
+`;
+
+const BG = styled(Image)`
+  z-index: 0;
+  /* opacity: 0.1; */
 `;
 
 const Icon = styled(BsArrowLeftSquareFill)`

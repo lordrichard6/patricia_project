@@ -4,62 +4,13 @@ import Image from "next/image";
 
 import { FaWindowClose } from "react-icons/fa";
 import { Colors, Title1, Title2 } from "../../assets/variables";
-import pattern from "../../assets/images/pattern.png";
-import picture_01 from "../../assets/images/gal01.jpg";
-import picture_02 from "../../assets/images/gal02.jpg";
-import picture_03 from "../../assets/images/gal03.jpg";
-import picture_04 from "../../assets/images/gal04.jpg";
-import picture_05 from "../../assets/images/gal05.jpg";
-import picture_06 from "../../assets/images/gal06.jpg";
+import { gallery } from '../../assets/data'
+import pattern from "../../public/images/pattern.png";
+
 
 export default function Gallery() {
   const [model, setModel] = useState(false);
   const [tempImgSrc, setTempImgSrc] = useState("");
-
-  let data = [
-    {
-      id: 1,
-      imgSrc: picture_01,
-      height: 300,
-      width: 400,
-      alt: "patricia vila nova",
-    },
-    {
-      id: 2,
-      imgSrc: picture_02,
-      height: 500,
-      width: 400,
-      alt: "patricia vila nova",
-    },
-    {
-      id: 3,
-      imgSrc: picture_03,
-      height: 400,
-      width: 400,
-      alt: "patricia vila nova",
-    },
-    {
-      id: 4,
-      imgSrc: picture_04,
-      height: 400,
-      width: 400,
-      alt: "patricia vila nova",
-    },
-    {
-      id: 5,
-      imgSrc: picture_05,
-      height: 500,
-      width: 400,
-      alt: "patricia vila nova",
-    },
-    {
-      id: 6,
-      imgSrc: picture_06,
-      height: 300,
-      width: 400,
-      alt: "patricia vila nova",
-    },
-  ];
 
   const getImg = (imgSrc) => {
     setTempImgSrc(imgSrc);
@@ -82,11 +33,11 @@ export default function Gallery() {
         onClick={() => setModel(false)}
         className={model ? "model open" : "model"}
       >
-        <Image src={tempImgSrc} />
+        <img src={tempImgSrc} />
         <FaWindowClose onClick={() => setModel(false)} />
       </div>
       <ImagesContainer>
-        {data.map((item, index) => {
+        {gallery.map((item, index) => {
           return (
             <div key={index} className="pics grid-images">
               <Image

@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import { Colors, Title1, Title2, Title3, NormalText } from '../../assets/variables'
 import { BsCheckSquareFill } from "react-icons/bs";
-import picture from '../../assets/images/whyChooseMe.jpg'
+import picture from '../../public/images/whyChooseMe.jpg'
 
 
 export default function WhyChooseMe() {

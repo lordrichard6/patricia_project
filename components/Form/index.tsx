@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 import { Colors, Title2, NormalText } from '../../assets/variables'
-import background from '../../assets/images/form.jpg'
-import pattern from '../../assets/images/pattern.png'
+import background from '../../public/images/form.jpg'
+import pattern from '../../public/images/pattern.png'
 
 export default function Form() {
     return (

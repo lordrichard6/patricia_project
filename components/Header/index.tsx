@@ -2,32 +2,26 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 import { Title1, Title2, Colors } from '../../assets/variables'
+import { homepageHeader } from '../../assets/data'
 
 
 export default function Header() {
-    const data = {
-        picture: require('../../assets/images/header.jpg'),
-        alt: 'patricia vila nova driving service',
-        title: 'We drive & You smile',
-        quote: 'We provide more than transport, we create a moment dedicated to you.'
-    }
-
     return (
         <SectionContainer id='header'>
             <Background
-                src={data.picture}
+                src={homepageHeader.picture}
                 layout='fill'
                 objectFit='cover'
                 objectPosition='center'
-                alt={data.picture}
+                alt={homepageHeader.alt}
                 priority
             />
             <SloganContainer>
                 <Title1 className='dark-font'>
-                    {data.title}
+                    {homepageHeader.title}
                 </Title1>
                 <Title2 className='italic text-justify'>
-                    {data.quote}
+                    {homepageHeader.quote}
                 </Title2>
             </SloganContainer>
         </SectionContainer>

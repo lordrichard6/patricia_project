@@ -2,22 +2,10 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 import { Colors, Title1, Title2, Title3, NormalText } from '../../assets/variables'
-import picture from '../../assets/images/aboutMe.jpg'
+import { aboutMe } from '../../assets/data'
+
 
 export default function AboutMe() {
-    const data = {
-        title: 'Energy and dedication',
-        text: `Each trip represents for us an opportunity to surprise you.
-                    Good vibes, energy, sense of humour, friendliness and politeness 
-                    are among the many qualities that will travel with us.
-            `,
-        picture: picture,
-        alt: 'patricia',
-        quote: 'Driving besides a passion, is a means to meet new people and share moments'
-    }
-
-
-
     return (
         <SectionContainer id="about">
             <Title2 className='black-font margin-y underline'>
@@ -26,10 +14,10 @@ export default function AboutMe() {
             <InnerContainer>
                 <LeftContainer>
                     <Title1 className='black-font'>
-                        {data.title}
+                        {aboutMe.title}
                     </Title1>
                     <NormalText className='black-font'>
-                        {data.text}
+                        {aboutMe.text}
                     </NormalText>
                     {/* <LeftImage>
                         <Image
@@ -45,16 +33,16 @@ export default function AboutMe() {
                 <RightContainer>
                     <ImageWrapper>
                         <Image
-                        src={data.picture}
-                        objectFit='cover'
-                        layout='responsive'
-                        objectPosition='center'
-                        alt={data.alt}
-                    />
+                            src={aboutMe.picture}
+                            objectFit='cover'
+                            layout='responsive'
+                            objectPosition='center'
+                            alt={aboutMe.alt}
+                        />
                     </ImageWrapper>
-                    
+
                     <Title3 className='black-font margin-top'>
-                        {data.quote}
+                        {aboutMe.quote}
                     </Title3>
                     <NormalText className='black-font'>
                         Patricia Vila Nova

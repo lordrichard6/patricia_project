@@ -4,7 +4,7 @@ import { Link as LinkScroll } from "react-scroll";
 
 import { FaTimes } from "react-icons/fa";
 import { Colors, Title3 } from "../../assets/variables";
-import pattern from '../../assets/images/pattern.png'
+import pattern from '../../public/images/pattern.png'
 
 export default function Sidebar({isOpen, toggle}) {
   return (

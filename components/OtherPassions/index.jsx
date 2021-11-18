@@ -2,43 +2,9 @@ import styled from "styled-components";
 import Image from "next/image";
 
 import { Colors, Title2, Title3, NormalText } from "../../assets/variables";
-import hobby_01 from "../../assets/images/hobby_01.jpg";
-import hobby_02 from "../../assets/images/hobby_02.jpg";
-import hobby_03 from "../../assets/images/hobby_03.jpg";
+import { passions } from '../../assets/data'
 
 export default function OtherPassions() {
-  let data = [
-    {
-      id: 1,
-      imgSrc: hobby_01,
-      alt: "hobby",
-      classname: "black-font",
-      hobbyTitle: "Creative writing",
-      hobbyText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in. Quam tincidunt congue turpis non massa. Augue euismod sit lobortis metus, tincidunt aliquet quam ut mauris.",
-      container: "hobby",
-    },
-    {
-      id: 2,
-      imgSrc: hobby_02,
-      alt: "hobby",
-      classname: "black-font",
-      hobbyTitle: "Events organization",
-      hobbyText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in. Quam tincidunt congue turpis non massa. Augue euismod sit lobortis metus, tincidunt aliquet quam ut mauris.",
-      container: "hobby-reverse",
-    },
-    {
-      id: 3,
-      imgSrc: hobby_03,
-      alt: "hobby",
-      classname: "black-font",
-      hobbyTitle: "Helping animals cause",
-      hobbyText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis tellus, faucibus volutpat fusce consequat in. Quam tincidunt congue turpis non massa. Augue euismod sit lobortis metus, tincidunt aliquet quam ut mauris.",
-      container: "hobby",
-    },
-  ];
   return (
     <SectionContainer>
       <Title2 className="black-font margin-y underline">My Passions</Title2>
@@ -46,7 +12,7 @@ export default function OtherPassions() {
         “Hearts beats better and faster we make things we love”
       </TitleBreak>
       <InnerContainer>
-        {data.map((item, index) => {
+        {passions.map((item, index) => {
           return (
             <div className={item.container} key={index}>
               <ImageContainer>
