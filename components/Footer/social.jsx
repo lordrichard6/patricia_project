@@ -9,7 +9,7 @@ import {
   ImLinkedin,
   ImYoutube,
 } from "react-icons/im";
-import logo from "../../public/logo_white.png";
+import logo from "../../public/logo_w.png";
 
 export default function Social() {
   const data = [
@@ -89,16 +89,16 @@ const IconWrapper = styled.div`
 const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
-  width: 100px;
+  width: 250px;
   height: 100px;
   margin-top: 1rem;
 
   @media screen and (max-width: 768px) {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 100px;
   }
   @media screen and (min-width: 2024px) {
-    width: 200px;
-    height: 200px;
+    width: 350px;
+    height: 150px;
   }
 `;
