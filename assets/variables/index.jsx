@@ -127,10 +127,10 @@ export const SectionContainer = styled.section`
   background-size: cover;
 
   @media screen and (max-width: 1024px) {
-    margin: 2rem 0;
+    padding: 2rem 0;
   }
   @media screen and (min-width: 2024px) {
-    margin: 8rem 0;
+    padding: 8rem 0;
   }
 `;
 
