@@ -14,25 +14,25 @@ import logo from "../../public/logo_w.png";
 export default function Social() {
   const data = [
     {
-      href: "https://www.instagram.com/patriciavilanova93/",
+      href: "https://www.instagram.com/sardinhadrive/",
       icon: <ImInstagram />,
     },
     {
-      href: "https://www.facebook.com//vilanova.patricia/",
+      href: "https://www.facebook.com/sardinhadrive",
       icon: <ImFacebook2 />,
     },
     {
-      href: "https://twitter.com/patriciavilano5/",
+      href: "https://twitter.com/SardinhaDrive",
       icon: <ImTwitter />,
     },
     {
-      href: "https://www.linkedin.com/in/patr%C3%ADcia-vila-nova-b22200b5/",
+      href: "https://www.linkedin.com/company/sardinha-drive",
       icon: <ImLinkedin />,
     },
-    {
-      href: "https://www.youtube.com/channel/UC9SSRSUEyefD6K3lKpsBWpA",
-      icon: <ImYoutube />,
-    },
+    // {
+    //   href: "https://www.youtube.com/channel/UC9SSRSUEyefD6K3lKpsBWpA",
+    //   icon: <ImYoutube />,
+    // },
   ];
 
   return (

@@ -15,7 +15,7 @@ export default function Contact() {
     },
     {
       icon: <BsMailbox2 className="small-icons" />,
-      info: "patriciavilanova93@gmail.com",
+      info: "sardinhaplease@gmail.com",
     },
   ];
 

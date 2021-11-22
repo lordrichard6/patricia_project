@@ -116,7 +116,15 @@ export const SectionContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5rem 0;
+  padding: 5rem 0;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url("/backg.png");
+  background-position: center;
+  background-size: cover;
 
   @media screen and (max-width: 1024px) {
     margin: 2rem 0;
