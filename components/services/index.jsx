@@ -42,17 +42,22 @@ const InnerContainer = styled.div`
   align-items: center;
 
   @media only screen and (min-width: 2024px) {
-    width: 60vw;
+    /* width: 80vw; */
   }
 `;
 
 const ServicesContainer = styled.div`
   z-index: 2;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 
-  @media only screen and (max-width: 768px) {
-    flex-direction: column;
+  @media only screen and (max-width: 1024px) {
+    /* flex-direction: column; */
+  }
+
+  @media only screen and (min-width: 2024px) {
+    flex-wrap: nowrap;
   }
 `;
