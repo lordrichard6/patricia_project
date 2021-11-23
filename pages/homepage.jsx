@@ -13,7 +13,7 @@ import Services from "../components/services";
 // import WhyChooseMe from "../components/WhyChooseMe";
 import Passions from "../components/Passions";
 import Gallery from "../components/Gallery";
-import Form from "../components/Form";
+import FormSection from "../components/Form";
 import Footer from "../components/Footer";
 
 export default function Homepage() {
@@ -30,13 +30,13 @@ export default function Homepage() {
         <Navbar toggle={toggle} />
         <Header />
         <AboutMe />
-        <Banner name="Gallery" to="gallery" image={bannerGallery} />
+        <Banner name="Jump to Gallery" to="gallery" image={bannerGallery} />
         <Services />
         {/* <WhyChooseMe /> */}
         <Banner name="Contact Me" to="form" image={bannerContact} />
         <Passions />
         <Gallery />
-        <Form />
+        <FormSection />
         <Footer />
       </MainContainer>
     </>

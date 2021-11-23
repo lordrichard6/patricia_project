@@ -2,21 +2,16 @@ import styled from "styled-components";
 import Image from "next/image";
 import { Link as LinkScroll } from "react-scroll";
 
-import { TitleBig, Colors } from "../../assets/variables";
-import { BsArrowLeftSquareFill } from "react-icons/bs";
+import { Colors } from "../../assets/variables";
+import Button from './button'
 
-export default function Banner({name, to, image}) {
+export default function Banner({ name, to, image }) {
   return (
     <SectionContainer>
-      <BG
-        src={image}
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-      />
-      <TitleBig className="font-color">{name}</TitleBig>
+      <BG src={image} layout="fill" objectFit="cover" objectPosition="center" />
+
       <GoTo to={to} smooth={true} duration={600}>
-        <Icon />
+        <Button name={name}/>
       </GoTo>
     </SectionContainer>
   );
@@ -27,11 +22,12 @@ const SectionContainer = styled.section`
   width: 100%;
   height: 60vh;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   justify-content: center;
   align-items: center;
   /* background-color: #68a7f0; */
-  @media screen and (max-width: 500px) {
+
+  @media screen and (max-width: 764px) {
     height: 25rem;
   }
 
@@ -50,13 +46,3 @@ const BG = styled(Image)`
   /* opacity: 0.1; */
 `;
 
-const Icon = styled(BsArrowLeftSquareFill)`
-  color: ${Colors.white};
-  text-shadow: ${Colors.dark} 1px 0 10px;
-  font-size: 4rem;
-  margin-left: 1rem;
-
-  @media screen and (max-width: 1024px) {
-    font-size: 3rem;
-  }
-`;
