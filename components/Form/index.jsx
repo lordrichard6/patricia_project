@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Image from "next/image";
 
 import { Colors } from "../../assets/variables";
 import Form from "./form";

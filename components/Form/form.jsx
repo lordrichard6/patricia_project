@@ -3,57 +3,66 @@ import Image from "next/image";
 
 import { Colors } from "../../assets/variables";
 import pink from "../../public/images/form_side.jpg";
+import qr from "../../public/qr_code.png";
 
 export default function Form() {
   return (
-      <ElementsWrapper>
-        <ImageWrapper>
+    <ElementsWrapper>
+      <ImageWrapper>
+        <QRWrapper>
           <Image
-            src={pink}
+            src={qr}
             objectFit="cover"
-            layout="responsive"
             objectPosition="center"
-            alt="pink"
+            alt="qr code"
           />
-        </ImageWrapper>
+        </QRWrapper>
+        <Image
+          src={pink}
+          objectFit="cover"
+          layout="responsive"
+          objectPosition="center"
+          alt="pink"
+        />
+      </ImageWrapper>
 
-        <FormContainer>
-          <h2 id="form">Book a Service Now</h2>
-          <form>
-            <InputGroup>
-              <input
-                type="text"
-                name="name"
-                // value='Name'
-                placeholder="Name"
-              />
-            </InputGroup>
-            <InputGroup>
-              <input
-                type="text"
-                name="number"
-                // value='Phone Number'
-                placeholder="Phone Number"
-              />
-            </InputGroup>
-            <InputGroup>
-              <input
-                type="email"
-                name="email"
-                // value='Email'
-                placeholder="Email"
-              />
-            </InputGroup>
-            <InputGroup>
-              <textarea
-                name="message"
-                // value='Message'
-                placeholder="Message"
-              />
-            </InputGroup>
-          </form>
-        </FormContainer>
-      </ElementsWrapper>
+      <FormContainer>
+        <h2 id="form">Book a Service Now</h2>
+        <form>
+          <InputGroup>
+            <input
+              type="text"
+              name="name"
+              // value='Name'
+              placeholder="Name"
+            />
+          </InputGroup>
+          <InputGroup>
+            <input
+              type="text"
+              name="number"
+              // value='Phone Number'
+              placeholder="Phone Number"
+            />
+          </InputGroup>
+          <InputGroup>
+            <input
+              type="email"
+              name="email"
+              // value='Email'
+              placeholder="Email"
+            />
+          </InputGroup>
+          <InputGroup>
+            <textarea
+              name="message"
+              // value='Message'
+              placeholder="Message"
+            />
+          </InputGroup>
+        </form>
+      </FormContainer>
+    </ElementsWrapper>
   );
 }
 
@@ -81,7 +90,9 @@ const ElementsWrapper = styled.div`
     width: 45%;
   }
 `;
+
 const ImageWrapper = styled.div`
+  position: relative;
   width: 50%;
   /* height: 100%; */
 
@@ -91,6 +102,19 @@ const ImageWrapper = styled.div`
   }
   @media screen and (min-width: 2024px) {
     width: 50%;
+  }
+`;
+
+const QRWrapper = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  z-index: 10;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
   }
 `;
 
