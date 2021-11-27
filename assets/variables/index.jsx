@@ -134,6 +134,26 @@ export const SectionContainer = styled.section`
   }
 `;
 
+// export const SectionContainerBlue = styled.section`
+//   position: relative;
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 5rem 0;
+//   background: url("/pattern.png"), ${Colors.primary};
+//   color: ${(props) => props.color};
+
+//   @media screen and (max-width: 1024px) {
+//     padding: 4rem 0;
+//   }
+//   @media screen and (min-width: 2024px) {
+//     padding: 8rem 0;
+//   }
+// `;
+
 export const SectionContainerBlue = styled.section`
   position: relative;
   width: 100%;
@@ -143,7 +163,7 @@ export const SectionContainerBlue = styled.section`
   justify-content: center;
   align-items: center;
   padding: 5rem 0;
-  background: url("/pattern.png"), ${Colors.primary};
+  background: url("/pattern.png"), linear-gradient(#085467, #afa7bb);
   color: ${(props) => props.color};
 
   @media screen and (max-width: 1024px) {

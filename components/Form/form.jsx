@@ -78,6 +78,7 @@ const ElementsWrapper = styled.div`
   margin: 4rem 0;
   background: ${Colors.dark};
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
   @media screen and (max-width: 764px) {
     width: 80%;
@@ -97,6 +98,7 @@ const ImageWrapper = styled.div`
   /* height: 100%; */
 
   @media screen and (max-width: 1024px) {
+    display: none;
     width: 100%;
     height: 30rem;
   }

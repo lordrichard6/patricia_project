@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import logo from "../../public/logo_w.png";
+import logo from "../../public/logo_noLetter.png";
 import { Colors, TitleSmall } from "../../assets/variables";
 
 export default function Logo() {
@@ -17,7 +17,7 @@ export default function Logo() {
           objectPosition="center"
         />
       </LogoImg>
-      {/* <TitleSmall color={Colors.white}>Sardinha Drive</TitleSmall> */}
+      <TitleSmall color={Colors.white}>Sardinha Drive</TitleSmall>
     </LogoWrapper>
   );
 }
@@ -25,14 +25,16 @@ export default function Logo() {
 const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   @media screen and (max-width: 1024px) {
     margin-left: 1rem;
   }
 `;
 
 const LogoImg = styled.a`
-  width: 145px;
-  height: 60px;
+  width: 45px;
+  height: auto;
+  /* height: 40px; */
   margin-right: 0.5rem;
-  margin-top: 4px;
+  /* margin-top: 4px; */
 `;

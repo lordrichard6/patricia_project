@@ -42,6 +42,7 @@ const SloganContainer = styled.hgroup`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: 'Signika', sans-serif;
   z-index: 1;
   line-height: 05rem;
   text-shadow: ${Colors.dark} 1px 0 10px;
@@ -57,7 +58,7 @@ const SloganContainer = styled.hgroup`
 
 const Quote = styled.h2`
   font-size: 36px;
-  font-weight: 400;
+  font-weight: 300;
   color: ${Colors.white};
   margin: 1rem 0;
 

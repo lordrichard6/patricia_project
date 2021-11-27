@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import bannerGallery from "../public/images/gallery_banner.jpg";
-import bannerContact from "../public/images/contact_banner.jpg";
+import bannerGallery from "../public/images/banner01.jpg";
+import bannerContact from "../public/images/banner02.jpg";
 
 import Sidebar from "../components/Navbar/Sidebar";
 import Navbar from "../components/Navbar";

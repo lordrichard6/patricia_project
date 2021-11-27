@@ -1,6 +1,6 @@
 // IMPORTS
 import headerImage from "../../public/images/header.jpg";
-import aboutMeImage from "../../public/images/aboutMe.jpg";
+import aboutMeImage from "../../public/images/about.jpg";
 import hobby_01 from "../../public/images/hobby_01.jpg";
 import hobby_02 from "../../public/images/hobby_02.jpg";
 import hobby_03 from "../../public/images/hobby_03.jpg";
@@ -63,7 +63,7 @@ export const services = [
   },
   {
     id: 4,
-    picture: require("../../public/images/service03.jpg"),
+    picture: require("../../public/images/service04.jpg"),
     height: 600,
     width: 400,
     alt: "service 3",
@@ -72,7 +72,7 @@ export const services = [
   },
   {
     id: 5,
-    picture: require("../../public/images/service03.jpg"),
+    picture: require("../../public/images/service05.jpg"),
     height: 600,
     width: 400,
     alt: "service 3",
