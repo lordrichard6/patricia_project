@@ -3,9 +3,11 @@ import Image from "next/image";
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 
+import { BiMailSend } from "react-icons/bi";
 import { Colors } from "../../assets/variables";
 import pink from "../../public/images/form_side.jpg";
 import qr from "../../public/qr_code.png";
+
 
 export default function Form() {
   const [name, setName] = useState("");
@@ -15,17 +17,17 @@ export default function Form() {
   const [statusMessage, setStatusMessage] = useState("");
 
   const API_KEY = process.env.API_KEY;
+  console.log(API_KEY);
 
   function sendEmail(e) {
     e.preventDefault();
     const statusMessage = document.querySelector(".status-message");
 
-    emailjs.sendForm("gmail", "template_qknrj5c", e.target, API_KEY).then(
+    emailjs.sendForm("gmail", "template_9lx0vo9", e.target, API_KEY).then(
       (result) => {
         console.log(result.text);
         setStatusMessage("Message sent sucessfully!");
-        statusMessage.className =
-          "status-message hide";
+        statusMessage.className = "status-message hide";
         setTimeout(() => {
           statusMessage.className = "status-message show";
         }, 1000);
@@ -33,8 +35,7 @@ export default function Form() {
       (error) => {
         console.log(error.text);
         setStatusMessage("Failed to send message! Try again.");
-        statusMessage.className =
-          "status-message failed hide";
+        statusMessage.className = "status-message failed hide";
         setTimeout(() => {
           statusMessage.className = "status-message failed show";
         }, 1000);
@@ -105,7 +106,7 @@ export default function Form() {
             />
           </InputGroup>
           <EmailSend className="status-message">{statusMessage}</EmailSend>
-          <button type="submit">send</button>
+          <button type="submit"><BiMailSend /></button>
         </form>
       </FormContainer>
     </ElementsWrapper>
@@ -148,7 +149,7 @@ const ElementsWrapper = styled.div`
     opacity: 0;
   }
   .failed {
-    color: red!important;
+    color: red !important;
   }
 `;
 
@@ -215,6 +216,7 @@ const FormContainer = styled.div`
   }
 
   form {
+    position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -228,6 +230,7 @@ const FormContainer = styled.div`
     color: ${Colors.white};
     margin: 1rem 0.4rem;
     cursor: pointer;
+    font-size: 2rem;
   }
 `;
 
@@ -279,5 +282,7 @@ const InputGroup = styled.div`
 `;
 
 const EmailSend = styled.p`
+  position: absolute;
   opacity: 1;
+  bottom: 0;
 `;
