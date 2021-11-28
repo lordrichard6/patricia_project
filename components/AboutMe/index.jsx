@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Colors, TitleSection, SectionContainer } from "../../assets/variables";
+import { Colors, TitleSection, TitleSmall, SectionContainer } from "../../assets/variables";
 import Upper from "./upper";
 import Bottom from "./bottom";
 
@@ -13,6 +13,8 @@ export default function AboutMe() {
       <InnerContainer>
         <Upper />
         <Bottom />
+        <TitleSmall>"Driving is a passion that allows me to meet new people and share moments."</TitleSmall>
+        <Author>Patricia Vila Nova</Author>
       </InnerContainer>
     </SectionContainer>
   );
@@ -35,3 +37,7 @@ const InnerContainer = styled.div`
     width: 50vw;
   }
 `;
+
+const Author = styled.p`
+  text-align: center;
+`

@@ -77,6 +77,7 @@ export const TitleSmall = styled.h3`
   letter-spacing: 1px;
   color: ${(props) => props.color};
   margin: 1rem 0;
+  text-align: center;
 
   @media screen and (max-width: 768px) {
     text-align: center;

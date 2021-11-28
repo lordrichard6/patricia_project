@@ -13,7 +13,7 @@ export default function Passions() {
     <SectionContainer>
       <TitleSection id="hobby">My Passions</TitleSection>
       <TitleMain>
-        “Hearts beats better and faster we make things we love”
+        “Heart beats better and faster when we do things we love”
       </TitleMain>
       <InnerContainer>
         {passions.map((item, index) => {

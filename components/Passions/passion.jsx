@@ -11,10 +11,8 @@ export default function Passion({ i, classname, image, alt, title, text }) {
           <Image
             src={image}
             objectFit="cover"
-            layout="responsive"
+            layout="fill"
             objectPosition="center"
-            height={250}
-            width={400}
             alt={alt}
           />
         </ImageContainer>
@@ -51,7 +49,9 @@ const HobbyWrapper = styled.div`
 `;
 
 const ImageContainer = styled.div`
+  position: relative;
   width: 50%;
+  height: 25rem;
   margin: 1rem;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
     rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
