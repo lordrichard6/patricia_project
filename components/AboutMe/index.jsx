@@ -13,7 +13,7 @@ export default function AboutMe() {
       <InnerContainer>
         <Upper />
         <Bottom />
-        <TitleSmall>"Driving is a passion that allows me to meet new people and share moments."</TitleSmall>
+        <TitleSmall>Driving is a passion that allows me to meet new people and share moments.</TitleSmall>
         <Author>Patricia Vila Nova</Author>
       </InnerContainer>
     </SectionContainer>
