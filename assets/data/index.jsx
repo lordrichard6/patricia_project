@@ -144,7 +144,7 @@ export const passions = [
     alt: "hobby",
     classname: "black-font",
     hobbyTitle: "Events organization",
-    hobbyText: `What do you think? ${<br/>}Is life an event, with several phases or is life a series of events? 
+    hobbyText: `What do you think? Is life an event, with several phases or is life a series of events? 
       Since I was a little girl, organisation has been part of my lifestyle, but, however, it is very contradictory because when I am at the beginning of creating something, I am a complete chaos. For example, I am extremely organised with the environments and spaces, but completely disorganised when it comes to creating texts or content. 
       I have my drafts completly desorganized and only then I make it perfect. 
       I like being involved in projects and being surrounded by people. 

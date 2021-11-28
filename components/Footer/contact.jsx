@@ -15,7 +15,7 @@ export default function Contact() {
     },
     {
       icon: <BsMailbox2 className="small-icons" />,
-      info: "sardinhaplease@gmail.com",
+      info: <a href="mailto: sardinhaplease@gmail.com">sardinhaplease@gmail.com</a>
     },
   ];
 
