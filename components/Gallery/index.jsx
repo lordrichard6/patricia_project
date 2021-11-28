@@ -29,7 +29,7 @@ export default function Gallery() {
           onClick={() => setModel(false)}
           className={model ? "model open" : "model"}
         >
-          {/* <Image src={tempImgSrc} alt=''/> */}
+          <Image src={tempImgSrc} alt=''/>
           <FaWindowClose onClick={() => setModel(false)} />
         </div>
         <ImagesContainer>
