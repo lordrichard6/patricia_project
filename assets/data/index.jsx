@@ -1,6 +1,7 @@
 // IMPORTS
 import headerImage from "../../public/images/header.jpg";
-import aboutMeImage from "../../public/images/about.jpg";
+import aboutImage01 from "../../public/images/about01.jpg";
+import aboutImage02 from "../../public/images/about02.jpg";
 import hobby_01 from "../../public/images/hobby_01.jpg";
 import hobby_02 from "../../public/images/hobby_02.jpg";
 import hobby_03 from "../../public/images/hobby_03.jpg";
@@ -20,15 +21,54 @@ export const homepageHeader = {
 // ABOUT ME -----------------------------------------------------------------------------
 export const aboutMe = {
   title: "Energy and dedication",
-  text: `Each trip represents for us an opportunity to surprise you.
-          Good vibes, energy, sense of humour, friendliness and politeness 
-          are among the many qualities that will travel with us.
-        `,
-  picture: aboutMeImage,
-  alt: "patricia",
+  picture01: aboutImage01,
+  picture02: aboutImage02,
+  alt01: "sardinha drive",
+  alt02: "driving service",
   quote:
     '"Driving besides a passion, is a means to meet new people and share moments."',
 };
+export const aboutText01 = [
+  {
+    text: "Driving is so much more than knowing how to manoeuvre a car."
+  },
+  {
+    text: "I`ve always had a great passion for driving and how I feel so good when I`m with a steering wheel in my hands. A sense of calm and freedom."
+  },
+  {
+    text: "I drove my first car (Rover) when I was 14 years old and I remember only wishing I was 18 to get my driving license."
+  },
+  {
+    text: "In short, I like to move around, meet new people, and share stories and listen to people's stories (I'm a good listener), see beautiful places (Switzerland is a paradise) and create memories and collect smiles. I love to see people smiling."
+  },
+  {
+    text: "For several years, I have always strived to do something that really gives me the motivation to work 200%. Something that would give me the energy to wake up in the morning and go out into the world to fight. I wanted to work, but not just because I had bills to pay, but because it was what made me happy. I wanted quality and not quantity. I didn't want a job, I wanted to work."
+  }
+]
+
+export const aboutText02 = [
+  {
+    text: "And luck (or fate) was always on my side."
+  },
+  {
+    text: "Life gave me some wonderful parents, who taught me that you must work hard to have something in life. And I followed my father's advice. I left Portugal when I was 19 and went in search of more."
+  },
+  {
+    text: "Well, the reality was harder than I thought, but nevertheless my willpower didn't let me down."
+  },
+  {
+    text: "You can follow my professional path on Linkedin."
+  },
+  {
+    text: "And here I am (like Bryan Adams song) with own business, with my humble and cute car, ready to make many miles every day and making people's lives easier."
+  },
+  {
+    text: "Each trip represents for us an opportunity to surprise you. Good vibes, energy, sense of humour, friendliness and politeness are among the many qualities that will travel with us (me and my car)."
+  },
+  {
+    text: "I wasn't born with wings to fly, but success isn't always about going up, it's about going forward (and yes, writing, is one of many passions)."
+  },
+]
 // SERVICES -----------------------------------------------------------------------------
 export const services = [
   {

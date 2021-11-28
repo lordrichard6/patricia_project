@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 import { Colors, TitleSection, SectionContainer } from "../../assets/variables";
-import Left from "./left";
-import Right from "./right";
+import Upper from "./upper";
+import Bottom from "./bottom";
 
 export default function AboutMe() {
   return (
@@ -11,8 +11,8 @@ export default function AboutMe() {
         About Me
       </TitleSection>
       <InnerContainer>
-        <Left />
-        <Right />
+        <Upper />
+        <Bottom />
       </InnerContainer>
     </SectionContainer>
   );
@@ -21,7 +21,7 @@ export default function AboutMe() {
 const InnerContainer = styled.div`
   width: 80vw;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
 
