@@ -2,22 +2,22 @@ import styled from "styled-components";
 import Image from "next/image";
 
 import { TitleBig, Colors } from "../../assets/variables";
-import { homepageHeader } from "../../assets/data";
+import { header } from "../../assets/data/homepage";
 
 export default function Header() {
   return (
     <SectionContainer>
-      <Background
-        src={homepageHeader.picture}
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-        alt={homepageHeader.alt}
+      <ImageWrapper>
+        <Image
+        src={header.picture}
+        alt={header.alt}
         priority
       />
+      </ImageWrapper>
+      
       <SloganContainer>
-        <TitleBig color={Colors.white}>{homepageHeader.title}</TitleBig>
-        <Quote>{homepageHeader.quote}</Quote>
+        <TitleBig color={Colors.white}>{header.title}</TitleBig>
+        <Quote>{header.quote}</Quote>
       </SloganContainer>
     </SectionContainer>
   );
@@ -26,9 +26,9 @@ export default function Header() {
 const SectionContainer = styled.header`
   position: relative;
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
 
@@ -37,8 +37,21 @@ const SectionContainer = styled.header`
   }
 `;
 
+const ImageWrapper = styled.div`
+width: 50%;
+margin: 1rem 2rem;
+
+  @media screen and (max-width: 1024px) {
+
+  }
+
+  @media screen and (min-width: 2024px) {
+
+  }
+`;
+
 const SloganContainer = styled.hgroup`
-  width: 80vw;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,8 +89,4 @@ const Quote = styled.h2`
     font-size: 38px;
     letter-spacing: 2px;
   }
-`;
-
-const Background = styled(Image)`
-  z-index: 0;
 `;
