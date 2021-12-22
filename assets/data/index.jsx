@@ -1,5 +1,4 @@
 // IMPORTS
-import headerImage from "../../public/images/header.jpg";
 import aboutImage01 from "../../public/images/about01.jpg";
 import aboutImage02 from "../../public/images/about02.jpg";
 import hobby_01 from "../../public/images/hobby_01.jpg";
@@ -11,13 +10,6 @@ import gallery_03 from "../../public/images/gal03.jpg";
 import gallery_04 from "../../public/images/gal04.jpg";
 import gallery_05 from "../../public/images/gal05.jpg";
 import gallery_06 from "../../public/images/gal06.jpg";
-// HEADER -----------------------------------------------------------------------------
-export const homepageHeader = {
-  picture: headerImage,
-  alt: "patricia vila nova driving service",
-  title: "We drive & You smile",
-  quote: "We provide more than transport, we create a moment dedicated to you.",
-};
 // ABOUT ME -----------------------------------------------------------------------------
 export const aboutMe = {
   title: "Energy and dedication",

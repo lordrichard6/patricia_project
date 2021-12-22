@@ -32,9 +32,7 @@ const LogoWrapper = styled.div`
 `;
 
 const LogoImg = styled.a`
-  width: 45px;
+  width: 40px;
   height: auto;
-  /* height: 40px; */
   margin-right: 0.5rem;
-  /* margin-top: 4px; */
 `;

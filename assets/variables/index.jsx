@@ -1,32 +1,12 @@
 import styled from "styled-components";
 
 export const Colors = {
-  primary: "#062942",
+  // primary: "#062942",
+  primary: "#085467",
   secondary: "#9f60cc",
   dark: "#1d2124",
   white: "#eee",
 };
-
-export const TitleBig = styled.h1`
-  z-index: 10;
-  font-size: 64px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: ${Colors.white};
-  text-shadow: ${Colors.dark} 1px 0 10px;
-
-  @media screen and (max-width: 768px) {
-    font-size: 48px;
-    text-align: center;
-    line-height: 46px;
-  }
-  @media screen and (min-width: 2024px) {
-    font-size: 72px;
-    letter-spacing: 4px;
-  }
-`;
 
 export const TitleMain = styled.h1`
   font-size: 48px;

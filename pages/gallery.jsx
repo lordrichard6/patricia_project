@@ -8,8 +8,8 @@ import {
   Colors,
   TitleMain,
   TitleSection,
-} from "../../assets/variables";
-import { gallery } from "../../assets/data";
+} from "../assets/variables";
+import { gallery } from "../assets/data";
 
 export default function Gallery() {
   const [model, setModel] = useState(false);

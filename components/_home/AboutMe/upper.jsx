@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import { TitleMain, Text } from "../../assets/variables";
-import { aboutMe, aboutText01 } from "../../assets/data";
+import { TitleMain, Text } from "../../../assets/variables";
+import { aboutMe, aboutText01 } from "../../../assets/data";
 
 export default function Upper() {
   return (

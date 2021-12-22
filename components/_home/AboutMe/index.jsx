@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Colors, TitleSection, TitleSmall, SectionContainer } from "../../assets/variables";
+import { Colors, TitleSection, TitleSmall, SectionContainer } from "../../../assets/variables";
 import Upper from "./upper";
 import Bottom from "./bottom";
 

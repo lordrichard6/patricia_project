@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import { Text } from "../../assets/variables";
-import { aboutMe, aboutText02 } from "../../assets/data";
+import { Text } from "../../../assets/variables";
+import { aboutMe, aboutText02 } from "../../../assets/data";
 
 export default function Bottom() {
   return (

@@ -5,9 +5,9 @@ import {
   Colors,
   TitleMain,
   TitleSection,
-} from "../../assets/variables";
-import { services } from "../../assets/data";
-import Service from "./service";
+} from "../assets/variables";
+import { services } from "../assets/data";
+import Service from "../components/_services/service";
 
 export default function Services() {
   return (

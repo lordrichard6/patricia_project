@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-import { Colors } from "../../assets/variables";
-import Form from "./form";
+import { Colors } from "../assets/variables";
+import Form from "../components/_contact/form";
 
 export default function FormSection() {
   return (

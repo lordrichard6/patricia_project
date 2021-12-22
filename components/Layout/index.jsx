@@ -49,7 +49,7 @@ export default function Layout({ children }) {
           href="/logo_noLetter.png"
         />
       </Head>
-      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Sidebar className="side" isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <MainContainer>{children}</MainContainer>
       <Footer />
@@ -64,4 +64,7 @@ const MainContainer = styled.main`
   flex-direction: column;
   align-items: center;
   /* overflow-x: hidden; */
+  .side {
+    position: sticky !important;
+  }
 `;

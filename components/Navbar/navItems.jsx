@@ -1,47 +1,28 @@
 import styled from "styled-components";
-// import Link from "next/link";
-import { Link as LinkScroll } from "react-scroll";
+import Link from "next/link";
+import { LinkScroll } from "react-scroll";
 
 import { Colors } from "../../assets/variables";
+import { Items } from "../../assets/data/navigation";
 
 export default function NavItems() {
-  const data = [
-    {
-      to: "about",
-      name: "About",
-    },
-    {
-      to: "services",
-      name: "Services",
-    },
-    {
-      to: "hobby",
-      name: "Hobbies",
-    },
-    {
-      to: "gallery",
-      name: "Gallery",
-    },
-    {
-      to: "form",
-      name: "Contact",
-    },
-  ];
 
   return (
     <NavMenu>
-      {data.map((item, i) => {
+      {Items.map((item, i) => {
         return (
           <NavItem key={i}>
-            <NavLinks
-              to={item.to}
-              smooth={true}
-              duration={600}
-              spy={true}
+            <Link href={item.to}>
+              <NavLinks
+              // smooth={true}
+              // duration={600}
+              // spy={true}
               // offset={80}
             >
               <Name>{item.name}</Name>
             </NavLinks>
+            </Link>
+            
           </NavItem>
         );
       })}
@@ -64,7 +45,7 @@ const NavItem = styled.li`
   height: 60px;
 `;
 
-const NavLinks = styled(LinkScroll)`
+const NavLinks = styled.a`
   color: #fff;
   display: flex;
   align-items: center;

@@ -24,9 +24,8 @@ export default function Navbar({ toggle }) {
 
 const Nav = styled.nav`
   z-index: 10;
-  /* background: url("/pattern.png"), ${Colors.primary}; */
-  background: #085467;
-  height: 56px;
+  background: ${Colors.primary};
+  height: 64px;
   width: 100%;
   display: flex;
   justify-content: center;
