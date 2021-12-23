@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Colors = {
-  // primary: "#062942",
   primary: "#085467",
   secondary: "#9f60cc",
+  terciary: "#062942",
   dark: "#1d2124",
   white: "#eee",
 };

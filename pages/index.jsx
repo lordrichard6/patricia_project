@@ -2,14 +2,18 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import Header from "../components/_home/header";
-import AboutMe from "../components/_home/AboutMe";
+import WhyChooseUs from "../components/_home/whyChooseUs";
+import Pictures from '../components/_home/pictures'
+import About from '../components/_home/about'
 
 
 export default function Home() {
   return (
     <MainContainer>
       <Header />
-      <AboutMe />
+      <Pictures />
+      <About />
+      <WhyChooseUs />
     </MainContainer>
   );
 }

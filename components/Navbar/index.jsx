@@ -5,7 +5,6 @@ import { Colors } from "../../assets/variables";
 import Logo from "./logo";
 import NavItems from "./navItems";
 
-
 export default function Navbar({ toggle }) {
   return (
     <>
@@ -48,6 +47,9 @@ const NavbarContainer = styled.div`
 
   @media screen and (max-width: 1024px) {
     width: 100%;
+  }
+  @media screen and (min-width: 2024px) {
+    width: 70%;
   }
 `;
 

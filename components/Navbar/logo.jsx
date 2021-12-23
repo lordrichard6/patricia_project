@@ -2,7 +2,8 @@ import styled from "styled-components";
 import Image from "next/image";
 
 import logo from "../../public/logo_noLetter.png";
-import { Colors, TitleSmall } from "../../assets/variables";
+import { Colors } from "../../assets/variables";
+import { Headline4 } from "../../assets/variables/typography";
 
 export default function Logo() {
   return (
@@ -10,14 +11,12 @@ export default function Logo() {
       <LogoImg href="/">
         <Image
           src={logo}
-          // height={100}
-          // width={100}
-          alt="logo patricia vila nova"
+          alt="logo sardinha drive"
           objectFit="cover"
           objectPosition="center"
         />
       </LogoImg>
-      <TitleSmall color={Colors.white}>Sardinha Drive</TitleSmall>
+      <Headline4 color={Colors.white}>Sardinha Drive</Headline4>
     </LogoWrapper>
   );
 }

@@ -2,26 +2,28 @@ import styled from "styled-components";
 import Link from "next/link";
 
 import { Colors } from "../../assets/variables";
+import { Headline4 } from "../../assets/variables/typography";
 
 export default function Button({ name, href }) {
   return (
-    <Link href={href}>
-      <AniButton className="font-color">{name}</AniButton>
-    </Link>
+    <div>
+      <Link href={href}>
+        <AniButton>
+          <Headline4 color={Colors.white}>{name}</Headline4>
+        </AniButton>
+      </Link>
+    </div>
   );
 }
 
 const AniButton = styled.button`
-  margin: 1rem 0;
+  margin: 32px 0;
+  padding: 16px 32px;
   text-decoration: none;
   position: relative;
   border: none;
-  font-size: 2rem;
   font-family: inherit;
-  color: #fff;
-  width: 20rem;
-  /* height: 66px; */
-  line-height: 2em;
+  /* width: 20rem; */
   text-align: center;
   /* background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4); */
   background: linear-gradient(90deg, #085467, #afa7bb, #f4c0b3, #085467);

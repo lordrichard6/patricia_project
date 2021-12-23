@@ -5,33 +5,41 @@ import { Colors } from "../../assets/variables";
 import { Headline1 } from "../../assets/variables/typography";
 import {
   SectionContainer,
-  SectionWrapper
+  SectionWrapper,
 } from "../../assets/variables/containers";
-import { header } from "../../assets/data/homepage";
+import { header } from "../../assets/data/home";
 import Button from "../Button";
-// import Morph from './morph'
 
 export default function Header() {
   return (
-    <SectionContainer>
+    <Section>
       <SectionWrapper flex="row-reverse">
         <ImageWrapper>
           <Image src={header.picture} alt={header.alt} priority />
         </ImageWrapper>
         <SloganContainer>
-          <Headline1 color={Colors.primary}>{header.title}</Headline1>
-          {/* <Morph /> */}
+          <Headline1 color={Colors.dark}>{header.title}</Headline1>
           <Button name="Check Our Services" href="/services" />
           {/* <Quote>{header.quote}</Quote> */}
         </SloganContainer>
       </SectionWrapper>
-    </SectionContainer>
+    </Section>
   );
 }
 
+const Section = styled(SectionContainer)`
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.1)
+    ),
+    url("/images/bg_top.png");
+  background-size: cover;
+`;
+
 const ImageWrapper = styled.div`
+  z-index: 100;
   width: 50%;
-  margin: 1rem 2rem;
   filter: drop-shadow(1px 2px 8px hsl(220deg 60% 50% / 0.3))
     drop-shadow(2px 4px 16px hsl(220deg 60% 50% / 0.3))
     drop-shadow(4px 8px 32px hsl(220deg 60% 50% / 0.3));
@@ -46,9 +54,8 @@ const SloganContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: "Signika", sans-serif;
+  /* font-family: "Signika", sans-serif; */
   z-index: 1;
-  /* line-height: 5rem; */
 
   @media screen and (max-width: 1024px) {
     width: 100%;

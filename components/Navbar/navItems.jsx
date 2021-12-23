@@ -1,28 +1,21 @@
 import styled from "styled-components";
 import Link from "next/link";
-import { LinkScroll } from "react-scroll";
 
 import { Colors } from "../../assets/variables";
+import { Headline4 } from "../../assets/variables/typography";
 import { Items } from "../../assets/data/navigation";
 
 export default function NavItems() {
-
   return (
     <NavMenu>
       {Items.map((item, i) => {
         return (
           <NavItem key={i}>
             <Link href={item.to}>
-              <NavLinks
-              // smooth={true}
-              // duration={600}
-              // spy={true}
-              // offset={80}
-            >
-              <Name>{item.name}</Name>
-            </NavLinks>
+              <NavLinks>
+                <Headline4 color={Colors.white}>{item.name}</Headline4>
+              </NavLinks>
             </Link>
-            
           </NavItem>
         );
       })}
@@ -46,28 +39,15 @@ const NavItem = styled.li`
 `;
 
 const NavLinks = styled.a`
-  color: #fff;
   display: flex;
   align-items: center;
-  text-decoration: none;
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
 
   &:hover {
-    /* transition: 0.2s ease-in-out; */
-    border-bottom: 3px solid ${Colors.secondary};
-  }
-
-  &.active {
-    border-bottom: 3px solid ${Colors.secondary};
-  }
-`;
-const Name = styled.h2`
-  font-size: 1.8rem;
-  font-weight: 400;
-
-  &.active {
-    border-bottom: 3px solid ${Colors.secondary};
+    transition: 0.1s ease-in-out;
+    background-color: ${Colors.terciary};
+    border-radius: 100px;
   }
 `;
