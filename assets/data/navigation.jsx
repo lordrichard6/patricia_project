@@ -4,6 +4,10 @@ export const Items = [
       name: "Home",
     },
     {
+      to: "/about",
+      name: "About",
+    },
+    {
       to: "/services",
       name: "Services",
     },

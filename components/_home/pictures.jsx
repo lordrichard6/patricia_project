@@ -27,6 +27,6 @@ const SectionContainer = styled.section`
 `;
 
 const ImageWrapper = styled.div`
+  display: flex;
   width: calc(100% / 3);
-  /* height: 40vh; */
 `;

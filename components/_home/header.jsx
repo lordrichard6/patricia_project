@@ -12,7 +12,7 @@ import Button from "../Button";
 
 export default function Header() {
   return (
-    <Section>
+    <SectionContainer className="background-pattern_top">
       <SectionWrapper flex="row-reverse">
         <ImageWrapper>
           <Image src={header.picture} alt={header.alt} priority />
@@ -23,19 +23,9 @@ export default function Header() {
           {/* <Quote>{header.quote}</Quote> */}
         </SloganContainer>
       </SectionWrapper>
-    </Section>
+    </SectionContainer>
   );
 }
-
-const Section = styled(SectionContainer)`
-  background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0.1)
-    ),
-    url("/images/bg_top.png");
-  background-size: cover;
-`;
 
 const ImageWrapper = styled.div`
   z-index: 100;

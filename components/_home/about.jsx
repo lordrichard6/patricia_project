@@ -35,7 +35,6 @@ const TextWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 50%;
-  height: 100%;
   background: ${Colors.primary};
   padding-top: 32px;
   padding-bottom: 32px;
@@ -49,7 +48,6 @@ const TextWrapper = styled.div`
 const ImageWrapper = styled.div`
   display: flex;
   width: 50%;
-  height: 100%;
 
   @media screen and (max-width: 1024px) {
   }

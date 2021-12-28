@@ -1,12 +1,13 @@
+import React, { useState } from "react";
 import styled from "styled-components";
 
-import Services from "../components/_services";
+import AboutMe from '../components/_about/AboutMe'
 
 
-export default function ServicesPage() {
+export default function AboutPage() {
   return (
     <MainContainer>
-      <Services />
+      <AboutMe />
     </MainContainer>
   );
 }

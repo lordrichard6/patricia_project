@@ -4,8 +4,10 @@ export const SectionContainer = styled.section`
   width: 100vw;
   min-height: 100vh;
   display: flex;
+  flex-direction: ${(props) => props.flex};
   justify-content: center;
   align-items: center;
+  padding: 80px 0;
 
   @media only screen and (max-width: 768px) {
     min-height: 46rem;
