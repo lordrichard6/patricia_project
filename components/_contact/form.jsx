@@ -5,9 +5,8 @@ import emailjs from "emailjs-com";
 
 import { BiMailSend } from "react-icons/bi";
 import { Colors } from "../../assets/variables";
-import pink from "../../public/images/form_side.jpg";
+import { Headline4 } from "../../assets/variables/typography";
 import qr from "../../public/qr_code.png";
-
 
 export default function Form() {
   const [name, setName] = useState("");
@@ -58,17 +57,10 @@ export default function Form() {
             alt="qr code"
           />
         </QRWrapper>
-        <Image
-          src={pink}
-          objectFit="cover"
-          layout="responsive"
-          objectPosition="center"
-          alt="pink"
-        />
       </ImageWrapper>
 
       <FormContainer>
-        <h2 id="form">Book a Service Now</h2>
+        <Headline4 id="form" color={Colors.white}>Book a Service Now</Headline4>
         <form id="contact-form" onSubmit={sendEmail}>
           <InputGroup>
             <input
@@ -106,7 +98,9 @@ export default function Form() {
             />
           </InputGroup>
           <EmailSend className="status-message">{statusMessage}</EmailSend>
-          <button type="submit"><BiMailSend /></button>
+          <button type="submit">
+            <BiMailSend />
+          </button>
         </form>
       </FormContainer>
     </ElementsWrapper>
@@ -156,7 +150,11 @@ const ElementsWrapper = styled.div`
 const ImageWrapper = styled.div`
   position: relative;
   width: 50%;
+  height: 100%;
   /* height: 100%; */
+  background: url("/form_pink.jpg");
+  background-position: center;
+  background-size: cover;
 
   @media screen and (max-width: 1024px) {
     display: none;
@@ -170,6 +168,7 @@ const ImageWrapper = styled.div`
 
 const QRWrapper = styled.div`
   position: absolute;
+  display: flex;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -189,6 +188,7 @@ const FormContainer = styled.div`
   width: 50%;
   background: ${Colors.dark};
   z-index: 2;
+  padding: 16px 0;
 
   @media screen and (max-width: 768px) {
     width: 90% !important;

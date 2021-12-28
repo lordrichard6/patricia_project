@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import { TitleSmall, Text } from "../../assets/variables";
+import { Headline4, Paragraph } from "../../assets/variables/typography";
+import { Colors } from "../../assets/variables";
 
 export default function Service({ i, imgSrc, alt, title, text }) {
   return (
@@ -10,8 +11,8 @@ export default function Service({ i, imgSrc, alt, title, text }) {
         <Image src={imgSrc} objectFit="cover" alt={alt} />
       </ImageWrapper>
       <Info>
-        <TitleSmall>{title}</TitleSmall>
-        <Text>{text}</Text>
+        <Headline4 className='paddingY-16' color={Colors.white}>{title}</Headline4>
+        <Paragraph color={Colors.white}>{text}</Paragraph>
       </Info>
     </ServiceWrapper>
   );
@@ -77,6 +78,6 @@ const Info = styled.div`
   }
 
   &:hover {
-    height: 60%;
+    height: 65%;
   }
 `;

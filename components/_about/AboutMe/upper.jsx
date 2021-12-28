@@ -1,18 +1,18 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import { TitleMain, Text } from "../../../assets/variables";
+import { Headline2, Paragraph } from "../../../assets/variables/typography";
 import { aboutMe, aboutText01 } from "../../../assets/data";
 
 export default function Upper() {
   return (
     <Container>
       <TextWrapper>
-        <TitleMain>{aboutMe.title}</TitleMain>
+        <Headline2>{aboutMe.title}</Headline2>
         {aboutText01.map((item, i) => {
           return (
             <div key={i}>
-              <Text>{item.text}</Text>
+              <Paragraph>{item.text}</Paragraph>
               <br />
             </div>
           );

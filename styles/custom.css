@@ -10,8 +10,16 @@
 .background-pattern_top {
     background: linear-gradient(0deg,
             rgba(255, 255, 255, 0.8),
-            rgba(255, 255, 255, 0.1)),
+            rgba(255, 255, 255, 0.2)),
         url("/bg_top.png");
     background-position: center;
     background-size: cover;
+}
+
+.paddingY-16 {
+    padding: 16px 0;
+}
+
+.paddingY-8 {
+    padding: 8px 0;
 }
