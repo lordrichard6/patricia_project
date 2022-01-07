@@ -25,7 +25,7 @@ export const SectionWrapper = styled.div`
 
   @media only screen and (max-width: 768px) {
     width: 90%;
-    height: 46rem;
+    min-height: 46rem;
     flex-direction: column;
   }
 

@@ -27,8 +27,10 @@ export default function WhyChooseUs() {
   );
 }
 
-export const SectionContainer = styled.section`
+const SectionContainer = styled.section`
   width: 100vw;
+  /* height: 100%; */
+  height: ;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,6 +43,10 @@ export const SectionContainer = styled.section`
     url("/backg.png");
   background-position: center;
   background-size: cover;
+
+  @media screen and (max-width: 1024px) {
+    padding: 32px 0;
+  }
 `;
 
 const InnerContainer = styled.div`
@@ -48,6 +54,10 @@ const InnerContainer = styled.div`
   grid-template-columns: repeat(3, 30%);
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, 80%);
+  }
 
   @media only screen and (min-width: 2024px) {
     /* width: 80vw; */

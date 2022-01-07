@@ -30,10 +30,10 @@ const Nav = styled.nav`
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  position: sticky;
-  top: 0;
 
   @media screen and (max-width: 1024px) {
+    position: sticky;
+    top: 0;
     transition: 0.8s all ease;
   }
 `;

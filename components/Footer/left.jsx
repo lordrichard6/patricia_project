@@ -12,18 +12,20 @@ export default function Left() {
       <Element>
         <Headline4 color={Colors.white}>{about.quote}</Headline4>
       </Element>
-      
+
       <Element>
         <Headline4 color={Colors.white}>Sitemap</Headline4>
-        {Items.map((item, i) => {
-          return (
-            <Link key={i} href={item.to}>
-              <NavLinks>
-                <Headline4 color={Colors.white}>{item.name}</Headline4>
-              </NavLinks>
-            </Link>
-          );
-        })}
+        <MapElements>
+          {Items.map((item, i) => {
+            return (
+              <Link key={i} href={item.to}>
+                <NavLinks>
+                  <Headline4 color={Colors.white}>{item.name}</Headline4>
+                </NavLinks>
+              </Link>
+            );
+          })}
+        </MapElements>
       </Element>
       <Element>
         <Headline4 color={Colors.white}>Follow Us</Headline4>
@@ -51,8 +53,29 @@ const Container = styled.div`
 const Element = styled.div`
   display: flex;
   margin: 16px 0;
+
+  :nth-child(2) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 1024px) {
+    align-items: center;
+    flex-direction: column;
+    margin: 16px 0;
+
+    div {
+      margin: 16px 0;
+    }
+  }
 `;
 
+const MapElements = styled.div`
+  display: flex;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+`;
 
 const IconWrapper = styled.div`
   color: ${Colors.white};

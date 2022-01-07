@@ -15,7 +15,12 @@ export default function About() {
         <Button name="Read more" href="/about" />
       </TextWrapper>
       <ImageWrapper>
-        <Image src={about.imgSrc} objectPosition="center" alt={about.alt} objectFit="cover"/>
+        <Image
+          src={about.imgSrc}
+          objectPosition="center"
+          alt={about.alt}
+          objectFit="cover"
+        />
       </ImageWrapper>
     </SectionContainer>
   );
@@ -26,7 +31,8 @@ const SectionContainer = styled.div`
   display: flex;
   flex-direction: row;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
   }
 `;
 
@@ -41,7 +47,13 @@ const TextWrapper = styled.div`
   padding-right: 16px;
   padding-left: calc(100vh / 5);
 
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 32px 32px!important;
+    align-items: center;
+  }
   @media screen and (max-width: 1024px) {
+    padding-left: calc(100vh / 8);
   }
 `;
 
@@ -49,7 +61,8 @@ const ImageWrapper = styled.div`
   display: flex;
   width: 50%;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 768px) {
+    width: 100%;
   }
 
   @media screen and (min-width: 2024px) {

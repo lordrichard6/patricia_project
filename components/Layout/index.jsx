@@ -49,10 +49,12 @@ export default function Layout({ children }) {
           href="/logo_noLetter.png"
         />
       </Head>
-      <Sidebar className="side" isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
-      <MainContainer>{children}</MainContainer>
-      <Footer />
+      <Mother>
+        <Sidebar className="side" isOpen={isOpen} toggle={toggle} />
+        <Navbar toggle={toggle} />
+        <MainContainer>{children}</MainContainer>
+        <Footer />
+      </Mother>
     </>
   );
 }
@@ -67,4 +69,8 @@ const MainContainer = styled.main`
   .side {
     position: sticky !important;
   }
+`;
+
+const Mother = styled.main`
+  
 `;

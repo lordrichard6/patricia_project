@@ -36,4 +36,8 @@ const InnerWrapper = styled.div`
   align-items: center;
   width: 80%;
   padding: 32px 0;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;

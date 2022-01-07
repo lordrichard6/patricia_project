@@ -28,7 +28,7 @@ export default function Header() {
 }
 
 const ImageWrapper = styled.div`
-  z-index: 100;
+  z-index: 50;
   width: 50%;
   filter: drop-shadow(1px 2px 8px hsl(220deg 60% 50% / 0.3))
     drop-shadow(2px 4px 16px hsl(220deg 60% 50% / 0.3))
@@ -49,6 +49,7 @@ const SloganContainer = styled.div`
 
   @media screen and (max-width: 1024px) {
     width: 100%;
+    align-items: center;
   }
 
   @media screen and (min-width: 2024px) {

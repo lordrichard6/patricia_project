@@ -26,6 +26,7 @@ const LogoContainer = styled.div`
   @media screen and (max-width: 768px) {
     width: 250px;
     height: 100px;
+    margin: 32px 0;
   }
   @media screen and (min-width: 2024px) {
     width: 350px;
