@@ -19,7 +19,7 @@ export default function Logo() {
           />
         </LogoImg>
       </Link>
-      <Headline4 color={Colors.white}>Sardinha Drive</Headline4>
+      <Headline4 color={Colors.dark}>Sardinha Drive</Headline4>
     </LogoWrapper>
   );
 }

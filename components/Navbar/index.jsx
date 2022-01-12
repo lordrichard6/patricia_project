@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import { FaBars } from "react-icons/fa";
@@ -6,35 +7,61 @@ import Logo from "./logo";
 import NavItems from "./navItems";
 
 export default function Navbar({ toggle }) {
+  const [scrolled, setScrolled] = useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 200) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
+  let navbarClasses = ["navbar"];
+  if (scrolled) {
+    navbarClasses.push("scrolled");
+  }
+
   return (
-    <>
-      <Nav id="top">
-        <NavbarContainer>
-          <Logo />
-          <MobileIcon onClick={toggle}>
-            <FaBars />
-          </MobileIcon>
-          <NavItems />
-        </NavbarContainer>
-      </Nav>
-    </>
+    <Nav id="top" className={navbarClasses.join(" ")}>
+      <NavbarContainer>
+        <Logo />
+        <MobileIcon onClick={toggle}>
+          <FaBars />
+        </MobileIcon>
+        <NavItems />
+      </NavbarContainer>
+    </Nav>
   );
 }
 
 const Nav = styled.nav`
   z-index: 10;
-  background: ${Colors.primary};
+  position: absolute;
+  /* top: 0; */
+  /* background: ${Colors.primary}; */
   height: 64px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
+  margin-top: 32px;
 
   @media screen and (max-width: 1024px) {
-    position: sticky;
-    top: 0;
+    /* position: sticky;
+    top: 0; */
     transition: 0.8s all ease;
+    margin-top: 0;
+  }
+
+  .scrolled {
+    position: fixed;
+    top: 0;
   }
 `;
 
@@ -64,6 +91,6 @@ const MobileIcon = styled.div`
     transform: translate(-100%, 40%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #fff;
+    color: ${Colors.dark};
   }
 `;

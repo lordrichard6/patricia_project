@@ -13,7 +13,7 @@ export default function NavItems() {
           <NavItem key={i}>
             <Link href={item.to}>
               <NavLinks>
-                <Headline4 color={Colors.white}>{item.name}</Headline4>
+                <Headline4 color={Colors.dark}>{item.name}</Headline4>
               </NavLinks>
             </Link>
           </NavItem>
@@ -46,8 +46,11 @@ const NavLinks = styled.a`
   cursor: pointer;
 
   &:hover {
-    transition: 0.1s ease-in-out;
+    transition: 0.2s ease-in-out;
     background-color: ${Colors.terciary};
     border-radius: 100px;
+    h4 {
+      color: ${Colors.white};
+    }
   }
 `;

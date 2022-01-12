@@ -23,3 +23,12 @@
 .paddingY-8 {
     padding: 8px 0;
 }
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+.relative {
+    position: relative;
+}
