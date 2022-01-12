@@ -32,3 +32,14 @@
 .relative {
     position: relative;
 }
+
+.scrolled {
+    position: fixed !important;
+    top: 0;
+    background: #085467;
+    margin-top: 0 !important;
+}
+
+.white-font * {
+    color: #eee !important;
+}

@@ -7,6 +7,7 @@ import { Colors } from "../../assets/variables";
 import { Headline4 } from "../../assets/variables/typography";
 
 export default function Logo() {
+
   return (
     <LogoWrapper>
       <Link href="/">

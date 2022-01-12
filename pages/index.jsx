@@ -5,26 +5,23 @@ import Header from "../components/_home/header";
 import WhyChooseUs from "../components/_home/whyChooseUs";
 import Pictures from "../components/_home/pictures";
 import About from "../components/_home/about";
-import Layout from "../components/Layout";
 
 export default function Home() {
   return (
-    <Layout>
-      {/* <MainContainer> */}
+    <MainContainer>
       <Header />
       <Pictures />
       <About />
       <WhyChooseUs />
-      {/* </MainContainer> */}
-    </Layout>
+    </MainContainer>
   );
 }
 
-// const MainContainer = styled.main`
-//   margin: 0;
-//   width: 100vw;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   overflow-x: hidden;
-// `;
+const MainContainer = styled.main`
+  margin: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+`;

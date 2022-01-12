@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Link as LinkScroll } from "react-scroll";
+// import { Link as LinkScroll } from "react-scroll";
+import Link from 'next/link'
 
 import { FaTimes } from "react-icons/fa";
 import { Colors, TitleMain } from "../../assets/variables";
@@ -15,7 +16,7 @@ export default function Sidebar({ isOpen, toggle }) {
         <SidebarMenu>
           {Items.map((item, i) => {
             return (
-              <SidebarLink key={i} onClick={toggle} to={item.to} smooth={true}>
+              <SidebarLink key={i} onClick={toggle} href={item.to} smooth={true}>
                 <Title>{item.name}</Title>
               </SidebarLink>
             );
@@ -28,7 +29,7 @@ export default function Sidebar({ isOpen, toggle }) {
 
 const SidebarContainer = styled.aside`
   position: fixed;
-  z-index: 100;
+  z-index: 200;
   width: 100vw;
   height: 100vh;
   /* background: url("/pattern.png"), ${Colors.primary}; */
@@ -63,7 +64,7 @@ const SidebarMenu = styled.ul`
   text-align: center;
 `;
 
-const SidebarLink = styled(LinkScroll)`
+const SidebarLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;

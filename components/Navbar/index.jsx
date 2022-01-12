@@ -11,7 +11,7 @@ export default function Navbar({ toggle }) {
 
   const handleScroll = () => {
     const offset = window.scrollY;
-    if (offset > 200) {
+    if (offset > 1) {
       setScrolled(true);
     } else {
       setScrolled(false);
@@ -21,9 +21,10 @@ export default function Navbar({ toggle }) {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   });
+  
   let navbarClasses = ["navbar"];
   if (scrolled) {
-    navbarClasses.push("scrolled");
+    navbarClasses.push("scrolled", "white-font");
   }
 
   return (
@@ -40,7 +41,7 @@ export default function Navbar({ toggle }) {
 }
 
 const Nav = styled.nav`
-  z-index: 10;
+  z-index: 100;
   position: absolute;
   /* top: 0; */
   /* background: ${Colors.primary}; */
@@ -51,17 +52,13 @@ const Nav = styled.nav`
   align-items: center;
   font-size: 1rem;
   margin-top: 32px;
+  transition: 0.8s all ease;
 
   @media screen and (max-width: 1024px) {
     /* position: sticky;
     top: 0; */
     transition: 0.8s all ease;
-    margin-top: 0;
-  }
-
-  .scrolled {
-    position: fixed;
-    top: 0;
+    margin-top: 16px;
   }
 `;
 
