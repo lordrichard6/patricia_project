@@ -55,9 +55,9 @@ const Info = styled.div`
   bottom: 0;
   height: 60px;
   background: #0a0a0a9b;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  -moz-backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  -moz-backdrop-filter: blur(8px);
   overflow: hidden;
   transition: all 0.4s;
   margin: 1rem 0;
@@ -75,9 +75,10 @@ const Info = styled.div`
   @media only screen and (max-width: 1024px) {
     margin: 1rem 0;
     margin-right: 1rem;
-  }
-
-  &:hover {
     height: 65%;
   }
+
+  /* &:hover {
+    height: 65%;
+  } */
 `;

@@ -6,7 +6,7 @@ import { FaWindowClose } from "react-icons/fa";
 import { Colors } from "../../assets/variables";
 import { SectionContainer } from "../../assets/variables/containers";
 import { Headline2, Headline4 } from "../../assets/variables/typography";
-import { gallery } from "../../assets/data";
+import { gallery } from "../../assets/data/gallery";
 
 export default function Gallery() {
   const [model, setModel] = useState(false);
@@ -26,7 +26,7 @@ export default function Gallery() {
           onClick={() => setModel(false)}
           className={model ? "model open" : "model"}
         >
-          {/* <Image src={tempImgSrc} alt=''/>   */}
+          <Image src={tempImgSrc} alt=''/>  
           <FaWindowClose onClick={() => setModel(false)} />
         </div>
         <ImagesContainer>

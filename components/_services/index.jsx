@@ -9,8 +9,8 @@ export default function Services() {
   return (
     <SectionContainer flex="column" className='background-pattern_bottom'>
       <Headline2 id="services">Services</Headline2>
-      <Headline4>“Better than one is three or more”</Headline4>
       <InnerContainer>
+      <Headline4>“A range of services for your needs”</Headline4>
         <ServicesContainer>
           {services.map((item, index) => {
             return (

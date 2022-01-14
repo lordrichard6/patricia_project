@@ -41,7 +41,7 @@ const SidebarContainer = styled.aside`
   left: 0;
   transition: 0.3s ease-in-out;
   color: ${Colors.white};
-  opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
+  opacity: ${({ isOpen }) => (isOpen ? "100%" : "50%")};
   top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
 `;
 

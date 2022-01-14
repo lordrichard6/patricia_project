@@ -4,12 +4,7 @@ import aboutImage02 from "../../public/images/about02.jpg";
 import hobby_01 from "../../public/images/hobby_01.jpg";
 import hobby_02 from "../../public/images/hobby_02.jpg";
 import hobby_03 from "../../public/images/hobby_03.jpg";
-import gallery_01 from "../../public/images/gal01.jpg";
-import gallery_02 from "../../public/images/gal02.jpg";
-import gallery_03 from "../../public/images/gal03.jpg";
-import gallery_04 from "../../public/images/gal04.jpg";
-import gallery_05 from "../../public/images/gal05.jpg";
-import gallery_06 from "../../public/images/gal06.jpg";
+
 // ABOUT ME -----------------------------------------------------------------------------
 export const aboutMe = {
   title: "Energy and dedication",
@@ -154,50 +149,5 @@ export const passions = [
       When people ask me what I would do if I won the Euromillions, I always reply that I would buy a farm and go rescue animals, but as I can't save the world that way, I do it as best I can. The important thing is for everyone to do their part and this way we all help. Since 2017, I help the association of my hometown - CAPA (do’s shelter) and I’ve being organizing walks in Switzerland to raise money so they can buy food and treatments for the dogs.  
       I can't imagine, how it is to suffer and without being able to say a word or spend a life in chains. Be humane please.`,
     container: "hobby",
-  },
-];
-// PASSIONS -----------------------------------------------------------------------------
-export const gallery = [
-  {
-    id: 1,
-    imgSrc: gallery_01,
-    height: 500,
-    width: 600,
-    alt: "patricia vila nova",
-  },
-  {
-    id: 2,
-    imgSrc: gallery_02,
-    height: 700,
-    width: 600,
-    alt: "patricia vila nova",
-  },
-  {
-    id: 3,
-    imgSrc: gallery_03,
-    height: 600,
-    width: 600,
-    alt: "patricia vila nova",
-  },
-  {
-    id: 4,
-    imgSrc: gallery_04,
-    height: 600,
-    width: 600,
-    alt: "patricia vila nova",
-  },
-  {
-    id: 5,
-    imgSrc: gallery_05,
-    height: 700,
-    width: 600,
-    alt: "patricia vila nova",
-  },
-  {
-    id: 6,
-    imgSrc: gallery_06,
-    height: 500,
-    width: 600,
-    alt: "patricia vila nova",
   },
 ];

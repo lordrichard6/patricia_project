@@ -32,7 +32,7 @@ export const Headline2 = styled.h2`
   color: ${(props) => props.color};
 
   @media screen and (max-width: 768px) {
-    
+    font-size: 42px;
   }
   @media screen and (min-width: 2024px) {
  
