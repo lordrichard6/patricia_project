@@ -15,10 +15,10 @@ export const Items = [
     //   to: "hobby",
     //   name: "Hobbies",
     // },
-    {
-      to: "/gallery",
-      name: "Gallery",
-    },
+    // {
+    //   to: "/gallery",
+    //   name: "Gallery",
+    // },
     {
       to: "/contact",
       name: "Contact",
