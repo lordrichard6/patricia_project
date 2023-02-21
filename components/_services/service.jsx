@@ -11,7 +11,9 @@ export default function Service({ i, imgSrc, alt, title, text }) {
         <Image src={imgSrc} objectFit="cover" alt={alt} />
       </ImageWrapper>
       <Info>
-        <Headline4 className='paddingY-16' color={Colors.white}>{title}</Headline4>
+        <Headline4 className="paddingY-16" color={Colors.white}>
+          {title}
+        </Headline4>
         <Paragraph color={Colors.white}>{text}</Paragraph>
       </Info>
     </ServiceWrapper>
@@ -41,7 +43,8 @@ const ImageWrapper = styled.div`
   /* box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
     rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
     rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px; */
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 `;
 
 const Info = styled.div`
@@ -62,14 +65,16 @@ const Info = styled.div`
   transition: all 0.4s;
   margin: 1rem 0;
   margin-right: 1rem;
-  padding:0 0.5rem;
+  padding: 0 0.5rem;
+  &:hover {
+      height: 80% !important;
+    }
 
   @media only screen and (max-width: 764px) {
     margin-right: 1rem;
-
     &:hover {
-    height: 80% !important;
-  }
+      height:65% !important;
+    }
   }
 
   @media only screen and (max-width: 1024px) {
