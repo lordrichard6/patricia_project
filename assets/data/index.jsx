@@ -13,14 +13,14 @@ export const aboutMe = {
   alt01: "sardinha drive",
   alt02: "driving service",
   quote:
-    '"Driving besides a passion, is a means to meet new people and share moments."',
+    '"Driving, besides a passion, is a means to meet new people and share moments."',
 };
 export const aboutText01 = [
   {
-    text: "Driving is so much more than knowing how to manoeuvre a car.",
+    text: "Driving is so much more than knowing how to maneuver a car.",
   },
   {
-    text: "I`ve always had a great passion for driving and how I feel so good when I`m with a steering wheel in my hands. A sense of calm and freedom.",
+    text: "I've always had a great passion for driving and how I feel so good when I'm with a steering wheel in my hands. A sense of calm and freedom.",
   },
   {
     text: "I drove my first car (Rover) when I was 14 years old and I remember only wishing I was 18 to get my driving license.",
@@ -66,7 +66,7 @@ export const services = [
     alt: "service 1",
     serviceTitle: "Transfer (Point A to B)",
     serviceText:
-      "From Earth to heaven – Well, we can not take to heaven but it similar. Just let us know where we pick you up and where is your destination.",
+      "From Earth to heaven – Well, we can not take you to heaven but it's similar. Just let us know where we pick you up and where is your destination.",
   },
   {
     id: 2,
@@ -76,7 +76,7 @@ export const services = [
     alt: "service 2",
     serviceTitle: "Disposal",
     serviceText:
-      "Do you need our service for more than 3 hours or for more than 1 day? Do you need to go shopping or travel in Switzerland? Don’t worry, we can help you.",
+      "Do you need our service for more than 3 hours or more than 1 day? Do you need to go shopping or travel in Switzerland? Don’t worry, we can help you.",
   },
   {
     id: 3,
@@ -86,7 +86,7 @@ export const services = [
     alt: "service 3",
     serviceTitle: "Driver Service",
     serviceText:
-      "Do you have a car but for some reason you can’t drive or your prefer use your car do the transport? Please, give us the key and we drive your car for you. If you need to take your car to control, or mechanic, we do it for you. Everything for you like Bryan Adams sing.",
+      "Do you have a car but for some reason you can’t drive or your prefer to use your car to move around? Please, give us the key and we drive your car for you. If you need to take your car to control, or mechanic, we do it for you. Everything for you like Bryan Adams song.",
   },
   {
     id: 4,
@@ -94,7 +94,7 @@ export const services = [
     height: 600,
     width: 400,
     alt: "service 3",
-    serviceTitle: "Customer`s cars",
+    serviceTitle: "Customer's cars",
     serviceText:
       "Do you need someone to take your car to mechanic or control? Well, where can I grab the keys?",
   },
@@ -106,7 +106,7 @@ export const services = [
     alt: "service 3",
     serviceTitle: "Car trip with guide tour (most by car)",
     serviceText:
-      "re you visiting Switzerland? Or do you a relax tour? We can recommend places to see, drive you there and bring you back with great memories.",
+      "Are you visiting Switzerland? Or do you a relax tour? We can recommend places to see, drive you there and bring you back with great memories.",
   },
 ];
 // PASSIONS -----------------------------------------------------------------------------
