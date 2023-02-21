@@ -1,56 +1,38 @@
 import styled from "styled-components";
 import Image from "next/image";
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import React from "react";
 
-import { BiMailSend } from "react-icons/bi";
+import { IoLocation, IoCall, IoMailOutline } from 'react-icons/io5';
 import { Colors } from "../../assets/variables";
 import { Headline4 } from "../../assets/variables/typography";
 import qr from "../../public/qr_code.png";
 
 export default function Form() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [number, setNumber] = useState("");
-  const [message, setMessage] = useState("");
-  const [statusMessage, setStatusMessage] = useState("");
-
-  const API_KEY = process.env.API_KEY;
-  console.log(API_KEY);
-
-  function sendEmail(e) {
-    e.preventDefault();
-    const statusMessage = document.querySelector(".status-message");
-
-    emailjs.sendForm("gmail", "template_9lx0vo9", e.target, API_KEY).then(
-      (result) => {
-        console.log(result.text);
-        setStatusMessage("Message sent sucessfully!");
-        statusMessage.className = "status-message hide";
-        setTimeout(() => {
-          statusMessage.className = "status-message show";
-        }, 1000);
-      },
-      (error) => {
-        console.log(error.text);
-        setStatusMessage("Failed to send message! Try again.");
-        statusMessage.className = "status-message failed hide";
-        setTimeout(() => {
-          statusMessage.className = "status-message failed show";
-        }, 1000);
-      }
-    );
-    setName("");
-    setNumber("");
-    setEmail("");
-    setMessage("");
-  }
-
   return (
     <ElementsWrapper>
+      <ContactContainer>
+        <h2>Book a service NOW!</h2>
+        <div className="element">
+          <p><IoLocation /></p>
+          <p><a href="https://goo.gl/maps/5djfRgB7kGgrfrsg7">Neuhausen am Rheinfall, CH</a></p>
+        </div>
+        <div className="element">
+          <p><IoCall /></p>
+          <p><a href="tel:+41768169111">+41 76 816 91 11</a></p>
+        </div>
+        <div className="element">
+          <p><IoMailOutline /></p>
+          <p><a href="mailto: sardinhaplease@gmail.com">sardinhaplease@gmail.com</a></p>
+        </div>
+        <h2>Available 27/7</h2>
+      </ContactContainer>
       <ImageWrapper>
+        <Headline4 id="form" color={Colors.white}>
+          Book a Service Now
+        </Headline4>
         <QRWrapper>
           <Image
+            className="handy"
             src={qr}
             objectFit="cover"
             objectPosition="center"
@@ -58,51 +40,6 @@ export default function Form() {
           />
         </QRWrapper>
       </ImageWrapper>
-
-      <FormContainer>
-        <Headline4 id="form" color={Colors.white}>Book a Service Now</Headline4>
-        <form id="contact-form" onSubmit={sendEmail}>
-          <InputGroup>
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Name"
-            />
-          </InputGroup>
-          <InputGroup>
-            <input
-              type="tel"
-              name="number"
-              value={number}
-              onChange={(e) => setNumber(e.target.value)}
-              placeholder="Phone Number"
-            />
-          </InputGroup>
-          <InputGroup>
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Email"
-            />
-          </InputGroup>
-          <InputGroup>
-            <textarea
-              name="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              placeholder="Message"
-            />
-          </InputGroup>
-          <EmailSend className="status-message">{statusMessage}</EmailSend>
-          <button type="submit">
-            <BiMailSend />
-          </button>
-        </form>
-      </FormContainer>
     </ElementsWrapper>
   );
 }
@@ -112,7 +49,7 @@ const ElementsWrapper = styled.div`
   height: 80%;
   position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
@@ -148,9 +85,10 @@ const ElementsWrapper = styled.div`
 `;
 
 const ImageWrapper = styled.div`
+  text-align: center;
   position: relative;
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  min-height: 600px;
   /* height: 100%; */
   background: url("/form_pink.jpg");
   background-position: center;
@@ -172,117 +110,68 @@ const QRWrapper = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60%;
+  width: 30%;
+  height: auto;
+  object-fit: cover;
   z-index: 10;
 
   @media screen and (max-width: 1024px) {
     display: none;
   }
+
+  @media screen and (min-width: 1500px) {
+    width: 20%;
+  }
+
+  .handy {
+    width: 100%;
+    height: auto;
+  }
 `;
 
-const FormContainer = styled.div`
+const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 50%;
-  background: ${Colors.dark};
-  z-index: 2;
-  padding: 16px 0;
-
-  @media screen and (max-width: 768px) {
-    width: 90% !important;
-    height: auto;
-  }
-
-  @media screen and (max-width: 1024px) {
-    width: 100%;
-    padding: 2rem 0;
-  }
-
-  @media screen and (min-width: 2024px) {
-    width: 50%;
-  }
+  padding: 2rem 1rem;
 
   h2 {
+    color: white;
+    text-align: center;
     font-size: 2rem;
-    font-weight: 400;
-    color: ${Colors.white};
-
-    @media screen and (max-width: 768px) {
-      text-align: center;
-      font-size: 1.5rem;
-    }
-  }
-
-  form {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
+    margin-bottom: 0;
     margin-top: 2rem;
   }
 
-  button {
-    color: ${Colors.white};
-    margin: 1rem 0.4rem;
-    cursor: pointer;
-    font-size: 2rem;
+  h2:first-child {
+    margin-bottom: 2rem;
+    margin-top: 0;
   }
-`;
 
-const InputGroup = styled.div`
-  position: relative;
-  margin-bottom: 33px;
-  border-bottom: 1px solid rgb(255, 255, 255);
+  .element {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.4rem 0;
 
-  input {
-    outline: none;
-    margin: 0;
-    border: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    width: 100%;
-    font-family: inherit;
-    padding: 5px 0;
-    font-size: 18px;
-    color: ${Colors.white};
-    background: transparent;
+    p {
+      font-size: 1.5rem;
+      color: white;
+      margin:0 0.2rem;
+      display: flex;
+      align-items: center;
 
-    @media screen and (max-width: 768px) {
-      width: 90%;
-      height: 40px;
-      font-size: 16px;
+      @media screen and (max-width: 560px) {
+        font-size: 1rem;
+      }
     }
   }
 
-  textarea {
-    width: 100%;
-    outline: none;
-    margin: 0;
-    border: none;
-    background: transparent;
-    font-family: inherit;
-    color: ${Colors.white};
-    border-radius: 5px;
-    border: 0;
-    margin-top: 5px;
-    min-height: 200px;
-    font-size: 18px;
-
-    @media screen and (max-width: 768px) {
-      width: 90%;
-      font-size: 16px;
-    }
+  @media screen and (min-width: 1024px) {
+    display: none;
   }
-`;
 
-const EmailSend = styled.p`
-  position: absolute;
-  opacity: 1;
-  bottom: 0;
+  .handy {
+    width: 100%;
+    height: auto;
+  }
 `;
